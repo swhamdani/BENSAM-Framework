@@ -1,23 +1,51 @@
-import hashlib, json, sqlite3, sys
-from core import LEDGER
+import json
+from datetime import datetime
 
-def verify(ref_id):
-    conn = sqlite3.connect("offchain_logs.db")
-    cur = conn.execute("SELECT payload FROM logs WHERE ref_id = ?", (ref_id,))
-    row = cur.fetchone(); conn.close()
-    if not row: return {"error": "not found off-chain"}
-    local_hash = hashlib.sha256(row[0].encode()).hexdigest()
+class Database:
+    def __init__(self):
+        self.devices = {}
+        self.logs = []
+        self.violations = []
 
-    onchain = LEDGER.get(ref_id, {})
-    if not onchain: return {"error": "not found on-chain"}
+    def get_devices(self):
+        return self.devices
 
-    return {
-        "ref_id": ref_id,
-        "match": local_hash == onchain["logHash"],
-        "local_hash": local_hash,
-        "onchain_hash": onchain["logHash"]
-    }
+    def add_device(self, device):
+        self.devices[device["name"]] = {
+            "ip": device["ip"],
+            "type": device["type"],
+            "last_seen": datetime.now().isoformat()
+        }
 
-if __name__ == "__main__":
-    if len(sys.argv) != 2: print("Usage: python audit.py <ref_id>"); exit(1)
-    print(json.dumps(verify(sys.argv[1]), indent=2))
+    def update_timestamp(self, name):
+        if name in self.devices:
+            self.devices[name]["last_seen"] = datetime.now().isoformat()
+
+    def store_profile(self, profile):
+        self.devices[profile["name"]].update(profile)
+
+    def log_traffic(self, packet):
+        self.logs.append(packet)
+
+    def log_violation(self, device, violation):
+        entry = {"device": device, "violation": violation, "timestamp": datetime.now().isoformat()}
+        self.violations.append(entry)
+
+    def get_logs(self):
+        return self.logs
+
+    def get_violations(self):
+        return self.violations
+
+
+class BlockchainAudit:
+    def log_event(self, event_type, data):
+        print(f"[Blockchain Log] {event_type}: {json.dumps(data)}")
+
+
+class SmartContract:
+    def check_policy(self, device):
+        # Simple mock rule: Printers cannot access external IPs
+        if device.get("type") == "Printer":
+            return "Unauthorized external communication"
+        return None
