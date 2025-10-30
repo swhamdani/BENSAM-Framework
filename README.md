@@ -121,6 +121,19 @@ pytest -v
 
 ---
 
+## MVP Demo (mock ledger)
+
+```bash
+# 1. Anchor a log
+python - <<EOF
+from core import BENSAMCore
+c = BENSAMCore()
+print(c.process({"event":"port_scan","status":"open"}))
+EOF
+
+# 2. Verify
+python audit.py <ref_id_from_step_1>
+
 ## 📖 Future Directions
 
 - Integration with real-world **network scanning tools**.  
