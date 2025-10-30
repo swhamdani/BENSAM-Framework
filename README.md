@@ -36,10 +36,7 @@ BENSAM follows a multi-layered architecture:
 > This ensures tamper-proof, transparent, and auditable security monitoring.
 
 ---
-
-## 📂 Project Structure
-
-
+📂 Project Structure
 BENSAM-Framework/
 │── core.py                # Core orchestration pipeline (scan, profile, traffic, policy, reporting)
 │── audit.py               # Blockchain logging, SmartContract class, audit & compliance checks
@@ -119,18 +116,22 @@ Run tests
 pytest
 
 MVP Demo (mock ledger & policy enforcement)
+
 1. Anchor a log
+
 python - <<EOF
 from core import BENSAMFramework
 c = BENSAMFramework()
 c.run()
 EOF
 
+
 2. Verify audit & policy
+
 python audit.py <ref_id_from_step_1>
 
-Output will show device profiles, traffic logs, policy violations, and a JSON report.
 
+Output will show device profiles, traffic logs, policy violations, and a JSON report.
 
 📖 Future Directions
 
@@ -142,6 +143,6 @@ Advanced AI/ML anomaly detection modules.
 
 Web-based dashboard for visualizing audit logs and compliance reports.
 
-
 📜 License
+
 This project is licensed under the MIT License – free to use, modify, and distribute with attribution.
