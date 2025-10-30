@@ -100,19 +100,24 @@ def test_core_processing(input_data):
     result = core.run()  # runs scan, monitoring, and policy enforcement
     assert isinstance(result, type(None))  # basic placeholder assertion
 
-
 Run tests:
 pytest -v
 
 🛠️ Installation & Usage
+
 Clone the repository
+
 git clone https://github.com/swhamdani/BENSAM-Framework.git
 cd BENSAM-Framework
 
+
 Install dependencies
+
 pip install -r requirements.txt
 
+
 Run tests
+
 pytest
 
 MVP Demo (mock ledger & policy enforcement)
@@ -135,13 +140,13 @@ Output will show device profiles, traffic logs, policy violations, and a JSON re
 
 📖 Future Directions
 
-Integration with real-world network scanning tools.
+Integration with real-world network scanning tools
 
-Extended blockchain support beyond Hyperledger (e.g., Ethereum, Polygon).
+Extended blockchain support beyond Hyperledger (e.g., Ethereum, Polygon)
 
-Advanced AI/ML anomaly detection modules.
+Advanced AI/ML anomaly detection modules
 
-Web-based dashboard for visualizing audit logs and compliance reports.
+Web-based dashboard for visualizing audit logs and compliance reports
 
 📜 License
 
