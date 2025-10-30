@@ -12,8 +12,10 @@ class BENSAMFramework:
         print("[*] Scanning network for active devices...")
         stored_devices = self.db.get_devices()
         detected_devices = [
-            {"name": "HP_Elitebook", "ip": "192.168.0.10", "type": "Laptop"},
-            {"name": "Office_Printer", "ip": "192.168.0.15", "type": "Printer"},
+            {"name": "HP_Elitebook", "ip": "192.168.0.10", "type": "Laptop", "os": "Windows 11"},
+            {"name": "Office_Printer", "ip": "192.168.0.15", "type": "Printer", "os": "Embedded OS"},
+            {"name": "Main_Router", "ip": "192.168.0.1", "type": "Router", "os": "RouterOS"},
+            {"name": "Smart_Camera", "ip": "192.168.0.25", "type": "IoT", "os": "TinyLinux"},
         ]
 
         for device in detected_devices:
@@ -32,17 +34,19 @@ class BENSAMFramework:
             "name": device["name"],
             "ip": device["ip"],
             "type": device["type"],
-            "os": "Windows 11" if device["type"] == "Laptop" else "Embedded OS"
+            "os": device["os"],
         }
         self.db.store_profile(profile)
         self.blockchain.log_event("DeviceProfile", profile)
 
-    # Step 3: Traffic Monitoring
+    # Step 3: Traffic Monitoring (simulated)
     def traffic_monitoring(self):
         print("[*] Monitoring network traffic...")
         mock_traffic = [
-            {"src": "192.168.0.10", "dst": "8.8.8.8", "port": 443},
-            {"src": "192.168.0.15", "dst": "192.168.0.1", "port": 80}
+            {"src": "192.168.0.10", "dst": "8.8.8.8", "port": 443},  # Laptop
+            {"src": "192.168.0.15", "dst": "192.168.0.1", "port": 80}, # Printer
+            {"src": "192.168.0.1", "dst": "192.168.0.10", "port": 8080}, # Router
+            {"src": "192.168.0.25", "dst": "192.168.0.50", "port": 554}, # IoT Camera
         ]
         for packet in mock_traffic:
             self.db.log_traffic(packet)
@@ -52,8 +56,9 @@ class BENSAMFramework:
     def policy_enforcement(self):
         print("[*] Running smart contract policy checks...")
         for device in self.db.get_devices().values():
+            # Use SmartContract class to evaluate policy
             violation = self.contract.check_policy(device)
-            if violation:
+            if violation != "Compliant":
                 self.db.log_violation(device, violation)
                 self.blockchain.log_event("PolicyViolation", {"device": device, "rule": violation})
 
@@ -69,7 +74,7 @@ class BENSAMFramework:
         print("[Report] Devices:", len(data["devices"]))
         print("[Report] Violations:", len(data["violations"]))
 
-        # === JSON Export ===
+        # JSON Export
         import json
         from datetime import datetime
 
