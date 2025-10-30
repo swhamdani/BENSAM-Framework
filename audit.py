@@ -45,7 +45,34 @@ class BlockchainAudit:
 
 class SmartContract:
     def check_policy(self, device):
-        # Simple mock rule: Printers cannot access external IPs
-        if device.get("type") == "Printer":
+        """
+        Simulates smart contract policy enforcement for different device types.
+        device: dict with keys 'name', 'type', 'ip', 'os'
+        Returns a string describing the policy status.
+        """
+        device_type = device.get("type")
+        name = device.get("name")
+        ip = device.get("ip")
+        os_name = device.get("os")
+
+        if device_type == "Printer":
             return "Unauthorized external communication"
-        return None
+
+        elif device_type == "Laptop":
+            if os_name not in ["Windows 11", "Ubuntu 22.04"]:
+                return "Outdated or unverified OS version"
+            if name == "HP_Elitebook":
+                return "Compliant"
+            return "Unknown laptop device"
+
+        elif device_type == "Router":
+            if not ip.startswith("192.168"):
+                return "Router outside internal network range"
+            return "Compliant"
+
+        elif device_type == "IoT":
+            return "Open port detected on IoT device"
+
+        else:
+            return "Unknown device type or policy not defined"
+
