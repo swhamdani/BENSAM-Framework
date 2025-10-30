@@ -64,7 +64,8 @@ BENSAM-Framework/
 - Implements the orchestration pipeline: network scan → device profiling → traffic monitoring → policy enforcement → reporting.  
 - Follows the **Open-Closed Principle (OCP)**.  
 - Supports multi-device types: Laptop, Printer, Router, IoT.  
-- Outputs JSON reports with device, traffic, and violation details.
+- Outputs JSON reports with device, traffic, and violation details.  
+- **Run & Test:** Execute `core.py` directly with Python; results are automatically saved as JSON reports.
 
 ### **audit.py**
 - Simulates blockchain logging and SmartContract-based policy evaluation.  
@@ -129,31 +130,19 @@ cd BENSAM-Framework
 pip install -r requirements.txt
 ```
 
+### Run core.py to execute framework
+
+```bash
+python core.py
+```
+
+> Output JSON reports will be generated automatically without requiring any `ref_id` input.
+
 ### Run tests
 
 ```bash
 pytest
 ```
-
-### MVP Demo (mock ledger & policy enforcement)
-
-**1. Anchor a log**
-
-```bash
-python - <<EOF
-from core import BENSAMFramework
-c = BENSAMFramework()
-c.run()
-EOF
-```
-
-**2. Verify audit & policy**
-
-```bash
-python audit.py <ref_id_from_step_1>
-```
-
-> Output will show device profiles, traffic logs, policy violations, and a JSON report.
 
 ---
 
