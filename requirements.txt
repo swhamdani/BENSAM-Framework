@@ -1,2 +1,6 @@
-pytest 
-sqlite3 #built-in, just for clarity
+# BENSAM Framework Python Dependencies
+
+pytest            # For automated testing
+rich              # Optional: Rich CLI formatting for logs and reports
+pandas            # Optional: For structured data manipulation if needed
+python-dateutil   # Optional: For flexible datetime parsing
