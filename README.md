@@ -1,3 +1,4 @@
+
 # Blockchain-Enhanced Network Scanning and Monitoring (BENSAM) Framework
 
 The **Blockchain-Enhanced Network Scanning and Monitoring (BENSAM) Framework** is a conceptual, multi-layered system engineered for comprehensive, verifiable, and tamper-proof network security.
@@ -38,18 +39,17 @@ BENSAM follows a multi-layered architecture:
 
 ## 📂 Project Structure
 
+```
 BENSAM-Framework/
-│── core.py # Core orchestration pipeline (scan, profile, traffic, policy, reporting)
-│── audit.py # Blockchain logging, SmartContract class, audit & compliance checks
-│── chaincode/bensam.go # Prototype Go chaincode for policy enforcement simulation
-│── interfaces.py # Abstract interfaces (Dependency Inversion Principle)
+│── core.py                # Core orchestration pipeline (scan, profile, traffic, policy, reporting)
+│── audit.py               # Blockchain logging, SmartContract class, audit & compliance checks
+│── chaincode/bensam.go    # Prototype Go chaincode for policy enforcement simulation
+│── interfaces.py          # Abstract interfaces (Dependency Inversion Principle)
 │── tests/
-│ └── test_core.py # pytest example with fixtures & parametrization
-│── README.md # Project documentation
-│── requirements.txt # Python dependencies
-
-yaml
-Copy code
+│    └── test_core.py      # pytest example with fixtures & parametrization
+│── README.md              # Project documentation
+│── requirements.txt       # Python dependencies
+```
 
 ---
 
@@ -104,50 +104,68 @@ def test_core_processing(input_data):
     core = BENSAMFramework()
     result = core.run()  # runs scan, monitoring, and policy enforcement
     assert isinstance(result, type(None))  # basic placeholder assertion
+```
+
 Run tests:
 
-bash
-Copy code
+```bash
 pytest -v
-🛠️ Installation & Usage
-Clone the repository
-bash
-Copy code
+```
+
+---
+
+## 🛠️ Installation & Usage
+
+### Clone the repository
+
+```bash
 git clone https://github.com/swhamdani/BENSAM-Framework.git
 cd BENSAM-Framework
-Install dependencies
-bash
-Copy code
-pip install -r requirements.txt
-Run tests
-bash
-Copy code
-pytest
-MVP Demo (mock ledger & policy enforcement)
-1. Anchor a log
+```
 
-bash
-Copy code
+### Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+### Run tests
+
+```bash
+pytest
+```
+
+### MVP Demo (mock ledger & policy enforcement)
+
+**1. Anchor a log**
+
+```bash
 python - <<EOF
 from core import BENSAMFramework
 c = BENSAMFramework()
 c.run()
 EOF
-2. Verify audit & policy
+```
 
-bash
-Copy code
+**2. Verify audit & policy**
+
+```bash
 python audit.py <ref_id_from_step_1>
-Output will show device profiles, traffic logs, policy violations, and a JSON report.
+```
 
-📖 Future Directions
-Integration with real-world network scanning tools
+> Output will show device profiles, traffic logs, policy violations, and a JSON report.
 
-Extended blockchain support beyond Hyperledger (e.g., Ethereum, Polygon)
+---
 
-Advanced AI/ML anomaly detection modules
+## 📖 Future Directions
 
-Web-based dashboard for visualizing audit logs and compliance reports
+- Integration with real-world **network scanning tools**  
+- Extended blockchain support beyond Hyperledger (e.g., Ethereum, Polygon)  
+- Advanced **AI/ML anomaly detection modules**  
+- Web-based dashboard for **visualizing audit logs and compliance reports**  
 
-📜 License
-This project is licensed under the MIT License – free to use, modify, and distribute with attribution.
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License** – free to use, modify, and distribute with attribution.
