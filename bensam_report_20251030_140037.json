@@ -1,0 +1,84 @@
+{
+    "metadata": {
+        "report_name": "BENSAM Network Scan & Compliance Report",
+        "generated_at": "2025-10-30T14:00:37.405064",
+        "total_devices": 4,
+        "total_violations": 2
+    },
+    "devices": {
+        "HP_Elitebook": {
+            "ip": "192.168.0.10",
+            "type": "Laptop",
+            "last_seen": "2025-10-30T14:00:37.404894",
+            "name": "HP_Elitebook",
+            "os": "Windows 11"
+        },
+        "Office_Printer": {
+            "ip": "192.168.0.15",
+            "type": "Printer",
+            "last_seen": "2025-10-30T14:00:37.404939",
+            "name": "Office_Printer",
+            "os": "Embedded OS"
+        },
+        "Main_Router": {
+            "ip": "192.168.0.1",
+            "type": "Router",
+            "last_seen": "2025-10-30T14:00:37.404964",
+            "name": "Main_Router",
+            "os": "RouterOS"
+        },
+        "Smart_Camera": {
+            "ip": "192.168.0.25",
+            "type": "IoT",
+            "last_seen": "2025-10-30T14:00:37.404980",
+            "name": "Smart_Camera",
+            "os": "TinyLinux"
+        }
+    },
+    "traffic_logs": [
+        {
+            "src": "192.168.0.10",
+            "dst": "8.8.8.8",
+            "port": 443
+        },
+        {
+            "src": "192.168.0.15",
+            "dst": "192.168.0.1",
+            "port": 80
+        },
+        {
+            "src": "192.168.0.1",
+            "dst": "192.168.0.10",
+            "port": 8080
+        },
+        {
+            "src": "192.168.0.25",
+            "dst": "192.168.0.50",
+            "port": 554
+        }
+    ],
+    "violations": [
+        {
+            "device": {
+                "ip": "192.168.0.15",
+                "type": "Printer",
+                "last_seen": "2025-10-30T14:00:37.404939",
+                "name": "Office_Printer",
+                "os": "Embedded OS"
+            },
+            "violation": "Unauthorized external communication",
+            "timestamp": "2025-10-30T14:00:37.405020"
+        },
+        {
+            "device": {
+                "ip": "192.168.0.25",
+                "type": "IoT",
+                "last_seen": "2025-10-30T14:00:37.404980",
+                "name": "Smart_Camera",
+                "os": "TinyLinux"
+            },
+            "violation": "Open port detected on IoT device",
+            "timestamp": "2025-10-30T14:00:37.405030"
+        }
+    ]
+}
