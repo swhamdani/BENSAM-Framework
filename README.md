@@ -47,6 +47,7 @@ BENSAM-Framework/
 │── interfaces.py          # Abstract interfaces (Dependency Inversion Principle)
 │── tests/
 │    └── test_core.py      # pytest example with fixtures & parametrization
+│── output/bensam_report_20251030_140037.json    # Sample execution output  
 │── README.md              # Project documentation
 │── requirements.txt       # Python dependencies
 ```
