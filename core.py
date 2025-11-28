@@ -1,52 +1,69 @@
-import time
-from audit import BlockchainAudit, Database, SmartContract
+# core.py
+import json
+from datetime import datetime
+from audit import Database, BlockchainAudit, SmartContract
+import re
 
 class BENSAMFramework:
-    def __init__(self):
+    def __init__(self, scan_result_file="ScanResult.txt"):
         self.db = Database()
         self.blockchain = BlockchainAudit()
         self.contract = SmartContract()
+        self.scan_result_file = scan_result_file
+
+    # Parse ScanResult.txt dynamically
+    def parse_scan_result(self):
+        devices = []
+        try:
+            with open(self.scan_result_file, "r") as f:
+                content = f.read()
+            # Extract IPs and MACs
+            ip_matches = re.findall(r"Nmap scan report for (\d+\.\d+\.\d+\.\d+)", content)
+            mac_matches = re.findall(r"MAC Address: ([0-9A-Fa-f:]+) \((.*?)\)", content)
+            for i, ip in enumerate(ip_matches):
+                device = {
+                    "name": f"Host_{i+1}",
+                    "ip": ip,
+                    "type": "Unknown",
+                    "os": "Unknown",
+                    "mac": mac_matches[i][0] if i < len(mac_matches) else "Unknown"
+                }
+                devices.append(device)
+        except Exception as e:
+            print(f"[BENSAM] Failed to parse scan results: {e}")
+        return devices
 
     # Step 1: Network Scan
     def network_scan(self):
-        print("[*] Scanning network for active devices...")
-        stored_devices = self.db.get_devices()
-        detected_devices = [
-            {"name": "HP_Elitebook", "ip": "192.168.0.10", "type": "Laptop", "os": "Windows 11"},
-            {"name": "Office_Printer", "ip": "192.168.0.15", "type": "Printer", "os": "Embedded OS"},
-            {"name": "Main_Router", "ip": "192.168.0.1", "type": "Router", "os": "RouterOS"},
-            {"name": "Smart_Camera", "ip": "192.168.0.25", "type": "IoT", "os": "TinyLinux"},
-        ]
+        print("[*] Parsing ScanResult.txt for devices...")
+        detected_devices = self.parse_scan_result()
 
         for device in detected_devices:
-            if device["name"] not in stored_devices:
+            if device["name"] not in self.db.get_devices():
                 print(f"[+] New device found: {device}")
                 self.db.add_device(device)
-                self.device_profiling(device)
             else:
                 self.db.update_timestamp(device["name"])
         return detected_devices
 
     # Step 2: Device Profiling
     def device_profiling(self, device):
-        print(f"[*] Profiling device {device['ip']} ({device['name']})...")
         profile = {
             "name": device["name"],
             "ip": device["ip"],
-            "type": device["type"],
-            "os": device["os"],
+            "type": device.get("type", "Unknown"),
+            "os": device.get("os", "Unknown"),
+            "mac": device.get("mac", "Unknown")
         }
         self.db.store_profile(profile)
         self.blockchain.log_event("DeviceProfile", profile)
 
     # Step 3: Traffic Monitoring (simulated)
     def traffic_monitoring(self):
-        print("[*] Monitoring network traffic...")
+        print("[*] Simulated traffic monitoring...")
         mock_traffic = [
-            {"src": "192.168.0.10", "dst": "8.8.8.8", "port": 443},  # Laptop
-            {"src": "192.168.0.15", "dst": "192.168.0.1", "port": 80}, # Printer
-            {"src": "192.168.0.1", "dst": "192.168.0.10", "port": 8080}, # Router
-            {"src": "192.168.0.25", "dst": "192.168.0.50", "port": 554}, # IoT Camera
+            {"src": "192.168.0.10", "dst": "8.8.8.8", "port": 443},
+            {"src": "192.168.0.15", "dst": "192.168.0.1", "port": 80}
         ]
         for packet in mock_traffic:
             self.db.log_traffic(packet)
@@ -54,29 +71,21 @@ class BENSAMFramework:
 
     # Step 4: Policy Enforcement
     def policy_enforcement(self):
-        print("[*] Running smart contract policy checks...")
+        print("[*] Running policy checks...")
         for device in self.db.get_devices().values():
-            # Use SmartContract class to evaluate policy
             violation = self.contract.check_policy(device)
             if violation != "Compliant":
                 self.db.log_violation(device, violation)
                 self.blockchain.log_event("PolicyViolation", {"device": device, "rule": violation})
 
-    # Step 5: Reporting (JSON Export)
+    # Step 5: Reporting
     def generate_reports(self):
-        print("[*] Generating compliance and audit reports...")
         data = {
             "devices": self.db.get_devices(),
             "logs": self.db.get_logs(),
-            "violations": self.db.get_violations(),
+            "violations": self.db.get_violations()
         }
-        self.blockchain.log_event("ReportGenerated", {"count": len(data['devices'])})
-        print("[Report] Devices:", len(data["devices"]))
-        print("[Report] Violations:", len(data["violations"]))
-
-        # JSON Export
-        import json
-        from datetime import datetime
+        self.blockchain.log_event("ReportGenerated", {"total_devices": len(data["devices"])})
 
         report = {
             "metadata": {
@@ -89,19 +98,21 @@ class BENSAMFramework:
             "traffic_logs": data["logs"],
             "violations": data["violations"]
         }
-
         filename = f"bensam_report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
         with open(filename, "w") as f:
             json.dump(report, f, indent=4)
-
-        print(f"[+] Report saved successfully → {filename}")
+        print(f"[+] BENSAM report saved → {filename}")
+        return filename
 
     # Runner
     def run(self):
-        self.network_scan()
+        devices = self.network_scan()
+        for device in devices:
+            self.device_profiling(device)
         self.traffic_monitoring()
         self.policy_enforcement()
-        self.generate_reports()
+        return self.generate_reports()
+
 
 if __name__ == "__main__":
     app = BENSAMFramework()

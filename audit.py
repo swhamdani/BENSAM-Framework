@@ -1,7 +1,9 @@
+# audit.py
 import json
 from datetime import datetime
 
 class Database:
+    """Stores devices, logs, and policy violations."""
     def __init__(self):
         self.devices = {}
         self.logs = []
@@ -14,6 +16,7 @@ class Database:
         self.devices[device["name"]] = {
             "ip": device["ip"],
             "type": device["type"],
+            "os": device.get("os"),
             "last_seen": datetime.now().isoformat()
         }
 
@@ -22,13 +25,18 @@ class Database:
             self.devices[name]["last_seen"] = datetime.now().isoformat()
 
     def store_profile(self, profile):
-        self.devices[profile["name"]].update(profile)
+        if profile["name"] in self.devices:
+            self.devices[profile["name"]].update(profile)
 
     def log_traffic(self, packet):
         self.logs.append(packet)
 
     def log_violation(self, device, violation):
-        entry = {"device": device, "violation": violation, "timestamp": datetime.now().isoformat()}
+        entry = {
+            "device": device,
+            "rule": violation,
+            "timestamp": datetime.now().isoformat()
+        }
         self.violations.append(entry)
 
     def get_logs(self):
@@ -39,17 +47,14 @@ class Database:
 
 
 class BlockchainAudit:
+    """Simulated blockchain logger."""
     def log_event(self, event_type, data):
         print(f"[Blockchain Log] {event_type}: {json.dumps(data)}")
 
 
 class SmartContract:
+    """Simulated policy enforcement engine."""
     def check_policy(self, device):
-        """
-        Simulates smart contract policy enforcement for different device types.
-        device: dict with keys 'name', 'type', 'ip', 'os'
-        Returns a string describing the policy status.
-        """
         device_type = device.get("type")
         name = device.get("name")
         ip = device.get("ip")
@@ -57,22 +62,17 @@ class SmartContract:
 
         if device_type == "Printer":
             return "Unauthorized external communication"
-
         elif device_type == "Laptop":
             if os_name not in ["Windows 11", "Ubuntu 22.04"]:
                 return "Outdated or unverified OS version"
             if name == "HP_Elitebook":
                 return "Compliant"
             return "Unknown laptop device"
-
         elif device_type == "Router":
             if not ip.startswith("192.168"):
                 return "Router outside internal network range"
             return "Compliant"
-
         elif device_type == "IoT":
             return "Open port detected on IoT device"
-
         else:
             return "Unknown device type or policy not defined"
-
