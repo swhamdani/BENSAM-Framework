@@ -1,161 +1,362 @@
-
 # Blockchain-Enhanced Network Scanning and Monitoring (BENSAM) Framework
 
-The **Blockchain-Enhanced Network Scanning and Monitoring (BENSAM) Framework** is a conceptual, multi-layered system engineered for comprehensive, verifiable, and tamper-proof network security.
 
-By leveraging blockchain technology, modular design, and object-oriented principles, BENSAM provides a scalable and auditable approach to network monitoring, traffic logging, device profiling, and compliance enforcement.
 
----
+The **Blockchain-Enhanced Network Scanning and Monitoring (BENSAM) Framework** is a modular, multi-layered system designed for **verifiable, tamper-proof, and auditable network security monitoring**.  
 
-## 🚀 Key Features
 
-- **Modular Architecture** – Breaks down complex tasks into reusable, manageable components.  
-- **Object-Oriented Principles** – Applies the Single-Responsibility Principle (SRP) and Dependency Inversion Principle (DIP) for flexibility and loose coupling.  
-- **Open-Closed Principle (OCP)** – Core logic interacts with abstract interfaces, making the system easily extensible without modifying existing code.  
-- **Blockchain Integration** – Uses Hyperledger Fabric (simulated in prototype) for immutability, integrity verification, and auditable security events.  
-- **Device & Traffic Policy Enforcement** – Smart contracts evaluate multiple device types (Laptop, Printer, Router, IoT) for compliance.  
-- **Secure Data Flow** – Logs are hashed and stored off-chain; reference IDs recorded on-chain for verification.  
-- **Automated Testing with pytest** – Simplifies test writing, encourages higher coverage, and ensures maintainability.  
+
+Phase 1 implements a **simulated blockchain audit layer** with off-chain payload storage, SHA-256 hashing, and full device & traffic profiling, laying the foundation for future Hyperledger Fabric integration.
+
+
 
 ---
 
-## 🏛️ System Architecture
 
-BENSAM follows a multi-layered architecture:
 
-1. **Network Scanning Agents** – Generate raw device and traffic logs.  
-2. **Logging & Event Aggregator Layer** – Processes, filters, and hashes payloads.  
-   - Stores full payload in an Off-Chain Data Store.  
-   - Generates a transaction proposal containing the hash, metadata, and reference ID.  
-3. **Blockchain Layer (Hyperledger Fabric)** –  
-   - Ordering Service packages transactions.  
-   - Peer Nodes endorse and commit transactions.  
-   - Chaincode (smart contracts) enforce compliance policies.  
-4. **Monitoring & Audit Layer** – Queries on-chain hashes, retrieves off-chain logs, recomputes hashes, and verifies integrity.  
+## 🚀 Key Features (Phase 1)
 
-> This ensures tamper-proof, transparent, and auditable security monitoring.
+
+
+- **Modular Architecture** – Components are loosely coupled, supporting easier upgrades and extensibility.  
+
+
+- **Interface-Based Design** – `IBlockchainLogger` and `IDatabase` interfaces separate core logic from implementation.  
+
+
+- **Simulated Blockchain Layer** – SHA-256 hashed payloads stored off-chain with metadata logged in `simulated_ledger.json`.  
+
+
+- **Persistent Off-Chain Storage** – Device and traffic data survive system restarts (`JSONFileDatabase`).  
+
+
+- **Policy Rules Externalization** – Compliance rules can be updated without code changes (`policy_rules.json`).  
+
+
+- **Full Audit Verification** – Verify data integrity end-to-end using `verify_scan_integrity(scan_id)`.  
+
+
+- **GUI Integration** – `bensam_integration.py` connects parsing, reporting, and verification to the interface layer.  
+
+
+
+---
+
+
+
+## 🏛️ Phase 1 Architecture Diagram
+
+
+      +------------------+
+
+
+      |  ScanResult.txt  |
+
+
+      +--------+---------+
+
+
+               |
+
+
+               v
+
+
+   +-----------------------+
+
+
+   | ScanResultParser.parse |   ← Extract host/IP, hostname, MAC, vendor, OS, ports, services, CVEs
+
+
+   +-----------------------+
+
+
+               |
+
+
+               v
+
+
+  +------------------------+
+
+
+  | device_profiling()     |   ← Generate structured payload
+
+
+  +------------------------+
+
+
+               |
+
+
+               v
+
+
+  +------------------------+
+
+
+  | compute_hash(payload)  |   ← SHA-256 hash of payload
+
+
+  +------------------------+
+
+
+               |
+
+
+               v
+
+
+  +------------------------+       +------------------------+
+
+
+  | JSONFileDatabase.store()| ----> | Off-chain payload store |
+
+
+  |  data/payloads/<scan_id>.json  |  ← Persistent JSON files
+
+
+  +------------------------+       +------------------------+
+
+
+               |
+
+
+               v
+
+
+  +------------------------+
+
+
+  | SimulatedBlockchainAudit |
+
+
+  |  data/simulated_ledger.json |
+
+
+  +------------------------+
+
+
+               |
+
+
+               v
+
+
+    +--------------------+
+
+
+    | Audit Verification |
+
+
+    | verify_scan_integrity() |
+
+
+    +--------------------+
+
+
+This diagram illustrates the **Phase 1 flow**: Scan results → parsing → payload profiling → hashing → off-chain storage → simulated blockchain logging → audit verification.
+
+
 
 ---
 
-## 📂 Project Structure
 
-```
-BENSAM-Framework/
-│── core.py                # Core orchestration pipeline (scan, profile, traffic, policy, reporting)
-│── audit.py               # Blockchain logging, SmartContract class, audit & compliance checks
-│── chaincode/bensam.go    # Prototype Go chaincode for policy enforcement simulation
-│── interfaces.py          # Abstract interfaces (Dependency Inversion Principle)
-│── tests/
-│    └── test_core.py      # pytest example with fixtures & parametrization
-│── output/bensam_report_20251030_140037.json    # Sample execution output  
-│── README.md              # Project documentation
-│── requirements.txt       # Python dependencies
-```
+
+## 📂 Project Structure (Phase 1)
+
+
+
+BENSAM_Framework/
+├── interfaces.py ← Abstract interfaces (IBlockchainLogger, IDatabase)
+├── audit.py ← JSONFileDatabase + SimulatedBlockchainAudit
+├── core.py ← BENSAMFramework pipeline (scan, hash, store, report)
+├── bensam_integration.py ← GUI bridge, reporting, verification functions
+├── policy_rules.json ← Editable compliance policies
+├── data/ ← Auto-created on first run
+│ ├── devices.json
+│ ├── traffic_logs.json
+│ ├── violations.json
+│ ├── simulated_ledger.json
+│ └── payloads/
+│ └── <scan_id>.json ← One file per scan event
+├── tests/ ← Automated pytest tests
+│ └── test_core.py
+├── README.md ← Project documentation
+└── requirements.txt ← Python dependencies
+
+
 
 ---
+
+
 
 ## 🧩 Core Components
 
-### **interfaces.py**
-- Defines abstract interfaces to decouple core logic from implementation.  
-- Promotes loose coupling and flexibility.  
-- Allows new modules to be added without modifying the core system.
 
-### **core.py**
-- Implements the orchestration pipeline: network scan → device profiling → traffic monitoring → policy enforcement → reporting.  
-- Follows the **Open-Closed Principle (OCP)**.  
-- Supports multi-device types: Laptop, Printer, Router, IoT.  
-- Outputs JSON reports with device, traffic, and violation details.  
-- **Run & Test:** Execute `core.py` directly with Python; results are automatically saved as JSON reports.
+
+### **interfaces.py**
+
+
+- Defines `IBlockchainLogger` & `IDatabase` for abstraction and future Fabric integration.  
+
+
+- Supports Phase 3 upgrade by replacing the simulated blockchain with a real Hyperledger Fabric connector.  
+
+
 
 ### **audit.py**
-- Simulates blockchain logging and SmartContract-based policy evaluation.  
-- Policy enforcement rules cover multiple device types:
-  - Printers: cannot access external IPs  
-  - Laptops: OS compliance check (Windows 11 / Ubuntu 22.04)  
-  - Routers: must have internal IP range  
-  - IoT: simulated open port detection  
+
+
+- Implements `JSONFileDatabase` for persistent storage of device, traffic, and violation data.  
+
+
+- Implements `SimulatedBlockchainAudit`:
+
+
+  - SHA-256 hash computation for each payload  
+
+
+  - Logs hash + metadata in `simulated_ledger.json`  
+
+
+  - Provides `verify_scan_integrity()` for Layer 4 audit verification  
+
+
+
+### **core.py**
+
+
+- `ScanResultParser` extracts full payload data.  
+
+
+- `_submit_to_chain()` handles off-chain storage → hash → blockchain log.  
+
+
+- `traffic_monitoring()` collects real scan port data.  
+
+
+- `generate_reports()` compiles results with `hash_registry`.  
+
+
+
+### **bensam_integration.py**
+
+
+- GUI bridge for scan parsing, report generation, and audit verification.  
+
+
+- New functions:
+
+
+  - `verify_scan_integrity(scan_id)` → checks end-to-end hash consistency  
+
+
+  - `get_hash_registry()` → returns all blockchain records for dashboard display  
+
+
 
 ---
+
+
 
 ## ✅ Testing
 
-The framework uses **pytest** for automated testing.
 
-**Why pytest?**  
-- Simple syntax with plain `assert` statements  
-- Fixtures for reusable test setup/teardown  
-- Parametrization for multiple inputs  
-- Rich plugin ecosystem for flexibility
+
+- Uses **pytest** for automated testing and verification.  
+
+
+- Test coverage includes scan parsing, device profiling, and blockchain simulation.
+
+
 
 **Example Test File: `tests/test_core.py`**
 
+
+
 ```python
+
+
 import pytest
+
+
 from core import BENSAMFramework
 
+
+
 @pytest.fixture
+
+
 def sample_input():
+
+
     return {"event": "scan", "status": "success"}
 
+
+
 @pytest.mark.parametrize("input_data", [
+
+
     {"event": "scan", "status": "success"},
+
+
     {"event": "monitor", "status": "failure"}
+
+
 ])
+
+
 def test_core_processing(input_data):
+
+
     core = BENSAMFramework()
-    result = core.run()  # runs scan, monitoring, and policy enforcement
+
+
+    result = core.run()  # runs scan, monitoring, policy enforcement
+
+
     assert isinstance(result, type(None))  # basic placeholder assertion
-```
 
 Run tests:
 
-```bash
-pytest -v
-```
+pytest 
+-v
+🛠️ Installation & Usage
+Clone the repository
+git
+ clone https://github.com/swhamdani/BENSAM-Framework.git
 
----
 
-## 🛠️ Installation & Usage
-
-### Clone the repository
-
-```bash
-git clone https://github.com/swhamdani/BENSAM-Framework.git
-cd BENSAM_Framework
-```
-
-### Install dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### Run core.py to execute framework
-
-```bash
+cd
+ BENSAM_Framework
+Install dependencies
+pip install 
+-r
+ requirements.txt
+Run framework
 python core.py
-```
 
-> Output JSON reports will be generated automatically without requiring any `ref_id` input.
+Reports and hashes are automatically generated.
 
-### Run tests
+Off-chain payloads are stored in data/payloads/.
 
-```bash
+Blockchain log simulation: data/simulated_ledger.json.
+
+Run tests
 pytest
-```
+📖 Future Directions (Phase 2 / Phase 3)
 
----
+Replace SimulatedBlockchainAudit with FabricBlockchainAudit for real Hyperledger Fabric logging.
 
-## 📖 Future Directions
+Advanced AI/ML anomaly detection for network events.
 
-- Integration with real-world **network scanning tools**  
-- Extended blockchain support beyond Hyperledger (e.g., Ethereum, Polygon)  
-- Advanced **AI/ML anomaly detection modules**  
-- Web-based dashboard for **visualizing audit logs and compliance reports**  
+Web dashboard for audit visualization.
 
----
+Multi-tenant network support with secure role-based access.
 
-## 📜 License
+Phase 1 sets the foundation: off-chain payload storage, SHA-256 hashing, simulated blockchain logging, and audit verification.
 
-This project is licensed under the **MIT License** – free to use, modify, and distribute with attribution.
+📜 License
+
+Licensed under MIT License – free to use, modify, and distribute with attribution.
