@@ -12,11 +12,7 @@ Phase 1 implements a **simulated blockchain audit layer** with off-chain payload
 
 ---
 
-
-
 ## 🚀 Key Features (Phase 1)
-
-
 
 - **Modular Architecture** – Components are loosely coupled, supporting easier upgrades and extensibility.  
 
@@ -37,136 +33,55 @@ Phase 1 implements a **simulated blockchain audit layer** with off-chain payload
 
 
 - **GUI Integration** – `bensam_integration.py` connects parsing, reporting, and verification to the interface layer.  
-
-
-
 ---
-
-
-
 ## 🏛️ Phase 1 Architecture Diagram
 
-
+```text
       +------------------+
-
-
       |  ScanResult.txt  |
-
-
       +--------+---------+
-
-
                |
-
-
                v
-
-
    +-----------------------+
-
-
-   | ScanResultParser.parse |   ← Extract host/IP, hostname, MAC, vendor, OS, ports, services, CVEs
-
-
+   | ScanResultParser.parse|   ← Extract host/IP, hostname, MAC, vendor, OS, ports, services, CVEs
    +-----------------------+
-
-
                |
-
-
                v
-
-
   +------------------------+
-
-
   | device_profiling()     |   ← Generate structured payload
-
-
   +------------------------+
-
-
                |
-
-
                v
-
-
   +------------------------+
-
-
   | compute_hash(payload)  |   ← SHA-256 hash of payload
-
-
   +------------------------+
-
-
                |
-
-
                v
-
-
   +------------------------+       +------------------------+
-
-
   | JSONFileDatabase.store()| ----> | Off-chain payload store |
-
-
   |  data/payloads/<scan_id>.json  |  ← Persistent JSON files
-
-
   +------------------------+       +------------------------+
-
-
                |
-
-
                v
-
-
   +------------------------+
-
-
-  | SimulatedBlockchainAudit |
-
-
+  | SimulatedBlockchainAudit|
   |  data/simulated_ledger.json |
-
-
   +------------------------+
-
-
                |
-
-
                v
-
-
     +--------------------+
-
-
     | Audit Verification |
-
-
     | verify_scan_integrity() |
-
-
     +--------------------+
 
-
-This diagram illustrates the **Phase 1 flow**: Scan results → parsing → payload profiling → hashing → off-chain storage → simulated blockchain logging → audit verification.
-
-
-
+> **Flow Summary:** Scan results → Parsing → Device Profiling → Payload Hashing → Off-Chain Storage → Simulated Blockchain Logging → Audit Verification
+```
 ---
-
-
 
 ## 📂 Project Structure (Phase 1)
 
 
-
+```
 BENSAM_Framework/
 ├── interfaces.py ← Abstract interfaces (IBlockchainLogger, IDatabase)
 ├── audit.py ← JSONFileDatabase + SimulatedBlockchainAudit
@@ -179,12 +94,12 @@ BENSAM_Framework/
 │ ├── violations.json
 │ ├── simulated_ledger.json
 │ └── payloads/
-│ └── <scan_id>.json ← One file per scan event
+│     └── <scan_id>.json ← One file per scan event
 ├── tests/ ← Automated pytest tests
 │ └── test_core.py
 ├── README.md ← Project documentation
 └── requirements.txt ← Python dependencies
-
+```
 
 
 ---
@@ -317,46 +232,36 @@ def test_core_processing(input_data):
 
 
     assert isinstance(result, type(None))  # basic placeholder assertion
-
+```
 Run tests:
 
-pytest 
--v
-🛠️ Installation & Usage
-Clone the repository
-git
- clone https://github.com/swhamdani/BENSAM-Framework.git
+```
+pytest -v
+```
 
+---
 
-cd
- BENSAM_Framework
-Install dependencies
-pip install 
--r
- requirements.txt
-Run framework
+## 🛠️ Installation & Usage
+
+### Clone the repository
+
+```
+git clone https://github.com/swhamdani/BENSAM-Framework.git
+cd BENSAM-Framework
+```
+### Install dependencies
+
+```
+pip install -r requirements.txt
+```
+
+### Run core.py to execute framework
+
+```
 python core.py
+```
 
-Reports and hashes are automatically generated.
 
-Off-chain payloads are stored in data/payloads/.
+## 📜 License
 
-Blockchain log simulation: data/simulated_ledger.json.
-
-Run tests
-pytest
-📖 Future Directions (Phase 2 / Phase 3)
-
-Replace SimulatedBlockchainAudit with FabricBlockchainAudit for real Hyperledger Fabric logging.
-
-Advanced AI/ML anomaly detection for network events.
-
-Web dashboard for audit visualization.
-
-Multi-tenant network support with secure role-based access.
-
-Phase 1 sets the foundation: off-chain payload storage, SHA-256 hashing, simulated blockchain logging, and audit verification.
-
-📜 License
-
-Licensed under MIT License – free to use, modify, and distribute with attribution.
+This project is licensed under the **MIT License** – free to use, modify, and distribute with attribution.
