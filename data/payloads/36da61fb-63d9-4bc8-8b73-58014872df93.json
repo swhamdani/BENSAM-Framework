@@ -1,0 +1,28 @@
+{
+    "ip": "192.168.10.1",
+    "hostname": "",
+    "mac": "88:76:B9:11:B7:B1",
+    "vendor": "D-Link",
+    "os": "Unknown",
+    "status": "up",
+    "open_ports": [
+        {
+            "port": 161,
+            "proto": "udp",
+            "state": "closed",
+            "service": "snmp",
+            "version": ""
+        }
+    ],
+    "services": [
+        "snmp"
+    ],
+    "cves": [],
+    "timestamp": "2026-03-08T07:40:30.854768Z",
+    "_meta": {
+        "scan_id": "36da61fb-63d9-4bc8-8b73-58014872df93",
+        "scan_type": "DeviceProfile",
+        "target": "192.168.10.1",
+        "timestamp": "2026-03-08T07:40:30.884801Z"
+    }
+}

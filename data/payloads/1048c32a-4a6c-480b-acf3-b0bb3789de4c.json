@@ -1,0 +1,36 @@
+{
+    "ip": "192.168.10.6",
+    "hostname": "",
+    "mac": "Unknown",
+    "vendor": "Unknown",
+    "os": "Unknown",
+    "status": "up",
+    "open_ports": [
+        {
+            "port": 161,
+            "proto": "udp",
+            "state": "closed",
+            "service": "snmp",
+            "version": ""
+        },
+        {
+            "port": 162,
+            "proto": "udp",
+            "state": "closed",
+            "service": "snmptrap",
+            "version": ""
+        }
+    ],
+    "services": [
+        "snmp",
+        "snmptrap"
+    ],
+    "cves": [],
+    "timestamp": "2026-03-08T07:40:31.186739Z",
+    "_meta": {
+        "scan_id": "1048c32a-4a6c-480b-acf3-b0bb3789de4c",
+        "scan_type": "DeviceProfile",
+        "target": "192.168.10.6",
+        "timestamp": "2026-03-08T07:40:31.206755Z"
+    }
+}

@@ -1,0 +1,44 @@
+{
+    "ip": "192.168.10.4",
+    "hostname": "",
+    "mac": "00:7C:2D:23:E7:C1",
+    "vendor": "Samsung Electronics",
+    "os": "Unknown",
+    "status": "up",
+    "open_ports": [
+        {
+            "port": 123,
+            "proto": "udp",
+            "state": "closed",
+            "service": "ntp",
+            "version": ""
+        },
+        {
+            "port": 161,
+            "proto": "udp",
+            "state": "closed",
+            "service": "snmp",
+            "version": ""
+        },
+        {
+            "port": 162,
+            "proto": "udp",
+            "state": "closed",
+            "service": "snmptrap",
+            "version": ""
+        }
+    ],
+    "services": [
+        "snmptrap",
+        "snmp",
+        "ntp"
+    ],
+    "cves": [],
+    "timestamp": "2026-03-08T07:40:31.087445Z",
+    "_meta": {
+        "scan_id": "92c0ec8f-a7bf-4109-9ea2-d28ce76ad85a",
+        "scan_type": "DeviceProfile",
+        "target": "192.168.10.4",
+        "timestamp": "2026-03-08T07:40:31.106487Z"
+    }
+}

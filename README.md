@@ -122,7 +122,7 @@ pytest -v
 
 ```bash
 git clone https://github.com/swhamdani/BENSAM-Framework.git
-cd BENSAM-Framework
+cd BENSAM_Framework
 ```
 
 ### Install dependencies

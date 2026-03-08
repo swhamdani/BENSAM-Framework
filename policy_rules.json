@@ -1,0 +1,15 @@
+{
+    "blocked_ports": [
+        23,
+        21,
+        445
+    ],
+    "allowed_os": [
+        "Windows 11",
+        "Windows 10",
+        "Ubuntu 22.04",
+        "Unknown"
+    ],
+    "internal_network_prefix": "192.168.",
+    "iot_open_port_limit": 2
+}

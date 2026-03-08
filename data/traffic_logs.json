@@ -1,0 +1,592 @@
+[
+    {
+        "src": "192.168.10.6",
+        "dst": "scanner",
+        "port": 135,
+        "proto": "tcp",
+        "service": "msrpc",
+        "state": "open",
+        "version": "Microsoft Windows RPC",
+        "logged_at": "2026-03-08T06:21:20.443174"
+    },
+    {
+        "src": "192.168.10.6",
+        "dst": "scanner",
+        "port": 139,
+        "proto": "tcp",
+        "service": "netbios-ssn",
+        "state": "open",
+        "version": "Microsoft Windows netbios-ssn",
+        "logged_at": "2026-03-08T06:21:20.464190"
+    },
+    {
+        "src": "192.168.10.6",
+        "dst": "scanner",
+        "port": 445,
+        "proto": "tcp",
+        "service": "microsoft-ds?",
+        "state": "open",
+        "version": "",
+        "logged_at": "2026-03-08T06:21:20.493887"
+    },
+    {
+        "src": "192.168.10.6",
+        "dst": "scanner",
+        "port": 3389,
+        "proto": "tcp",
+        "service": "ms-wbt-server",
+        "state": "open",
+        "version": "",
+        "logged_at": "2026-03-08T06:21:20.526863"
+    },
+    {
+        "src": "192.168.10.6",
+        "dst": "scanner",
+        "port": 9000,
+        "proto": "tcp",
+        "service": "tcpwrapped",
+        "state": "open",
+        "version": "",
+        "logged_at": "2026-03-08T06:21:20.567485"
+    },
+    {
+        "src": "192.168.10.6",
+        "dst": "scanner",
+        "port": 9010,
+        "proto": "tcp",
+        "service": "tcpwrapped",
+        "state": "open",
+        "version": "",
+        "logged_at": "2026-03-08T06:21:20.594477"
+    },
+    {
+        "src": "192.168.10.6",
+        "dst": "scanner",
+        "port": 135,
+        "proto": "tcp",
+        "service": "msrpc",
+        "state": "open",
+        "version": "Microsoft Windows RPC",
+        "logged_at": "2026-03-08T06:21:20.629138"
+    },
+    {
+        "src": "192.168.10.6",
+        "dst": "scanner",
+        "port": 139,
+        "proto": "tcp",
+        "service": "netbios-ssn",
+        "state": "open",
+        "version": "Microsoft Windows netbios-ssn",
+        "logged_at": "2026-03-08T06:21:20.689201"
+    },
+    {
+        "src": "192.168.10.6",
+        "dst": "scanner",
+        "port": 445,
+        "proto": "tcp",
+        "service": "microsoft-ds?",
+        "state": "open",
+        "version": "",
+        "logged_at": "2026-03-08T06:21:20.712982"
+    },
+    {
+        "src": "192.168.10.6",
+        "dst": "scanner",
+        "port": 3389,
+        "proto": "tcp",
+        "service": "ms-wbt-server",
+        "state": "open",
+        "version": "",
+        "logged_at": "2026-03-08T06:21:20.734379"
+    },
+    {
+        "src": "192.168.10.6",
+        "dst": "scanner",
+        "port": 9000,
+        "proto": "tcp",
+        "service": "tcpwrapped",
+        "state": "open",
+        "version": "",
+        "logged_at": "2026-03-08T06:21:20.767530"
+    },
+    {
+        "src": "192.168.10.6",
+        "dst": "scanner",
+        "port": 9010,
+        "proto": "tcp",
+        "service": "tcpwrapped",
+        "state": "open",
+        "version": "",
+        "logged_at": "2026-03-08T06:21:20.795147"
+    },
+    {
+        "src": "192.168.10.1",
+        "dst": "scanner",
+        "port": 161,
+        "proto": "udp",
+        "service": "snmp",
+        "state": "closed",
+        "version": "",
+        "logged_at": "2026-03-08T07:40:31.487299"
+    },
+    {
+        "src": "192.168.10.4",
+        "dst": "scanner",
+        "port": 123,
+        "proto": "udp",
+        "service": "ntp",
+        "state": "closed",
+        "version": "",
+        "logged_at": "2026-03-08T07:40:31.502307"
+    },
+    {
+        "src": "192.168.10.4",
+        "dst": "scanner",
+        "port": 161,
+        "proto": "udp",
+        "service": "snmp",
+        "state": "closed",
+        "version": "",
+        "logged_at": "2026-03-08T07:40:31.515328"
+    },
+    {
+        "src": "192.168.10.4",
+        "dst": "scanner",
+        "port": 162,
+        "proto": "udp",
+        "service": "snmptrap",
+        "state": "closed",
+        "version": "",
+        "logged_at": "2026-03-08T07:40:31.530811"
+    },
+    {
+        "src": "192.168.10.10",
+        "dst": "scanner",
+        "port": 123,
+        "proto": "udp",
+        "service": "ntp",
+        "state": "closed",
+        "version": "",
+        "logged_at": "2026-03-08T07:40:31.549868"
+    },
+    {
+        "src": "192.168.10.10",
+        "dst": "scanner",
+        "port": 161,
+        "proto": "udp",
+        "service": "snmp",
+        "state": "closed",
+        "version": "",
+        "logged_at": "2026-03-08T07:40:31.577873"
+    },
+    {
+        "src": "192.168.10.10",
+        "dst": "scanner",
+        "port": 162,
+        "proto": "udp",
+        "service": "snmptrap",
+        "state": "closed",
+        "version": "",
+        "logged_at": "2026-03-08T07:40:31.606876"
+    },
+    {
+        "src": "192.168.10.6",
+        "dst": "scanner",
+        "port": 161,
+        "proto": "udp",
+        "service": "snmp",
+        "state": "closed",
+        "version": "",
+        "logged_at": "2026-03-08T07:40:31.633133"
+    },
+    {
+        "src": "192.168.10.6",
+        "dst": "scanner",
+        "port": 162,
+        "proto": "udp",
+        "service": "snmptrap",
+        "state": "closed",
+        "version": "",
+        "logged_at": "2026-03-08T07:40:31.648139"
+    },
+    {
+        "src": "192.168.10.1",
+        "dst": "scanner",
+        "port": 161,
+        "proto": "udp",
+        "service": "snmp",
+        "state": "closed",
+        "version": "",
+        "logged_at": "2026-03-08T07:40:31.661164"
+    },
+    {
+        "src": "192.168.10.4",
+        "dst": "scanner",
+        "port": 123,
+        "proto": "udp",
+        "service": "ntp",
+        "state": "closed",
+        "version": "",
+        "logged_at": "2026-03-08T07:40:31.675137"
+    },
+    {
+        "src": "192.168.10.4",
+        "dst": "scanner",
+        "port": 161,
+        "proto": "udp",
+        "service": "snmp",
+        "state": "closed",
+        "version": "",
+        "logged_at": "2026-03-08T07:40:31.690136"
+    },
+    {
+        "src": "192.168.10.4",
+        "dst": "scanner",
+        "port": 162,
+        "proto": "udp",
+        "service": "snmptrap",
+        "state": "closed",
+        "version": "",
+        "logged_at": "2026-03-08T07:40:31.706150"
+    },
+    {
+        "src": "192.168.10.10",
+        "dst": "scanner",
+        "port": 123,
+        "proto": "udp",
+        "service": "ntp",
+        "state": "closed",
+        "version": "",
+        "logged_at": "2026-03-08T07:40:31.719387"
+    },
+    {
+        "src": "192.168.10.10",
+        "dst": "scanner",
+        "port": 161,
+        "proto": "udp",
+        "service": "snmp",
+        "state": "closed",
+        "version": "",
+        "logged_at": "2026-03-08T07:40:31.731128"
+    },
+    {
+        "src": "192.168.10.10",
+        "dst": "scanner",
+        "port": 162,
+        "proto": "udp",
+        "service": "snmptrap",
+        "state": "closed",
+        "version": "",
+        "logged_at": "2026-03-08T07:40:31.742127"
+    },
+    {
+        "src": "192.168.10.6",
+        "dst": "scanner",
+        "port": 161,
+        "proto": "udp",
+        "service": "snmp",
+        "state": "closed",
+        "version": "",
+        "logged_at": "2026-03-08T07:40:31.754127"
+    },
+    {
+        "src": "192.168.10.6",
+        "dst": "scanner",
+        "port": 162,
+        "proto": "udp",
+        "service": "snmptrap",
+        "state": "closed",
+        "version": "",
+        "logged_at": "2026-03-08T07:40:31.767127"
+    },
+    {
+        "src": "192.168.10.1",
+        "dst": "scanner",
+        "port": 161,
+        "proto": "udp",
+        "service": "snmp",
+        "state": "closed",
+        "version": "",
+        "logged_at": "2026-03-08T07:40:31.781130"
+    },
+    {
+        "src": "192.168.10.4",
+        "dst": "scanner",
+        "port": 123,
+        "proto": "udp",
+        "service": "ntp",
+        "state": "closed",
+        "version": "",
+        "logged_at": "2026-03-08T07:40:31.793260"
+    },
+    {
+        "src": "192.168.10.4",
+        "dst": "scanner",
+        "port": 161,
+        "proto": "udp",
+        "service": "snmp",
+        "state": "closed",
+        "version": "",
+        "logged_at": "2026-03-08T07:40:31.806128"
+    },
+    {
+        "src": "192.168.10.4",
+        "dst": "scanner",
+        "port": 162,
+        "proto": "udp",
+        "service": "snmptrap",
+        "state": "closed",
+        "version": "",
+        "logged_at": "2026-03-08T07:40:31.818193"
+    },
+    {
+        "src": "192.168.10.10",
+        "dst": "scanner",
+        "port": 123,
+        "proto": "udp",
+        "service": "ntp",
+        "state": "closed",
+        "version": "",
+        "logged_at": "2026-03-08T07:40:31.832907"
+    },
+    {
+        "src": "192.168.10.10",
+        "dst": "scanner",
+        "port": 161,
+        "proto": "udp",
+        "service": "snmp",
+        "state": "closed",
+        "version": "",
+        "logged_at": "2026-03-08T07:40:31.845908"
+    },
+    {
+        "src": "192.168.10.10",
+        "dst": "scanner",
+        "port": 162,
+        "proto": "udp",
+        "service": "snmptrap",
+        "state": "closed",
+        "version": "",
+        "logged_at": "2026-03-08T07:40:31.859908"
+    },
+    {
+        "src": "192.168.10.6",
+        "dst": "scanner",
+        "port": 161,
+        "proto": "udp",
+        "service": "snmp",
+        "state": "closed",
+        "version": "",
+        "logged_at": "2026-03-08T07:40:31.873597"
+    },
+    {
+        "src": "192.168.10.6",
+        "dst": "scanner",
+        "port": 162,
+        "proto": "udp",
+        "service": "snmptrap",
+        "state": "closed",
+        "version": "",
+        "logged_at": "2026-03-08T07:40:31.884699"
+    },
+    {
+        "src": "192.168.10.6",
+        "dst": "scanner",
+        "port": 1000,
+        "proto": "tcp",
+        "service": "cadlock",
+        "state": "closed",
+        "version": "",
+        "logged_at": "2026-03-08T07:41:18.524080"
+    },
+    {
+        "src": "192.168.10.6",
+        "dst": "scanner",
+        "port": 1000,
+        "proto": "tcp",
+        "service": "cadlock",
+        "state": "closed",
+        "version": "",
+        "logged_at": "2026-03-08T07:41:18.553484"
+    },
+    {
+        "src": "192.168.10.6",
+        "dst": "scanner",
+        "port": 135,
+        "proto": "tcp",
+        "service": "msrpc",
+        "state": "open",
+        "version": "Microsoft Windows RPC",
+        "logged_at": "2026-03-08T07:48:01.108576"
+    },
+    {
+        "src": "192.168.10.6",
+        "dst": "scanner",
+        "port": 139,
+        "proto": "tcp",
+        "service": "netbios-ssn",
+        "state": "open",
+        "version": "Microsoft Windows netbios-ssn",
+        "logged_at": "2026-03-08T07:48:01.127681"
+    },
+    {
+        "src": "192.168.10.6",
+        "dst": "scanner",
+        "port": 445,
+        "proto": "tcp",
+        "service": "microsoft-ds?",
+        "state": "open",
+        "version": "",
+        "logged_at": "2026-03-08T07:48:01.158483"
+    },
+    {
+        "src": "192.168.10.6",
+        "dst": "scanner",
+        "port": 3389,
+        "proto": "tcp",
+        "service": "ms-wbt-server",
+        "state": "open",
+        "version": "",
+        "logged_at": "2026-03-08T07:48:01.177726"
+    },
+    {
+        "src": "192.168.10.6",
+        "dst": "scanner",
+        "port": 9000,
+        "proto": "tcp",
+        "service": "tcpwrapped",
+        "state": "open",
+        "version": "",
+        "logged_at": "2026-03-08T07:48:01.194088"
+    },
+    {
+        "src": "192.168.10.6",
+        "dst": "scanner",
+        "port": 9010,
+        "proto": "tcp",
+        "service": "tcpwrapped",
+        "state": "open",
+        "version": "",
+        "logged_at": "2026-03-08T07:48:01.210699"
+    },
+    {
+        "src": "192.168.10.6",
+        "dst": "scanner",
+        "port": 135,
+        "proto": "tcp",
+        "service": "msrpc",
+        "state": "open",
+        "version": "Microsoft Windows RPC",
+        "logged_at": "2026-03-08T07:48:01.244311"
+    },
+    {
+        "src": "192.168.10.6",
+        "dst": "scanner",
+        "port": 139,
+        "proto": "tcp",
+        "service": "netbios-ssn",
+        "state": "open",
+        "version": "Microsoft Windows netbios-ssn",
+        "logged_at": "2026-03-08T07:48:01.264676"
+    },
+    {
+        "src": "192.168.10.6",
+        "dst": "scanner",
+        "port": 445,
+        "proto": "tcp",
+        "service": "microsoft-ds?",
+        "state": "open",
+        "version": "",
+        "logged_at": "2026-03-08T07:48:01.284726"
+    },
+    {
+        "src": "192.168.10.6",
+        "dst": "scanner",
+        "port": 3389,
+        "proto": "tcp",
+        "service": "ms-wbt-server",
+        "state": "open",
+        "version": "",
+        "logged_at": "2026-03-08T07:48:01.305138"
+    },
+    {
+        "src": "192.168.10.6",
+        "dst": "scanner",
+        "port": 9000,
+        "proto": "tcp",
+        "service": "tcpwrapped",
+        "state": "open",
+        "version": "",
+        "logged_at": "2026-03-08T07:48:01.321172"
+    },
+    {
+        "src": "192.168.10.6",
+        "dst": "scanner",
+        "port": 9010,
+        "proto": "tcp",
+        "service": "tcpwrapped",
+        "state": "open",
+        "version": "",
+        "logged_at": "2026-03-08T07:48:01.352585"
+    },
+    {
+        "src": "192.168.10.6",
+        "dst": "scanner",
+        "port": 135,
+        "proto": "tcp",
+        "service": "msrpc",
+        "state": "open",
+        "version": "Microsoft Windows RPC",
+        "logged_at": "2026-03-08T07:48:01.384457"
+    },
+    {
+        "src": "192.168.10.6",
+        "dst": "scanner",
+        "port": 139,
+        "proto": "tcp",
+        "service": "netbios-ssn",
+        "state": "open",
+        "version": "Microsoft Windows netbios-ssn",
+        "logged_at": "2026-03-08T07:48:01.416124"
+    },
+    {
+        "src": "192.168.10.6",
+        "dst": "scanner",
+        "port": 445,
+        "proto": "tcp",
+        "service": "microsoft-ds?",
+        "state": "open",
+        "version": "",
+        "logged_at": "2026-03-08T07:48:01.448126"
+    },
+    {
+        "src": "192.168.10.6",
+        "dst": "scanner",
+        "port": 3389,
+        "proto": "tcp",
+        "service": "ms-wbt-server",
+        "state": "open",
+        "version": "",
+        "logged_at": "2026-03-08T07:48:01.463800"
+    },
+    {
+        "src": "192.168.10.6",
+        "dst": "scanner",
+        "port": 9000,
+        "proto": "tcp",
+        "service": "tcpwrapped",
+        "state": "open",
+        "version": "",
+        "logged_at": "2026-03-08T07:48:01.494177"
+    },
+    {
+        "src": "192.168.10.6",
+        "dst": "scanner",
+        "port": 9010,
+        "proto": "tcp",
+        "service": "tcpwrapped",
+        "state": "open",
+        "version": "",
+        "logged_at": "2026-03-08T07:48:01.511060"
+    }
+]

@@ -1,0 +1,392 @@
+[
+    {
+        "violation_id": "b09c014c-c456-4d0a-ba22-7b0cceb9ef17",
+        "device": {
+            "ip": "192.168.10.6",
+            "type": "Unknown",
+            "os": "Windows",
+            "mac": "Unknown",
+            "ports": [
+                135,
+                139,
+                445,
+                3389,
+                9000,
+                9010
+            ],
+            "services": [
+                "netbios-ssn",
+                "msrpc",
+                "ms-wbt-server",
+                "tcpwrapped",
+                "microsoft-ds?"
+            ],
+            "last_seen": "2026-03-08T06:21:20.410050",
+            "name": "Host_192_168_10_6",
+            "hostname": "",
+            "vendor": "Unknown",
+            "status": "up",
+            "open_ports": [
+                {
+                    "port": 135,
+                    "proto": "tcp",
+                    "state": "open",
+                    "service": "msrpc",
+                    "version": "Microsoft Windows RPC"
+                },
+                {
+                    "port": 139,
+                    "proto": "tcp",
+                    "state": "open",
+                    "service": "netbios-ssn",
+                    "version": "Microsoft Windows netbios-ssn"
+                },
+                {
+                    "port": 445,
+                    "proto": "tcp",
+                    "state": "open",
+                    "service": "microsoft-ds?",
+                    "version": ""
+                },
+                {
+                    "port": 3389,
+                    "proto": "tcp",
+                    "state": "open",
+                    "service": "ms-wbt-server",
+                    "version": ""
+                },
+                {
+                    "port": 9000,
+                    "proto": "tcp",
+                    "state": "open",
+                    "service": "tcpwrapped",
+                    "version": ""
+                },
+                {
+                    "port": 9010,
+                    "proto": "tcp",
+                    "state": "open",
+                    "service": "tcpwrapped",
+                    "version": ""
+                }
+            ],
+            "cves": [],
+            "timestamp": "2026-03-08T06:21:20.376496Z"
+        },
+        "rule": "Blocked port open: 445",
+        "severity": "High",
+        "timestamp": "2026-03-08T06:21:20.830525"
+    },
+    {
+        "violation_id": "1be78fd1-c965-4bb0-b747-12b4ac432546",
+        "device": {
+            "ip": "192.168.10.6",
+            "type": "Unknown",
+            "os": "Windows",
+            "mac": "Unknown",
+            "ports": [
+                135,
+                139,
+                445,
+                3389,
+                9000,
+                9010
+            ],
+            "services": [
+                "netbios-ssn",
+                "msrpc",
+                "ms-wbt-server",
+                "tcpwrapped",
+                "microsoft-ds?"
+            ],
+            "last_seen": "2026-03-08T06:21:20.410050",
+            "name": "Host_192_168_10_6",
+            "hostname": "",
+            "vendor": "Unknown",
+            "status": "up",
+            "open_ports": [
+                {
+                    "port": 135,
+                    "proto": "tcp",
+                    "state": "open",
+                    "service": "msrpc",
+                    "version": "Microsoft Windows RPC"
+                },
+                {
+                    "port": 139,
+                    "proto": "tcp",
+                    "state": "open",
+                    "service": "netbios-ssn",
+                    "version": "Microsoft Windows netbios-ssn"
+                },
+                {
+                    "port": 445,
+                    "proto": "tcp",
+                    "state": "open",
+                    "service": "microsoft-ds?",
+                    "version": ""
+                },
+                {
+                    "port": 3389,
+                    "proto": "tcp",
+                    "state": "open",
+                    "service": "ms-wbt-server",
+                    "version": ""
+                },
+                {
+                    "port": 9000,
+                    "proto": "tcp",
+                    "state": "open",
+                    "service": "tcpwrapped",
+                    "version": ""
+                },
+                {
+                    "port": 9010,
+                    "proto": "tcp",
+                    "state": "open",
+                    "service": "tcpwrapped",
+                    "version": ""
+                }
+            ],
+            "cves": [],
+            "timestamp": "2026-03-08T06:21:20.376496Z"
+        },
+        "rule": "Blocked port open: 445",
+        "severity": "High",
+        "timestamp": "2026-03-08T06:21:20.894499"
+    },
+    {
+        "violation_id": "a422b2af-999f-4258-bf9d-d8b376080a9c",
+        "device": {
+            "ip": "192.168.10.6",
+            "type": "Unknown",
+            "os": "Windows",
+            "mac": "Unknown",
+            "ports": [
+                135,
+                139,
+                445,
+                3389,
+                9000,
+                9010
+            ],
+            "services": [
+                "tcpwrapped",
+                "netbios-ssn",
+                "ms-wbt-server",
+                "msrpc",
+                "microsoft-ds?"
+            ],
+            "last_seen": "2026-03-08T07:48:01.071736",
+            "name": "Host_192_168_10_6",
+            "hostname": "",
+            "vendor": "Unknown",
+            "status": "up",
+            "open_ports": [
+                {
+                    "port": 135,
+                    "proto": "tcp",
+                    "state": "open",
+                    "service": "msrpc",
+                    "version": "Microsoft Windows RPC"
+                },
+                {
+                    "port": 139,
+                    "proto": "tcp",
+                    "state": "open",
+                    "service": "netbios-ssn",
+                    "version": "Microsoft Windows netbios-ssn"
+                },
+                {
+                    "port": 445,
+                    "proto": "tcp",
+                    "state": "open",
+                    "service": "microsoft-ds?",
+                    "version": ""
+                },
+                {
+                    "port": 3389,
+                    "proto": "tcp",
+                    "state": "open",
+                    "service": "ms-wbt-server",
+                    "version": ""
+                },
+                {
+                    "port": 9000,
+                    "proto": "tcp",
+                    "state": "open",
+                    "service": "tcpwrapped",
+                    "version": ""
+                },
+                {
+                    "port": 9010,
+                    "proto": "tcp",
+                    "state": "open",
+                    "service": "tcpwrapped",
+                    "version": ""
+                }
+            ],
+            "cves": [],
+            "timestamp": "2026-03-08T07:48:01.044388Z"
+        },
+        "rule": "Blocked port open: 445",
+        "severity": "High",
+        "timestamp": "2026-03-08T07:48:01.544570"
+    },
+    {
+        "violation_id": "478ddef1-b77e-41bb-90ae-fe8b1f88d860",
+        "device": {
+            "ip": "192.168.10.6",
+            "type": "Unknown",
+            "os": "Windows",
+            "mac": "Unknown",
+            "ports": [
+                135,
+                139,
+                445,
+                3389,
+                9000,
+                9010
+            ],
+            "services": [
+                "tcpwrapped",
+                "netbios-ssn",
+                "ms-wbt-server",
+                "msrpc",
+                "microsoft-ds?"
+            ],
+            "last_seen": "2026-03-08T07:48:01.071736",
+            "name": "Host_192_168_10_6",
+            "hostname": "",
+            "vendor": "Unknown",
+            "status": "up",
+            "open_ports": [
+                {
+                    "port": 135,
+                    "proto": "tcp",
+                    "state": "open",
+                    "service": "msrpc",
+                    "version": "Microsoft Windows RPC"
+                },
+                {
+                    "port": 139,
+                    "proto": "tcp",
+                    "state": "open",
+                    "service": "netbios-ssn",
+                    "version": "Microsoft Windows netbios-ssn"
+                },
+                {
+                    "port": 445,
+                    "proto": "tcp",
+                    "state": "open",
+                    "service": "microsoft-ds?",
+                    "version": ""
+                },
+                {
+                    "port": 3389,
+                    "proto": "tcp",
+                    "state": "open",
+                    "service": "ms-wbt-server",
+                    "version": ""
+                },
+                {
+                    "port": 9000,
+                    "proto": "tcp",
+                    "state": "open",
+                    "service": "tcpwrapped",
+                    "version": ""
+                },
+                {
+                    "port": 9010,
+                    "proto": "tcp",
+                    "state": "open",
+                    "service": "tcpwrapped",
+                    "version": ""
+                }
+            ],
+            "cves": [],
+            "timestamp": "2026-03-08T07:48:01.044388Z"
+        },
+        "rule": "Blocked port open: 445",
+        "severity": "High",
+        "timestamp": "2026-03-08T07:48:01.604319"
+    },
+    {
+        "violation_id": "65ad89a3-86ff-4e44-a9e1-241eea70e8a8",
+        "device": {
+            "ip": "192.168.10.6",
+            "type": "Unknown",
+            "os": "Windows",
+            "mac": "Unknown",
+            "ports": [
+                135,
+                139,
+                445,
+                3389,
+                9000,
+                9010
+            ],
+            "services": [
+                "tcpwrapped",
+                "netbios-ssn",
+                "ms-wbt-server",
+                "msrpc",
+                "microsoft-ds?"
+            ],
+            "last_seen": "2026-03-08T07:48:01.071736",
+            "name": "Host_192_168_10_6",
+            "hostname": "",
+            "vendor": "Unknown",
+            "status": "up",
+            "open_ports": [
+                {
+                    "port": 135,
+                    "proto": "tcp",
+                    "state": "open",
+                    "service": "msrpc",
+                    "version": "Microsoft Windows RPC"
+                },
+                {
+                    "port": 139,
+                    "proto": "tcp",
+                    "state": "open",
+                    "service": "netbios-ssn",
+                    "version": "Microsoft Windows netbios-ssn"
+                },
+                {
+                    "port": 445,
+                    "proto": "tcp",
+                    "state": "open",
+                    "service": "microsoft-ds?",
+                    "version": ""
+                },
+                {
+                    "port": 3389,
+                    "proto": "tcp",
+                    "state": "open",
+                    "service": "ms-wbt-server",
+                    "version": ""
+                },
+                {
+                    "port": 9000,
+                    "proto": "tcp",
+                    "state": "open",
+                    "service": "tcpwrapped",
+                    "version": ""
+                },
+                {
+                    "port": 9010,
+                    "proto": "tcp",
+                    "state": "open",
+                    "service": "tcpwrapped",
+                    "version": ""
+                }
+            ],
+            "cves": [],
+            "timestamp": "2026-03-08T07:48:01.044388Z"
+        },
+        "rule": "Blocked port open: 445",
+        "severity": "High",
+        "timestamp": "2026-03-08T07:48:01.652109"
+    }
+]

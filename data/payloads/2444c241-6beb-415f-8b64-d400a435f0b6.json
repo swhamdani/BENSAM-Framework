@@ -1,0 +1,18 @@
+{
+    "ip": "192.168.10.4",
+    "hostname": "",
+    "mac": "00:7C:2D:23:E7:C1",
+    "vendor": "Samsung Electronics",
+    "os": "Unknown",
+    "status": "up",
+    "open_ports": [],
+    "services": [],
+    "cves": [],
+    "timestamp": "2026-03-08T07:37:36.781019Z",
+    "_meta": {
+        "scan_id": "2444c241-6beb-415f-8b64-d400a435f0b6",
+        "scan_type": "DeviceProfile",
+        "target": "192.168.10.4",
+        "timestamp": "2026-03-08T07:37:36.797667Z"
+    }
+}

@@ -1,0 +1,2594 @@
+{
+    "3b75eb03-0932-43ac-9095-cfc37abe0265": {
+        "scan_id": "3b75eb03-0932-43ac-9095-cfc37abe0265",
+        "hash": "4aae1398274ba520563c7ff061cf50c0695d02e75482b194736b4404ad35187e",
+        "scan_type": "DeviceProfile",
+        "target": "192.168.10.6",
+        "ref_id": "3b75eb03-0932-43ac-9095-cfc37abe0265",
+        "timestamp": "2026-03-08T06:21:20.376496Z",
+        "tx_id": "TX-380764C05C244924A5E2E23AFFDFE5A5"
+    },
+    "a3cac45d-900f-40a3-951e-a3d816b6e2a7": {
+        "scan_id": "a3cac45d-900f-40a3-951e-a3d816b6e2a7",
+        "hash": "73ecafe02c1ee50d131a6895a340c985972e461ef01a8d38761c77165a90d8a3",
+        "scan_type": "DeviceProfile",
+        "target": "192.168.10.6",
+        "ref_id": "a3cac45d-900f-40a3-951e-a3d816b6e2a7",
+        "timestamp": "2026-03-08T06:21:20.412063Z",
+        "tx_id": "TX-71277110661D4875965BD9FCA3916FB4"
+    },
+    "VIOLATION_9c87e7d5-bc4c-40d3-92aa-c4ebede2bf76": {
+        "violation_id": "9c87e7d5-bc4c-40d3-92aa-c4ebede2bf76",
+        "scan_id": "unknown",
+        "target": "192.168.10.6",
+        "rule": "Blocked port open: 445",
+        "severity": "High",
+        "timestamp": "2026-03-08T06:21:20.830525Z",
+        "tx_id": "TX-76C9CCE2C19F4493B3F6C3681F233469"
+    },
+    "VIOLATION_e2239ee7-a280-4c87-9286-97dcb5d74861": {
+        "violation_id": "e2239ee7-a280-4c87-9286-97dcb5d74861",
+        "scan_id": "unknown",
+        "target": "192.168.10.6",
+        "rule": "Blocked port open: 445",
+        "severity": "High",
+        "timestamp": "2026-03-08T06:21:20.894499Z",
+        "tx_id": "TX-F240FBA1545D4ECA9D0220170D1AFCB9"
+    },
+    "c9611638-81a1-4eac-9d22-e6e8575bb10d": {
+        "scan_id": "c9611638-81a1-4eac-9d22-e6e8575bb10d",
+        "hash": "c283c02abf0a329821dbb6ccc7acd06e632774fbc1a312d52560da843340a8a8",
+        "scan_type": "DeviceProfile",
+        "target": "192.168.10.1",
+        "ref_id": "c9611638-81a1-4eac-9d22-e6e8575bb10d",
+        "timestamp": "2026-03-08T07:37:36.781019Z",
+        "tx_id": "TX-419B042F8D014D38A1F03AEF2A4A7A9A"
+    },
+    "2444c241-6beb-415f-8b64-d400a435f0b6": {
+        "scan_id": "2444c241-6beb-415f-8b64-d400a435f0b6",
+        "hash": "3f8240d853938a9853e1110c2dd485380e2bf76c015ba991b117795b5e67ac63",
+        "scan_type": "DeviceProfile",
+        "target": "192.168.10.4",
+        "ref_id": "2444c241-6beb-415f-8b64-d400a435f0b6",
+        "timestamp": "2026-03-08T07:37:36.797667Z",
+        "tx_id": "TX-88843C62D6C547A59214560E9E254519"
+    },
+    "29a72999-e8cf-441d-b45e-ea45ff9d25d4": {
+        "scan_id": "29a72999-e8cf-441d-b45e-ea45ff9d25d4",
+        "hash": "3b7d3ee69b1f004a47f0ecd92ed6c358b7e5fc659a8fa34765d40912777bcdbe",
+        "scan_type": "DeviceProfile",
+        "target": "192.168.10.10",
+        "ref_id": "29a72999-e8cf-441d-b45e-ea45ff9d25d4",
+        "timestamp": "2026-03-08T07:37:36.828936Z",
+        "tx_id": "TX-49D228B264B1460DB9827964B093BB51"
+    },
+    "4804b0ee-87b1-48b5-b3bb-8bbd35667a3a": {
+        "scan_id": "4804b0ee-87b1-48b5-b3bb-8bbd35667a3a",
+        "hash": "0bb14b70e2d2bc7f70779dd3e74389a43410da959492f6a74bfb8ed2aa6efb05",
+        "scan_type": "DeviceProfile",
+        "target": "192.168.10.6",
+        "ref_id": "4804b0ee-87b1-48b5-b3bb-8bbd35667a3a",
+        "timestamp": "2026-03-08T07:37:36.847819Z",
+        "tx_id": "TX-7EC3B1C4F5624174916B2475117E0B9A"
+    },
+    "78e1c6b0-994b-40c4-83f4-e2f3faa21b4e": {
+        "scan_id": "78e1c6b0-994b-40c4-83f4-e2f3faa21b4e",
+        "hash": "aaa73cd505e58967607c82c153c6ce2db8a136a9c908b57e4a647cb58e0f9763",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "78e1c6b0-994b-40c4-83f4-e2f3faa21b4e",
+        "timestamp": "2026-03-08T07:38:13.197228Z",
+        "tx_id": "TX-E7475C86E6FF434E8D22BB4E41222473"
+    },
+    "e996ed7d-c781-4f8a-9c79-09ebfd1b15cb": {
+        "scan_id": "e996ed7d-c781-4f8a-9c79-09ebfd1b15cb",
+        "hash": "afafb0c9fe1d6b39ca5d12110d483fa4f2654fd301e297521e119d7f1d0f5789",
+        "scan_type": "DeviceProfile",
+        "target": "192.168.10.1",
+        "ref_id": "e996ed7d-c781-4f8a-9c79-09ebfd1b15cb",
+        "timestamp": "2026-03-08T07:38:13.213509Z",
+        "tx_id": "TX-6D664611352D4594947E31A1FEDECF6B"
+    },
+    "8fee7a4f-168e-4192-8220-cd625a5107db": {
+        "scan_id": "8fee7a4f-168e-4192-8220-cd625a5107db",
+        "hash": "17b010f0fc1ba57b7b708b1d7c806656b540156e30460ce3cc832076bfc668e6",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "8fee7a4f-168e-4192-8220-cd625a5107db",
+        "timestamp": "2026-03-08T07:38:13.252594Z",
+        "tx_id": "TX-FC56760A8D9F43D2907C17B619766C0B"
+    },
+    "66199169-166f-4a59-a8f8-6f0fdab5c965": {
+        "scan_id": "66199169-166f-4a59-a8f8-6f0fdab5c965",
+        "hash": "351408f5951dd150c6f261391407df25c1bbd14bba41e396b3d838b88b0cd970",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "66199169-166f-4a59-a8f8-6f0fdab5c965",
+        "timestamp": "2026-03-08T07:38:13.305751Z",
+        "tx_id": "TX-0936BAF4E00D413EB63D87CD86ACA34B"
+    },
+    "02f02876-4527-4655-b7e7-d8d6effeeb1b": {
+        "scan_id": "02f02876-4527-4655-b7e7-d8d6effeeb1b",
+        "hash": "b9bc1088d3e504d684dc76724052fcb822d06c806fa5e5b03e65b858576b31f3",
+        "scan_type": "DeviceProfile",
+        "target": "192.168.10.4",
+        "ref_id": "02f02876-4527-4655-b7e7-d8d6effeeb1b",
+        "timestamp": "2026-03-08T07:38:13.373601Z",
+        "tx_id": "TX-53C24FA99C47405EA6EEA0A905F19534"
+    },
+    "f751c66b-8d97-45a6-8e92-52635c203f98": {
+        "scan_id": "f751c66b-8d97-45a6-8e92-52635c203f98",
+        "hash": "8d268e8eda329e78dadab7a494b144a9d6ef5933e1ad4a3ff2fcf454a98eb418",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "f751c66b-8d97-45a6-8e92-52635c203f98",
+        "timestamp": "2026-03-08T07:38:13.433147Z",
+        "tx_id": "TX-2882A2D5147C4748A8C3F0991AA85696"
+    },
+    "38aa2654-5ed3-4358-96dd-a064d2426c67": {
+        "scan_id": "38aa2654-5ed3-4358-96dd-a064d2426c67",
+        "hash": "5eeb3d05ab51144464fe562aa92c0b07dbf3356795bf764e11b05cfe3fa8670e",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "38aa2654-5ed3-4358-96dd-a064d2426c67",
+        "timestamp": "2026-03-08T07:38:13.485263Z",
+        "tx_id": "TX-AA8B0834D10A4510A8A1C5417002022C"
+    },
+    "964c471a-a5ef-4eb3-aa92-9d7f42976a62": {
+        "scan_id": "964c471a-a5ef-4eb3-aa92-9d7f42976a62",
+        "hash": "bad9a88b8850721d0b775b90ea96ccf82f8d84eff7c28fc1878a52312a71ad73",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "964c471a-a5ef-4eb3-aa92-9d7f42976a62",
+        "timestamp": "2026-03-08T07:38:13.536740Z",
+        "tx_id": "TX-BA3F35C1DC5846D88C8A8D02BD65B535"
+    },
+    "a1d57d06-7978-4e67-919b-de7ba4743f0f": {
+        "scan_id": "a1d57d06-7978-4e67-919b-de7ba4743f0f",
+        "hash": "663d7f73be46030b9a5ed895dfaa4e18efbe0a38cda2dc4bf557d29a5d0795b8",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "a1d57d06-7978-4e67-919b-de7ba4743f0f",
+        "timestamp": "2026-03-08T07:38:13.597032Z",
+        "tx_id": "TX-E05BF1794816417B9AE1922FE9919E4E"
+    },
+    "94002b9a-fd53-46af-a037-6b13646a8628": {
+        "scan_id": "94002b9a-fd53-46af-a037-6b13646a8628",
+        "hash": "7a6bcd63b1d38b140e4bb2428972a91501ab0e964409a4ca30ac9ef840273fc7",
+        "scan_type": "DeviceProfile",
+        "target": "192.168.10.10",
+        "ref_id": "94002b9a-fd53-46af-a037-6b13646a8628",
+        "timestamp": "2026-03-08T07:38:13.654719Z",
+        "tx_id": "TX-8C82863DC53B48DDA05223A37EC0BD83"
+    },
+    "470dfc1b-ebe1-4d6d-8f9a-04e70f124ae1": {
+        "scan_id": "470dfc1b-ebe1-4d6d-8f9a-04e70f124ae1",
+        "hash": "f08e2b411878b435decf74a2f1bf0dee2733697a6443039aa6743009e81a1f02",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "470dfc1b-ebe1-4d6d-8f9a-04e70f124ae1",
+        "timestamp": "2026-03-08T07:38:13.706328Z",
+        "tx_id": "TX-53B26737513949DCBA7BEC1754630C08"
+    },
+    "23da2e59-66f3-474b-8070-f0f149fe4f38": {
+        "scan_id": "23da2e59-66f3-474b-8070-f0f149fe4f38",
+        "hash": "aa5ccc17ffebd801ed937caade54678d54dc5233a8bafb1b77ef3cb262e11601",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "23da2e59-66f3-474b-8070-f0f149fe4f38",
+        "timestamp": "2026-03-08T07:38:13.759816Z",
+        "tx_id": "TX-DA72FD765C14498E8FC4ED87973CD606"
+    },
+    "316feb0e-9eeb-447a-8001-0c167d8c0c03": {
+        "scan_id": "316feb0e-9eeb-447a-8001-0c167d8c0c03",
+        "hash": "f938b176e370eba28ff60c899cb77abf2b5686f757f212c4cdf07432f9224105",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "316feb0e-9eeb-447a-8001-0c167d8c0c03",
+        "timestamp": "2026-03-08T07:38:13.807846Z",
+        "tx_id": "TX-FA51E964536C470CA1EE1261ED08A414"
+    },
+    "edaa6fd1-97d7-4d36-b6e0-27af289efb59": {
+        "scan_id": "edaa6fd1-97d7-4d36-b6e0-27af289efb59",
+        "hash": "4e2ef829b35707f32488b673d42f7413e601f6913a72a776f319e231be74ad53",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "edaa6fd1-97d7-4d36-b6e0-27af289efb59",
+        "timestamp": "2026-03-08T07:38:13.864075Z",
+        "tx_id": "TX-828A0A5ADE5D467FACCA579CEDDD72BC"
+    },
+    "451be882-73fe-46fd-b7f3-5426d8ce4319": {
+        "scan_id": "451be882-73fe-46fd-b7f3-5426d8ce4319",
+        "hash": "c5d0ef69998e41ec199f190840f45ac0fce396a37d549b4b37861218ca7ff74b",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "451be882-73fe-46fd-b7f3-5426d8ce4319",
+        "timestamp": "2026-03-08T07:38:13.928516Z",
+        "tx_id": "TX-0966C9649F3144B8BA8E49FB5F401C1A"
+    },
+    "f918310f-89d9-4c6a-a3fa-189847e42b87": {
+        "scan_id": "f918310f-89d9-4c6a-a3fa-189847e42b87",
+        "hash": "71a6c2da0fdda6ddcaf1084597d8fb8293701136f591495fa4228d77370c3587",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "f918310f-89d9-4c6a-a3fa-189847e42b87",
+        "timestamp": "2026-03-08T07:38:13.985505Z",
+        "tx_id": "TX-E59B7CE7C9284134BFF5BFFD834BE728"
+    },
+    "4e2742b3-f94a-46d2-aef7-404bd93786e5": {
+        "scan_id": "4e2742b3-f94a-46d2-aef7-404bd93786e5",
+        "hash": "34779c81135b7808a1b13427451b6e0de871c2c715619c8ed997d6d651b6d190",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "4e2742b3-f94a-46d2-aef7-404bd93786e5",
+        "timestamp": "2026-03-08T07:38:14.039016Z",
+        "tx_id": "TX-1A3E648BC4BF42ECA130982858BA5192"
+    },
+    "4c09e6f2-bd8f-47cf-a604-b7222ab53183": {
+        "scan_id": "4c09e6f2-bd8f-47cf-a604-b7222ab53183",
+        "hash": "05bb650f99b99222001ec04a748e0d1238344d62bdc32cd2aed692de910db09c",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "4c09e6f2-bd8f-47cf-a604-b7222ab53183",
+        "timestamp": "2026-03-08T07:38:14.086833Z",
+        "tx_id": "TX-384DFBEACE4049EFA6E4C7D65794467A"
+    },
+    "576ff086-6ce4-47b8-a015-0d6e95b9f3af": {
+        "scan_id": "576ff086-6ce4-47b8-a015-0d6e95b9f3af",
+        "hash": "67e54c8eebf25c6f722d75a799b74b0735de99d21ee7e06979e7aba5a0a4ac14",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "576ff086-6ce4-47b8-a015-0d6e95b9f3af",
+        "timestamp": "2026-03-08T07:38:14.134178Z",
+        "tx_id": "TX-D80867F6D7B34F4F9CE1CD129597B1A8"
+    },
+    "54eb478b-4e79-4960-a715-8b15a2dd1e9c": {
+        "scan_id": "54eb478b-4e79-4960-a715-8b15a2dd1e9c",
+        "hash": "c78c20c94caabcbd61d990ac6ed7e4e3491901f499b9f2390059e101b62b73c9",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "54eb478b-4e79-4960-a715-8b15a2dd1e9c",
+        "timestamp": "2026-03-08T07:38:14.196390Z",
+        "tx_id": "TX-5FFA636F90EF4B9B9B92E1811A931035"
+    },
+    "c9b9a1f5-172a-4f30-9abd-348309f8d027": {
+        "scan_id": "c9b9a1f5-172a-4f30-9abd-348309f8d027",
+        "hash": "4021379ee0fe8c8ec42a693e1a185e7515a4c4fea9e0c075c6942db7ee06903e",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "c9b9a1f5-172a-4f30-9abd-348309f8d027",
+        "timestamp": "2026-03-08T07:38:14.260799Z",
+        "tx_id": "TX-964198EDFB5541AEADDCA16FBBCC29C5"
+    },
+    "49e37042-b7f9-44c8-a3bf-53edf4d7ad95": {
+        "scan_id": "49e37042-b7f9-44c8-a3bf-53edf4d7ad95",
+        "hash": "d056eabeb5a232bf1d231eda0e48819e13c904bda76154515df07b1efbe8f19b",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "49e37042-b7f9-44c8-a3bf-53edf4d7ad95",
+        "timestamp": "2026-03-08T07:38:14.312435Z",
+        "tx_id": "TX-9C247C6633AC4C798E851C549B94E8EF"
+    },
+    "a9256d37-8f07-4624-8e01-685e34f36253": {
+        "scan_id": "a9256d37-8f07-4624-8e01-685e34f36253",
+        "hash": "53155e6473816afa4f1fd3f6c62f3e3b70bc10b1eaede011f1675b09093ee49e",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "a9256d37-8f07-4624-8e01-685e34f36253",
+        "timestamp": "2026-03-08T07:38:14.368848Z",
+        "tx_id": "TX-5167D7857FF14A58A84C1C6545CF0A91"
+    },
+    "f3a10b91-21b3-41c7-a66f-68cd51d57e66": {
+        "scan_id": "f3a10b91-21b3-41c7-a66f-68cd51d57e66",
+        "hash": "fef1ee9a4f75a206a592a6debadd297bc387e3f59ecc46c1ce72713bcf7c122c",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "f3a10b91-21b3-41c7-a66f-68cd51d57e66",
+        "timestamp": "2026-03-08T07:38:14.432537Z",
+        "tx_id": "TX-8A4A4817903947799FEB749DED4C70E7"
+    },
+    "71cad6df-d727-48e1-b429-248b27dc478b": {
+        "scan_id": "71cad6df-d727-48e1-b429-248b27dc478b",
+        "hash": "b30a11600f08af546768bc284c34392dc5e20b83b0419d6f48cd11f524903d5e",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "71cad6df-d727-48e1-b429-248b27dc478b",
+        "timestamp": "2026-03-08T07:38:14.483863Z",
+        "tx_id": "TX-CF04A2F4F9FE4C84BDBE900459416E23"
+    },
+    "666c9c20-a935-45a4-b48b-528688a1039a": {
+        "scan_id": "666c9c20-a935-45a4-b48b-528688a1039a",
+        "hash": "67caf0b1e218c6bea697b5423d44ff195d837eedffa96dae1de111f3bb3f02e7",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "666c9c20-a935-45a4-b48b-528688a1039a",
+        "timestamp": "2026-03-08T07:38:14.528388Z",
+        "tx_id": "TX-92DAAC41D4584F44A884896155579B28"
+    },
+    "8bdf8a1d-0e86-4012-a004-17a25a5eafbe": {
+        "scan_id": "8bdf8a1d-0e86-4012-a004-17a25a5eafbe",
+        "hash": "c806308ba2bc88d8e49e4756b50f3c9a25b316c9f29e6ff9b7f634c13ab0f614",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "8bdf8a1d-0e86-4012-a004-17a25a5eafbe",
+        "timestamp": "2026-03-08T07:38:14.596320Z",
+        "tx_id": "TX-35B0899F175840409D2ADD155CC9BFB9"
+    },
+    "f785ba69-2135-43bd-861c-24b3943ed6ce": {
+        "scan_id": "f785ba69-2135-43bd-861c-24b3943ed6ce",
+        "hash": "1d45d99af54be15906f070b9732a11b860d2bae4b0c6791ee7d9f153b453ad39",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "f785ba69-2135-43bd-861c-24b3943ed6ce",
+        "timestamp": "2026-03-08T07:38:14.647953Z",
+        "tx_id": "TX-650FFA28E0984190AC613EF5AD52AC26"
+    },
+    "cb66f8c5-e24a-46b1-8030-bed07b54cebb": {
+        "scan_id": "cb66f8c5-e24a-46b1-8030-bed07b54cebb",
+        "hash": "2586aafe2f82af46fc21407e2e50201e62116b020e24744c904ac9a99e1a9397",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "cb66f8c5-e24a-46b1-8030-bed07b54cebb",
+        "timestamp": "2026-03-08T07:38:14.705818Z",
+        "tx_id": "TX-3F834DE2C4BE453785316B3CA8F49138"
+    },
+    "49818db7-3100-48f5-a4ce-7a937fd23e1f": {
+        "scan_id": "49818db7-3100-48f5-a4ce-7a937fd23e1f",
+        "hash": "db9bee7d26564d606f4b02728bc314bbaa11e2991ccaa97287390458e8e69180",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "49818db7-3100-48f5-a4ce-7a937fd23e1f",
+        "timestamp": "2026-03-08T07:38:14.755785Z",
+        "tx_id": "TX-8741FB10CCD149B6B8465E0451031026"
+    },
+    "5d9adc38-2a9f-449e-86a0-121031f0c816": {
+        "scan_id": "5d9adc38-2a9f-449e-86a0-121031f0c816",
+        "hash": "47f0ad6c707b9785cb1dca780c84c2760bb49ee6e49898c29f409999b4fa42e2",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "5d9adc38-2a9f-449e-86a0-121031f0c816",
+        "timestamp": "2026-03-08T07:38:14.813285Z",
+        "tx_id": "TX-E13BDCB2D6DF41718058C3F279E93B56"
+    },
+    "1ad21137-f5a5-44e5-80a9-f22d0f0bbf77": {
+        "scan_id": "1ad21137-f5a5-44e5-80a9-f22d0f0bbf77",
+        "hash": "fdce851159655560267482026fef91cf74c9813d4bbe7dbc1b2e6c69d1820ebf",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "1ad21137-f5a5-44e5-80a9-f22d0f0bbf77",
+        "timestamp": "2026-03-08T07:38:14.880509Z",
+        "tx_id": "TX-7CFBF0FCBC494440B18E133A264307BF"
+    },
+    "d741a304-1a24-490b-83d6-b056613bbd9e": {
+        "scan_id": "d741a304-1a24-490b-83d6-b056613bbd9e",
+        "hash": "01cfefa509b2e5b84233f941d69a54e066f5d72aeeadcb260459216ed762eefb",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "d741a304-1a24-490b-83d6-b056613bbd9e",
+        "timestamp": "2026-03-08T07:38:14.935345Z",
+        "tx_id": "TX-1AB7303AAD804CB28139422F127AE900"
+    },
+    "ad7260d2-3fb7-4504-903a-d63bba4e4756": {
+        "scan_id": "ad7260d2-3fb7-4504-903a-d63bba4e4756",
+        "hash": "998751d11ef62404db89f3818895423be7f729acf08851b3f0295998d550a1e6",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "ad7260d2-3fb7-4504-903a-d63bba4e4756",
+        "timestamp": "2026-03-08T07:38:16.875581Z",
+        "tx_id": "TX-51C4B1F366574C419BEA2B0EC4978F3C"
+    },
+    "04b6c33d-77ab-43f4-b16a-01b1845930df": {
+        "scan_id": "04b6c33d-77ab-43f4-b16a-01b1845930df",
+        "hash": "660efe1c8b41081f8e5ea15532c129485d44724e7276a18d54810fd2e209c8ac",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "04b6c33d-77ab-43f4-b16a-01b1845930df",
+        "timestamp": "2026-03-08T07:38:16.907313Z",
+        "tx_id": "TX-B95FA32A67D440D889C801619FD3568B"
+    },
+    "ebf15cca-f0e6-4c0d-964f-a80ae0e23249": {
+        "scan_id": "ebf15cca-f0e6-4c0d-964f-a80ae0e23249",
+        "hash": "8a21c2d881f2b14fbf66720a511e47d5d4c401db4518c515c0770e7f7e810f76",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "ebf15cca-f0e6-4c0d-964f-a80ae0e23249",
+        "timestamp": "2026-03-08T07:38:16.973638Z",
+        "tx_id": "TX-5E95A764D3404CFDB01FFA3F9F72FFB3"
+    },
+    "accbcbdd-97cf-4529-91b6-7f8581f87c57": {
+        "scan_id": "accbcbdd-97cf-4529-91b6-7f8581f87c57",
+        "hash": "97f6e11b84a0f999e7eeeafd96b4db5582821669a33bbad3fd3c4b7af1ef4a71",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "accbcbdd-97cf-4529-91b6-7f8581f87c57",
+        "timestamp": "2026-03-08T07:38:17.034923Z",
+        "tx_id": "TX-8ED82A3B190E4B0A96A79402090D564C"
+    },
+    "7824adc7-f0cb-4a59-bd69-07ee69eae7e2": {
+        "scan_id": "7824adc7-f0cb-4a59-bd69-07ee69eae7e2",
+        "hash": "a15fcd209ce1a956c608a4bd64b6d0c3120f9a34f422b24df682fa8951f3d783",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "7824adc7-f0cb-4a59-bd69-07ee69eae7e2",
+        "timestamp": "2026-03-08T07:38:17.092924Z",
+        "tx_id": "TX-FA385E0DC08346DDB25F9F6E442C9CD5"
+    },
+    "14effaf0-6dfc-4b8a-aa79-ec2e9859d5a5": {
+        "scan_id": "14effaf0-6dfc-4b8a-aa79-ec2e9859d5a5",
+        "hash": "748d9b2447e0dabd82aca92cab66d6795533286617f604125086fac621b5b22e",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "14effaf0-6dfc-4b8a-aa79-ec2e9859d5a5",
+        "timestamp": "2026-03-08T07:38:17.141178Z",
+        "tx_id": "TX-24F627213241440C8DD5FACDCB1DBF1D"
+    },
+    "1432cef1-27b2-4702-a5e1-36f8b32b560e": {
+        "scan_id": "1432cef1-27b2-4702-a5e1-36f8b32b560e",
+        "hash": "a2b9b5984270a99ca50da6f1d95958c4eb7d5a5b217272e7573c0ad8a01490b3",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "1432cef1-27b2-4702-a5e1-36f8b32b560e",
+        "timestamp": "2026-03-08T07:38:17.209364Z",
+        "tx_id": "TX-B263B3A9C15F462996893DF0C1F3C89D"
+    },
+    "f09a196a-7dad-4692-9013-986096e5931c": {
+        "scan_id": "f09a196a-7dad-4692-9013-986096e5931c",
+        "hash": "d4b00eac2e2f85563b10ae27f4517bc2d94149f9ba14c97178f04fa9c3c25b21",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "f09a196a-7dad-4692-9013-986096e5931c",
+        "timestamp": "2026-03-08T07:38:17.268726Z",
+        "tx_id": "TX-844CD7CBD0044575AD7D27725C3E79F9"
+    },
+    "93117622-7c2e-41c4-a59d-7e6ac271d659": {
+        "scan_id": "93117622-7c2e-41c4-a59d-7e6ac271d659",
+        "hash": "7fa1696e2fe7f796a75b88758f205e7aa8494aba04fc9f970d4c2cdeb6495db4",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "93117622-7c2e-41c4-a59d-7e6ac271d659",
+        "timestamp": "2026-03-08T07:38:17.328509Z",
+        "tx_id": "TX-A31791AD0D1C4519B80208664CEE06AE"
+    },
+    "ca7caac4-d0f3-4e8d-9339-f22e1dac9f45": {
+        "scan_id": "ca7caac4-d0f3-4e8d-9339-f22e1dac9f45",
+        "hash": "7a15bdece3fa4d3d803c0cae04d6cd02774dc2aad7fbb8c00950a4b928cea382",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "ca7caac4-d0f3-4e8d-9339-f22e1dac9f45",
+        "timestamp": "2026-03-08T07:38:17.385959Z",
+        "tx_id": "TX-DF0916D82C244144A48059D484BADC31"
+    },
+    "a2e2076f-129d-4207-ade7-ce2408743ab2": {
+        "scan_id": "a2e2076f-129d-4207-ade7-ce2408743ab2",
+        "hash": "eb4acb9af153d1d1d192a09e94c89977caa2cd3bd9a1e88addcf48fad6c7b911",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "a2e2076f-129d-4207-ade7-ce2408743ab2",
+        "timestamp": "2026-03-08T07:38:17.445236Z",
+        "tx_id": "TX-C6CAEF69DB504E1CAAEA5ABD740D6D38"
+    },
+    "5f715bda-e929-4555-b731-4936371c2eb7": {
+        "scan_id": "5f715bda-e929-4555-b731-4936371c2eb7",
+        "hash": "b7e23e209d5534587155f07792d3abb85212180244592cfcfa41f7b43846c3cb",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "5f715bda-e929-4555-b731-4936371c2eb7",
+        "timestamp": "2026-03-08T07:38:17.513329Z",
+        "tx_id": "TX-226AC4A8321A441490E56C53A063D371"
+    },
+    "858fcf86-ec87-40c1-81e6-12761b5fa5f6": {
+        "scan_id": "858fcf86-ec87-40c1-81e6-12761b5fa5f6",
+        "hash": "9cfb9227afd5d1d300524a4103c07811093041df4b4ec424191aec8bef959279",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "858fcf86-ec87-40c1-81e6-12761b5fa5f6",
+        "timestamp": "2026-03-08T07:38:17.563296Z",
+        "tx_id": "TX-815828B5F7E14F1FB181721B66CA5529"
+    },
+    "413ec712-f054-4032-9298-93fb12ce9740": {
+        "scan_id": "413ec712-f054-4032-9298-93fb12ce9740",
+        "hash": "376a925a17e56f56fca7f3eaa23cc87063edb6f49cbfb25cdcd175220bbb0667",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "413ec712-f054-4032-9298-93fb12ce9740",
+        "timestamp": "2026-03-08T07:38:17.625051Z",
+        "tx_id": "TX-1A102634E52D4943ADB4FA2FFEE610D9"
+    },
+    "eb6c524c-5628-4cf3-b226-9c562c0b3091": {
+        "scan_id": "eb6c524c-5628-4cf3-b226-9c562c0b3091",
+        "hash": "128243323297ee4cdbab2eb3d17f740bbf766551325329468ab0fac594296a21",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "eb6c524c-5628-4cf3-b226-9c562c0b3091",
+        "timestamp": "2026-03-08T07:38:17.672449Z",
+        "tx_id": "TX-431770129D074A17968DE3BD1B8E0299"
+    },
+    "aa0d8102-4d82-4ab1-8b38-92a50f3a2b33": {
+        "scan_id": "aa0d8102-4d82-4ab1-8b38-92a50f3a2b33",
+        "hash": "0f6da3b4a6c6b55d2ff01345c34d27392bf86293d242c058083a0d317aa50fa2",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "aa0d8102-4d82-4ab1-8b38-92a50f3a2b33",
+        "timestamp": "2026-03-08T07:38:17.736369Z",
+        "tx_id": "TX-D2251DAEC60F4BD187D5FB34D224A443"
+    },
+    "affafacf-096f-4df6-b085-d3c2ec1f6234": {
+        "scan_id": "affafacf-096f-4df6-b085-d3c2ec1f6234",
+        "hash": "1d0b15850a34649b5eba567aa63a6392f96bff655c44ad0101cd1b8d52fcd254",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "affafacf-096f-4df6-b085-d3c2ec1f6234",
+        "timestamp": "2026-03-08T07:38:17.783676Z",
+        "tx_id": "TX-9A14C147012D4EDB834597AC2F257FD5"
+    },
+    "21500431-8168-4445-b015-ee1cc1388c49": {
+        "scan_id": "21500431-8168-4445-b015-ee1cc1388c49",
+        "hash": "1f3394da6982fd7495639e0652f6a2151977d76cd8f589d737bb013500f920f8",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "21500431-8168-4445-b015-ee1cc1388c49",
+        "timestamp": "2026-03-08T07:38:17.848010Z",
+        "tx_id": "TX-45201F5A3B78412281C429A0535C0303"
+    },
+    "c7a7d037-c585-404e-b5a1-83b63d84d941": {
+        "scan_id": "c7a7d037-c585-404e-b5a1-83b63d84d941",
+        "hash": "4802256ebf1d945a1591ce8700b7fe992faeb6cde1467dc63712c4c77d3d750f",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "c7a7d037-c585-404e-b5a1-83b63d84d941",
+        "timestamp": "2026-03-08T07:38:17.909738Z",
+        "tx_id": "TX-4913E3B459C0488DBA30621970CF733A"
+    },
+    "3578ae72-34b0-49d3-84cc-41851c6b5b9f": {
+        "scan_id": "3578ae72-34b0-49d3-84cc-41851c6b5b9f",
+        "hash": "159b84c9f271b1f97d7ac8782efa24d8d7c04556f7bb3d53e2393ec59a3803ba",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "3578ae72-34b0-49d3-84cc-41851c6b5b9f",
+        "timestamp": "2026-03-08T07:38:17.974590Z",
+        "tx_id": "TX-F3B2A4F125EF44D2A3DCA85E7211BE7E"
+    },
+    "518ba71c-e71d-4479-a017-014b09434583": {
+        "scan_id": "518ba71c-e71d-4479-a017-014b09434583",
+        "hash": "da5ef6fef5608275e99c7c3ca666039542c5536f24cb7b173b17e3b1841533f8",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "518ba71c-e71d-4479-a017-014b09434583",
+        "timestamp": "2026-03-08T07:38:18.033940Z",
+        "tx_id": "TX-EF35A207A2354651B1A28DBABEFBF519"
+    },
+    "56c5b946-b939-41bf-b40b-dfe4f97da373": {
+        "scan_id": "56c5b946-b939-41bf-b40b-dfe4f97da373",
+        "hash": "43f90918e218415473191576b64ecc8b49a3720df9950a7e7469ed18554f644e",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "56c5b946-b939-41bf-b40b-dfe4f97da373",
+        "timestamp": "2026-03-08T07:38:18.091642Z",
+        "tx_id": "TX-7EEC6781E2E8459B85E301793D627C22"
+    },
+    "d16be34f-de46-462a-afef-adbd4f516003": {
+        "scan_id": "d16be34f-de46-462a-afef-adbd4f516003",
+        "hash": "11260c2f756192a0521906f1bf8bf1920b8fa15e4d91ad7485287d25c45611ec",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "d16be34f-de46-462a-afef-adbd4f516003",
+        "timestamp": "2026-03-08T07:38:18.150513Z",
+        "tx_id": "TX-71CF1F3E14F64FDFAE5FEDDDD862B0A4"
+    },
+    "7f8622b2-8a52-4473-88ac-70c4d5fcb5ec": {
+        "scan_id": "7f8622b2-8a52-4473-88ac-70c4d5fcb5ec",
+        "hash": "9b5fb4a7e69f0d3799efe6c620d8d842c61ec6a1374675b5b7f6c082a6a03653",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "7f8622b2-8a52-4473-88ac-70c4d5fcb5ec",
+        "timestamp": "2026-03-08T07:38:22.802099Z",
+        "tx_id": "TX-8E1870E356654CE891B2C389B6FE298A"
+    },
+    "707519d6-9ac1-4594-be5a-184b3d66c383": {
+        "scan_id": "707519d6-9ac1-4594-be5a-184b3d66c383",
+        "hash": "6ba4055d00368cb49999d9f66131ea214f8b8731fed608f7570609e16ff3c349",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "707519d6-9ac1-4594-be5a-184b3d66c383",
+        "timestamp": "2026-03-08T07:38:22.857236Z",
+        "tx_id": "TX-CE2EC1A6812F4E1581E808C56182E604"
+    },
+    "ca0d84c2-0533-4208-824f-676cb9ac55f9": {
+        "scan_id": "ca0d84c2-0533-4208-824f-676cb9ac55f9",
+        "hash": "94c400378829317b8711dd44419679894dbef5ebbc51d8a86e4b9e8ee411402c",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "ca0d84c2-0533-4208-824f-676cb9ac55f9",
+        "timestamp": "2026-03-08T07:38:22.913563Z",
+        "tx_id": "TX-D973BBF568084183A2EFCB74D67316E1"
+    },
+    "b6277c74-2adc-4abe-b473-e9c3d714b7b8": {
+        "scan_id": "b6277c74-2adc-4abe-b473-e9c3d714b7b8",
+        "hash": "9a429a3e380089f1b631f91954e5c686189df219075595182dcf2a3fe066aa05",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "b6277c74-2adc-4abe-b473-e9c3d714b7b8",
+        "timestamp": "2026-03-08T07:38:22.965502Z",
+        "tx_id": "TX-9A8A10D295DC4FDEA2611E16B5809358"
+    },
+    "f779b76e-c38d-48e4-8d7b-863c94c91661": {
+        "scan_id": "f779b76e-c38d-48e4-8d7b-863c94c91661",
+        "hash": "d16f1ace3409194c606db58e17f923c01e65df270003b6bdf4fc47552879fc24",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "f779b76e-c38d-48e4-8d7b-863c94c91661",
+        "timestamp": "2026-03-08T07:38:23.025486Z",
+        "tx_id": "TX-520DE17D35774405886E94517DB5C472"
+    },
+    "52b487a0-74f3-419e-816f-13b11a626b27": {
+        "scan_id": "52b487a0-74f3-419e-816f-13b11a626b27",
+        "hash": "08350e6c359479c0da2302a82836febfdd7f17758951e3e4bdc9a00dbbcc6884",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "52b487a0-74f3-419e-816f-13b11a626b27",
+        "timestamp": "2026-03-08T07:38:23.064182Z",
+        "tx_id": "TX-2EB23DF9410E4B3E9A4ADA346BFF67A1"
+    },
+    "ca732d0b-06e4-40a5-a941-7d9ae0015795": {
+        "scan_id": "ca732d0b-06e4-40a5-a941-7d9ae0015795",
+        "hash": "b8dc295335705daa583052473986cc84f7323e63d7de55b53a94ce8fd8907c33",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "ca732d0b-06e4-40a5-a941-7d9ae0015795",
+        "timestamp": "2026-03-08T07:38:23.104886Z",
+        "tx_id": "TX-55D704CC192E4E02ABB7DB1FF4AD666E"
+    },
+    "064f5443-f3c3-4498-88b0-4bf687527171": {
+        "scan_id": "064f5443-f3c3-4498-88b0-4bf687527171",
+        "hash": "0730ea85d1d8067abebe0a1a607e132c3611c8c7a108b3508fb4418e847655f8",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "064f5443-f3c3-4498-88b0-4bf687527171",
+        "timestamp": "2026-03-08T07:38:23.136437Z",
+        "tx_id": "TX-46F2D2E17C094A6098BC109CC980353C"
+    },
+    "81d4d7c5-9963-4810-b8c6-54966e86fc6a": {
+        "scan_id": "81d4d7c5-9963-4810-b8c6-54966e86fc6a",
+        "hash": "6895178aa439cf25cb7ae955f0067ee2d04b2c71970387863ca0de939f88722d",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "81d4d7c5-9963-4810-b8c6-54966e86fc6a",
+        "timestamp": "2026-03-08T07:38:23.190323Z",
+        "tx_id": "TX-3EF12B93D8354C3AA3BE9E6AAE5B7AD6"
+    },
+    "9f5b1617-71be-4477-8d75-8b9cda91172a": {
+        "scan_id": "9f5b1617-71be-4477-8d75-8b9cda91172a",
+        "hash": "29672868e799cb2597946e9a93a67c8b934328f496e52e01bcc3bdbc0496c43a",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "9f5b1617-71be-4477-8d75-8b9cda91172a",
+        "timestamp": "2026-03-08T07:38:23.231186Z",
+        "tx_id": "TX-867CA23C0FCB4E9AAE7746E4AF19DECA"
+    },
+    "ce7ac2d3-2b4d-4073-aee7-21ea0b8fc365": {
+        "scan_id": "ce7ac2d3-2b4d-4073-aee7-21ea0b8fc365",
+        "hash": "f429c2fbd1b230155c9fc6affe1b2a9d06ab288b352927ae8cde0e79e3ed8716",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "ce7ac2d3-2b4d-4073-aee7-21ea0b8fc365",
+        "timestamp": "2026-03-08T07:38:23.303265Z",
+        "tx_id": "TX-B93942A9F303452FB7524006BE447E30"
+    },
+    "acc59d73-1700-4614-a45e-a0f09c6112b0": {
+        "scan_id": "acc59d73-1700-4614-a45e-a0f09c6112b0",
+        "hash": "3708a20f0a8a7fd393f098081b0c156059f452684d3702b6520414d4ca0ff215",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "acc59d73-1700-4614-a45e-a0f09c6112b0",
+        "timestamp": "2026-03-08T07:38:23.350905Z",
+        "tx_id": "TX-8B606525FFE944FD8BB1D57D8C272458"
+    },
+    "98968467-3f23-4ab4-af55-7d464fa62f7d": {
+        "scan_id": "98968467-3f23-4ab4-af55-7d464fa62f7d",
+        "hash": "5b00240881ebbd7503f8cf98605496b79658ecbae0389de7457128c1877dcb8e",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "98968467-3f23-4ab4-af55-7d464fa62f7d",
+        "timestamp": "2026-03-08T07:38:23.408016Z",
+        "tx_id": "TX-B8EEFF02E488484089D923BFC2B1ABBD"
+    },
+    "33fd05ed-eb16-48e9-a7f4-6e3e4afbce96": {
+        "scan_id": "33fd05ed-eb16-48e9-a7f4-6e3e4afbce96",
+        "hash": "511bd3f9f18248006433cd65917eb04ab6df82bff1d43e4bbdcdce763944f4b5",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "33fd05ed-eb16-48e9-a7f4-6e3e4afbce96",
+        "timestamp": "2026-03-08T07:38:23.452654Z",
+        "tx_id": "TX-80C3CDDF618A4E65AB4D0852729B6A0C"
+    },
+    "67edd7da-edfa-422b-bfd9-d004aeae799b": {
+        "scan_id": "67edd7da-edfa-422b-bfd9-d004aeae799b",
+        "hash": "6038c57370fee0b530aacd50e80fa4d4ebdf8e75c85c35252b73b9fa00435286",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "67edd7da-edfa-422b-bfd9-d004aeae799b",
+        "timestamp": "2026-03-08T07:38:23.496785Z",
+        "tx_id": "TX-9D368F9AC5C94BDB947C3C57D40449C0"
+    },
+    "9680dcac-d68e-43b8-af4a-2d6c03f9b5d4": {
+        "scan_id": "9680dcac-d68e-43b8-af4a-2d6c03f9b5d4",
+        "hash": "858ac3a43cdcc5b00e6fca32281c669ab3a256f18c6999920f09f85ad4a3c934",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "9680dcac-d68e-43b8-af4a-2d6c03f9b5d4",
+        "timestamp": "2026-03-08T07:38:23.540830Z",
+        "tx_id": "TX-BA84755EFE0A44D79BA6C37921400CB4"
+    },
+    "e0594ec0-1942-413d-ad54-91ddb1d81a2b": {
+        "scan_id": "e0594ec0-1942-413d-ad54-91ddb1d81a2b",
+        "hash": "a2ac517dd4859c98b7db6cb9ab5bc932fd87540830e9c4a1411b2408ce136a02",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "e0594ec0-1942-413d-ad54-91ddb1d81a2b",
+        "timestamp": "2026-03-08T07:38:23.580581Z",
+        "tx_id": "TX-DCD75A478DC248DE8239B8300FA747BE"
+    },
+    "a6f9a197-901c-40d3-a43b-75dbf16952c9": {
+        "scan_id": "a6f9a197-901c-40d3-a43b-75dbf16952c9",
+        "hash": "6b875f2460a79053c83553ae627c844d14c5f0c704a6972071a9411f6dca2865",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "a6f9a197-901c-40d3-a43b-75dbf16952c9",
+        "timestamp": "2026-03-08T07:38:23.630574Z",
+        "tx_id": "TX-FE29B9F30B7541618781DC2AD69EB022"
+    },
+    "6c11b88d-c566-4032-8ab3-317e9a66bd3f": {
+        "scan_id": "6c11b88d-c566-4032-8ab3-317e9a66bd3f",
+        "hash": "2b1d30652a641f156bc6307d43d12976d2ea6fdeb7c731eff13c9b62b179a961",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "6c11b88d-c566-4032-8ab3-317e9a66bd3f",
+        "timestamp": "2026-03-08T07:38:23.672594Z",
+        "tx_id": "TX-BBA39B13FA62477886CBCC5BA08FE912"
+    },
+    "b7f8289b-3bc8-4526-a60c-e2fe44d89212": {
+        "scan_id": "b7f8289b-3bc8-4526-a60c-e2fe44d89212",
+        "hash": "0d7a17501ccfcfdbcea8a7c388e6e1334c1fe4eae7cba0dc4098e107f6f5ecc3",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "b7f8289b-3bc8-4526-a60c-e2fe44d89212",
+        "timestamp": "2026-03-08T07:38:23.708649Z",
+        "tx_id": "TX-C2D0EB8A9AA7487EADEE241A03D77650"
+    },
+    "27921ffd-2fa4-419f-a473-48f2d3733e79": {
+        "scan_id": "27921ffd-2fa4-419f-a473-48f2d3733e79",
+        "hash": "db13e92594e24e2660d621da98f59e54612d793d5c4819fb24cb876121f64b74",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "27921ffd-2fa4-419f-a473-48f2d3733e79",
+        "timestamp": "2026-03-08T07:38:23.735794Z",
+        "tx_id": "TX-E1356FE7EBAF463DABF1B4EDDD629B3A"
+    },
+    "5afb7086-4fb9-4b9d-959b-7737ec07b3da": {
+        "scan_id": "5afb7086-4fb9-4b9d-959b-7737ec07b3da",
+        "hash": "b5d61d07653041cd1b615340d714f34b80051a8621f8ae260a652d106e32171a",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "5afb7086-4fb9-4b9d-959b-7737ec07b3da",
+        "timestamp": "2026-03-08T07:38:23.786092Z",
+        "tx_id": "TX-3B7F674DA17243CBAC15A68F77D68A30"
+    },
+    "3406edc1-f876-4555-997b-2a048cdc56aa": {
+        "scan_id": "3406edc1-f876-4555-997b-2a048cdc56aa",
+        "hash": "2511b9be058c35898a4ffb823a7cdaefafb793231e0766d4cd611eb1585cf76d",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "3406edc1-f876-4555-997b-2a048cdc56aa",
+        "timestamp": "2026-03-08T07:38:23.828899Z",
+        "tx_id": "TX-6AC7EC1397E34C258BF96C54A320AA7E"
+    },
+    "bf9e45b9-779c-4f9a-94d3-309dfaedbfbe": {
+        "scan_id": "bf9e45b9-779c-4f9a-94d3-309dfaedbfbe",
+        "hash": "909d0c3074a46c5dd645aa53defdb603b877213cb3dc6e093661e7c648de74d0",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "bf9e45b9-779c-4f9a-94d3-309dfaedbfbe",
+        "timestamp": "2026-03-08T07:38:23.864106Z",
+        "tx_id": "TX-74B910ABA49F41FBB2E97370ECD412DE"
+    },
+    "b0c09351-cea4-41de-a726-3b77421afb38": {
+        "scan_id": "b0c09351-cea4-41de-a726-3b77421afb38",
+        "hash": "b04bc5099ccda3380882d2d93f39a59fc606e9b22e4bda82a17813fc2de21ae1",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "b0c09351-cea4-41de-a726-3b77421afb38",
+        "timestamp": "2026-03-08T07:38:23.896976Z",
+        "tx_id": "TX-1F99B41F87B6437D8D18C084D66291A4"
+    },
+    "ac3ef946-1f3a-4daa-afa9-16eca0b98887": {
+        "scan_id": "ac3ef946-1f3a-4daa-afa9-16eca0b98887",
+        "hash": "804a045d727a0f50f536df3db5a885f7b17bdce17fdaf57f8f3e087ef19b47e3",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "ac3ef946-1f3a-4daa-afa9-16eca0b98887",
+        "timestamp": "2026-03-08T07:38:23.930501Z",
+        "tx_id": "TX-C73089214F8C4B8592E2BE9C361FFD54"
+    },
+    "0b401286-53c8-4564-b014-d19984c920d0": {
+        "scan_id": "0b401286-53c8-4564-b014-d19984c920d0",
+        "hash": "36ce73107f2fde93d622cd60e9b17637c5a27092a6c0db7628f569c090777416",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "0b401286-53c8-4564-b014-d19984c920d0",
+        "timestamp": "2026-03-08T07:38:23.959459Z",
+        "tx_id": "TX-AC75A883E3CF4DFE97926E14A0A6A107"
+    },
+    "5eefd305-98e7-45e4-bee1-666728a5122e": {
+        "scan_id": "5eefd305-98e7-45e4-bee1-666728a5122e",
+        "hash": "acc1838757c9fb0d86ad6beef864fb2e1c8bef06faf14f20d821ab9b4a9e0e27",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "5eefd305-98e7-45e4-bee1-666728a5122e",
+        "timestamp": "2026-03-08T07:38:23.980606Z",
+        "tx_id": "TX-6694475FD43A4F0AA9236BCAFD6310D2"
+    },
+    "efe7f885-ba17-4efd-8e3d-6ffc0d749169": {
+        "scan_id": "efe7f885-ba17-4efd-8e3d-6ffc0d749169",
+        "hash": "57607e76aedcf8be51d11e903eb5be767d706ec1141477328cdce00012de7131",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "efe7f885-ba17-4efd-8e3d-6ffc0d749169",
+        "timestamp": "2026-03-08T07:38:24.003042Z",
+        "tx_id": "TX-91DB1510F51743819C83E6DF508CCFB2"
+    },
+    "10181019-c17c-4eaf-baab-0b8a21febf3d": {
+        "scan_id": "10181019-c17c-4eaf-baab-0b8a21febf3d",
+        "hash": "9d633da8d7df7178fb78c707f15c7b26b4fec60c0d934f16ef7d244d9a6a1dcd",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "10181019-c17c-4eaf-baab-0b8a21febf3d",
+        "timestamp": "2026-03-08T07:38:24.030776Z",
+        "tx_id": "TX-4C40B17B72134033827F96E074195413"
+    },
+    "cdbfdf25-d00d-453d-9d49-5a15d4d6b4e8": {
+        "scan_id": "cdbfdf25-d00d-453d-9d49-5a15d4d6b4e8",
+        "hash": "afe1fb0f905259cf07c18fe820e10de3c86251fc7b9cc5d311891d6b39611098",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "cdbfdf25-d00d-453d-9d49-5a15d4d6b4e8",
+        "timestamp": "2026-03-08T07:38:24.086315Z",
+        "tx_id": "TX-73BA3E05223A4278BF3645777E0D0B12"
+    },
+    "213a7bad-a872-445b-89d3-4c969e02cf26": {
+        "scan_id": "213a7bad-a872-445b-89d3-4c969e02cf26",
+        "hash": "641d429dcee34a835aa1a192e3c68ce8b2c3c37eb2d9ff44b9a7334c90b692ed",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "213a7bad-a872-445b-89d3-4c969e02cf26",
+        "timestamp": "2026-03-08T07:38:24.132696Z",
+        "tx_id": "TX-55125C3E4B864F86990C688B880F2FAF"
+    },
+    "41f0fcfb-a165-41ef-82b3-6373dc24cb73": {
+        "scan_id": "41f0fcfb-a165-41ef-82b3-6373dc24cb73",
+        "hash": "1ad8c1b4cd9a6115edb69dbc166ef0cc25605c8ad96ce28aa6ebcaa6be0499b4",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "41f0fcfb-a165-41ef-82b3-6373dc24cb73",
+        "timestamp": "2026-03-08T07:38:24.174860Z",
+        "tx_id": "TX-81387E6D70A74D84B001BC9F4A2EBD9A"
+    },
+    "08c53e13-0b4d-4f5c-8758-0e7ca9834773": {
+        "scan_id": "08c53e13-0b4d-4f5c-8758-0e7ca9834773",
+        "hash": "19a19436ade3e125695b9b0eeba260ebbd38897ef0e109125a3268376e55c755",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "08c53e13-0b4d-4f5c-8758-0e7ca9834773",
+        "timestamp": "2026-03-08T07:38:24.223189Z",
+        "tx_id": "TX-469BC38DB1E84C7EAFF62EC56AF0573E"
+    },
+    "29fe3c87-6fb8-49f9-bcde-b7ed8a3de4fc": {
+        "scan_id": "29fe3c87-6fb8-49f9-bcde-b7ed8a3de4fc",
+        "hash": "73f2d9777ee6c05a61a39e08d5778b2a19df4c03d3fe900e2276b986ff04e0ab",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "29fe3c87-6fb8-49f9-bcde-b7ed8a3de4fc",
+        "timestamp": "2026-03-08T07:38:24.284005Z",
+        "tx_id": "TX-96B7AAD62B3949EC9159B8063A9DB2A6"
+    },
+    "041d3bfd-3aac-40b2-8fa4-ee175a3c8f23": {
+        "scan_id": "041d3bfd-3aac-40b2-8fa4-ee175a3c8f23",
+        "hash": "63e240145221f3b7b5a147883049322ce0a70f8ce1c98f7bca91876d2f7bf8d4",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "041d3bfd-3aac-40b2-8fa4-ee175a3c8f23",
+        "timestamp": "2026-03-08T07:38:24.320744Z",
+        "tx_id": "TX-902505A868254844A84C87C88CDD691F"
+    },
+    "a22b9020-bfef-450d-bb8a-380c05020dcd": {
+        "scan_id": "a22b9020-bfef-450d-bb8a-380c05020dcd",
+        "hash": "b9d6e4801b4ca91a53b31877bd758ad1d6bfa45c73b710ffb7164b2e4322a3e5",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "a22b9020-bfef-450d-bb8a-380c05020dcd",
+        "timestamp": "2026-03-08T07:38:24.398319Z",
+        "tx_id": "TX-2E768AC5D6B54F79B7BCE351BD3BF315"
+    },
+    "e5d2bbf6-c565-4be7-9982-e5fa7959e429": {
+        "scan_id": "e5d2bbf6-c565-4be7-9982-e5fa7959e429",
+        "hash": "983f8a0a639dacd329fc2c4d6f1707ee92a6c65df88aee7527a47ec4ff44a274",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "e5d2bbf6-c565-4be7-9982-e5fa7959e429",
+        "timestamp": "2026-03-08T07:38:24.425298Z",
+        "tx_id": "TX-A3EDB081920B469B950285119B248B89"
+    },
+    "d86b5475-f0b4-47a3-b358-07cbe1f0918d": {
+        "scan_id": "d86b5475-f0b4-47a3-b358-07cbe1f0918d",
+        "hash": "4195c8d2dd54e46e91847c436b6424d9be1eda5086bba6f39b00744bb1e26b2a",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "d86b5475-f0b4-47a3-b358-07cbe1f0918d",
+        "timestamp": "2026-03-08T07:38:24.468977Z",
+        "tx_id": "TX-D6C4BD1993F74F14858682122B974DE2"
+    },
+    "372f0ecf-1032-4e29-9457-83989231f84f": {
+        "scan_id": "372f0ecf-1032-4e29-9457-83989231f84f",
+        "hash": "2407d827786b7ef84cc53ec41ee230efcdf394027e22ed579b1b293006c962b6",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "372f0ecf-1032-4e29-9457-83989231f84f",
+        "timestamp": "2026-03-08T07:38:24.531871Z",
+        "tx_id": "TX-FD679D6A7C104C8B9C8FB71976A26175"
+    },
+    "beeb0953-4487-4377-8d84-6a7f8323b1df": {
+        "scan_id": "beeb0953-4487-4377-8d84-6a7f8323b1df",
+        "hash": "a58476b58762cea0f380a96222f620ffbe21ca530dcdd7a01ac7e5440af25ca8",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "beeb0953-4487-4377-8d84-6a7f8323b1df",
+        "timestamp": "2026-03-08T07:38:24.597222Z",
+        "tx_id": "TX-3B2AD25AE0C7482480D0FF7AC1CF2D25"
+    },
+    "8e91fc2c-f149-49d6-bab3-d4070dd21cc1": {
+        "scan_id": "8e91fc2c-f149-49d6-bab3-d4070dd21cc1",
+        "hash": "5bc6859ea7a3039a2722753db69ad26428b3ae45a5a514695f15c53a324f9bd2",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "8e91fc2c-f149-49d6-bab3-d4070dd21cc1",
+        "timestamp": "2026-03-08T07:38:24.647877Z",
+        "tx_id": "TX-248B6DFC79364B38A9147F5D78D85963"
+    },
+    "c872879c-1379-4294-80bc-ed35d376780e": {
+        "scan_id": "c872879c-1379-4294-80bc-ed35d376780e",
+        "hash": "9565bea29d3990e8493f843848081e63a0ccd3cf38bfabbfaf302cd7b43e54c2",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "c872879c-1379-4294-80bc-ed35d376780e",
+        "timestamp": "2026-03-08T07:38:24.698194Z",
+        "tx_id": "TX-580E644153BC4032A8089DD20C173A07"
+    },
+    "9f84757f-f40c-4f50-945d-e4efa98bcc1e": {
+        "scan_id": "9f84757f-f40c-4f50-945d-e4efa98bcc1e",
+        "hash": "ab56b0ea8a575ff9290089fa5abff8c5a9df7f82f2385ae8277c8df35bfabc8b",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "9f84757f-f40c-4f50-945d-e4efa98bcc1e",
+        "timestamp": "2026-03-08T07:38:24.740803Z",
+        "tx_id": "TX-F110190BF7F04D4CA796D0667DC4C537"
+    },
+    "ccb7ce09-50db-4e1e-b369-97299bde6f49": {
+        "scan_id": "ccb7ce09-50db-4e1e-b369-97299bde6f49",
+        "hash": "e977c7b9f6ac83a16e2e206714da637ccdb5337453d54aa66335a48800c20cd6",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "ccb7ce09-50db-4e1e-b369-97299bde6f49",
+        "timestamp": "2026-03-08T07:38:24.776498Z",
+        "tx_id": "TX-D5A8C4B5E07544808E1C588203030555"
+    },
+    "79b772cb-5fef-43d3-b74b-fcd209123338": {
+        "scan_id": "79b772cb-5fef-43d3-b74b-fcd209123338",
+        "hash": "5ea3ae19e48f951d71919f5af1ff451d734031a96cdd06101fc220a048b9514f",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "79b772cb-5fef-43d3-b74b-fcd209123338",
+        "timestamp": "2026-03-08T07:38:24.797264Z",
+        "tx_id": "TX-0D4E5A1EFA6F4AD8BFC9B295F1FACAE2"
+    },
+    "838bd902-8b83-4d63-9eaa-8d3fc14240e4": {
+        "scan_id": "838bd902-8b83-4d63-9eaa-8d3fc14240e4",
+        "hash": "7b85365554099694c540efd43f6a8c32c2c00df517594adde61856d44b67a549",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "838bd902-8b83-4d63-9eaa-8d3fc14240e4",
+        "timestamp": "2026-03-08T07:38:24.830114Z",
+        "tx_id": "TX-4FC02489948943B6BC648E8A75D7DBFA"
+    },
+    "a59bef6d-0fea-41a6-a02f-50260bfc5867": {
+        "scan_id": "a59bef6d-0fea-41a6-a02f-50260bfc5867",
+        "hash": "ac2ec9189be04132f08122bd01b850916d6e11c045e212c3db1cbda3160fc362",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "a59bef6d-0fea-41a6-a02f-50260bfc5867",
+        "timestamp": "2026-03-08T07:38:24.863654Z",
+        "tx_id": "TX-D4210C0ADAA84FCA808011BA4CAE6DC8"
+    },
+    "09c41b6e-27bb-4965-a567-1aae08e2bfa3": {
+        "scan_id": "09c41b6e-27bb-4965-a567-1aae08e2bfa3",
+        "hash": "c55f24fcb34103a51416ef2927779b5215a1cc05b98dfda560ef11200d8234f4",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "09c41b6e-27bb-4965-a567-1aae08e2bfa3",
+        "timestamp": "2026-03-08T07:38:24.893503Z",
+        "tx_id": "TX-33C6298E921345F3980F07B3750323D1"
+    },
+    "b33bdfeb-3085-4fd5-b7b0-38c4282bf6e7": {
+        "scan_id": "b33bdfeb-3085-4fd5-b7b0-38c4282bf6e7",
+        "hash": "05467069beb1a910d84c9b6b1238574c4859d379e1617f9b534f657bb301322a",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "b33bdfeb-3085-4fd5-b7b0-38c4282bf6e7",
+        "timestamp": "2026-03-08T07:38:24.920185Z",
+        "tx_id": "TX-6EE57103DF4E4662967D5897D5C6E167"
+    },
+    "49e305d8-45c2-48a7-aac3-5d3caae87d8b": {
+        "scan_id": "49e305d8-45c2-48a7-aac3-5d3caae87d8b",
+        "hash": "67dffb93557c010508c6031e0658f80bdac2e6f3fd9a4a939184115fb2dd53e9",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "49e305d8-45c2-48a7-aac3-5d3caae87d8b",
+        "timestamp": "2026-03-08T07:38:24.946672Z",
+        "tx_id": "TX-36199D04FF804F328B6FFA0CED52ABC0"
+    },
+    "85ca0768-a316-4e01-b8ee-2ebc602bf540": {
+        "scan_id": "85ca0768-a316-4e01-b8ee-2ebc602bf540",
+        "hash": "39d767e3881f8a3e56eadd4cc67d4949089c0cf839208354d202268fcc275f83",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "85ca0768-a316-4e01-b8ee-2ebc602bf540",
+        "timestamp": "2026-03-08T07:38:24.978129Z",
+        "tx_id": "TX-DD8C69ADE27B4DA7844D3B2D888C439D"
+    },
+    "94f33f16-9f10-40a0-a8f7-d4d40329bdf6": {
+        "scan_id": "94f33f16-9f10-40a0-a8f7-d4d40329bdf6",
+        "hash": "88fc2c5005e0809bc31e2b6fe7debdfd20b1d0c06305e8a8e901c92a9b59edbf",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "94f33f16-9f10-40a0-a8f7-d4d40329bdf6",
+        "timestamp": "2026-03-08T07:38:24.997042Z",
+        "tx_id": "TX-5D7CACA7330746C3B4BDD7318018A531"
+    },
+    "738fb89b-191d-4a10-9df7-38a70ec5b491": {
+        "scan_id": "738fb89b-191d-4a10-9df7-38a70ec5b491",
+        "hash": "f8f9bb05f98c0da0ba2535c512e2176a0d53d1bf2058c9472ab21906360bc70f",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "738fb89b-191d-4a10-9df7-38a70ec5b491",
+        "timestamp": "2026-03-08T07:38:25.030433Z",
+        "tx_id": "TX-85932B14B696429C95A1AC51B5F3E8F4"
+    },
+    "afefe5ba-8f7c-4b33-9b4d-899fd4679b47": {
+        "scan_id": "afefe5ba-8f7c-4b33-9b4d-899fd4679b47",
+        "hash": "853e7d2badcf7ad088f43fb017769924f11957a36d66cb393943bf0cbedab3f7",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "afefe5ba-8f7c-4b33-9b4d-899fd4679b47",
+        "timestamp": "2026-03-08T07:38:25.066863Z",
+        "tx_id": "TX-C9732D2D97684057B4B0190EDF841AC0"
+    },
+    "a8c8841d-5a17-49f9-a0b5-2ec962c214b9": {
+        "scan_id": "a8c8841d-5a17-49f9-a0b5-2ec962c214b9",
+        "hash": "043ca088eccd76db7295929f05a4455fa12e70f84018f44ba799a2f81836da95",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "a8c8841d-5a17-49f9-a0b5-2ec962c214b9",
+        "timestamp": "2026-03-08T07:38:25.094779Z",
+        "tx_id": "TX-30C1491BA5ED49BA95F8C10966167302"
+    },
+    "13dc6cb9-c124-4ed5-b717-e161ae9cc732": {
+        "scan_id": "13dc6cb9-c124-4ed5-b717-e161ae9cc732",
+        "hash": "5096352770a9c71450d18d5480462db65d1e75eef1d8cf8aa3caff67831788fb",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "13dc6cb9-c124-4ed5-b717-e161ae9cc732",
+        "timestamp": "2026-03-08T07:38:25.122707Z",
+        "tx_id": "TX-ECDEFB0DA54C440A9931E12DE8C3D844"
+    },
+    "6db7be25-ac4f-42b6-9e07-37e07cb411b9": {
+        "scan_id": "6db7be25-ac4f-42b6-9e07-37e07cb411b9",
+        "hash": "41583acb5069b3f0dab9d8025586c64773cae34ca9a637802bd2bd8bf57d018d",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "6db7be25-ac4f-42b6-9e07-37e07cb411b9",
+        "timestamp": "2026-03-08T07:38:25.152504Z",
+        "tx_id": "TX-21623E0FC631441887134C7D6D4DCA37"
+    },
+    "532bfa9b-3bd6-4e0a-8a25-88afce56d0e1": {
+        "scan_id": "532bfa9b-3bd6-4e0a-8a25-88afce56d0e1",
+        "hash": "3b48f1cb1e1204842c3967d6748e292a8c09c4e78c04fcab57495206092e122a",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "532bfa9b-3bd6-4e0a-8a25-88afce56d0e1",
+        "timestamp": "2026-03-08T07:38:25.188488Z",
+        "tx_id": "TX-F95E713251A341FCAB9B9992EF6FEB0C"
+    },
+    "8da17e55-f91c-420c-8c58-1d4417eda32c": {
+        "scan_id": "8da17e55-f91c-420c-8c58-1d4417eda32c",
+        "hash": "5564938b404a06fda7f186eebe0474ce72601668c408b68dbd1607448d0e7fbd",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "8da17e55-f91c-420c-8c58-1d4417eda32c",
+        "timestamp": "2026-03-08T07:38:25.213265Z",
+        "tx_id": "TX-79786EAD7BC44DF9966D2D55D1065BEA"
+    },
+    "48ad0065-6e43-4cfc-bc2c-12112cc05209": {
+        "scan_id": "48ad0065-6e43-4cfc-bc2c-12112cc05209",
+        "hash": "31176965d96f633017b9f573edcba516e1203277d6b97951a9007231f1f53cf2",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "48ad0065-6e43-4cfc-bc2c-12112cc05209",
+        "timestamp": "2026-03-08T07:38:25.249539Z",
+        "tx_id": "TX-5FA155DDAE3B4C35A3FB7E309614DB98"
+    },
+    "f9f869be-acd0-40ff-8fa1-9642876943b9": {
+        "scan_id": "f9f869be-acd0-40ff-8fa1-9642876943b9",
+        "hash": "cbaa488e0d22a2c9902e51435a3e1b642e44eb9e3aea2c8b717cc9e9f6837dd3",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "f9f869be-acd0-40ff-8fa1-9642876943b9",
+        "timestamp": "2026-03-08T07:38:25.278061Z",
+        "tx_id": "TX-9C69898B93F549838AE085C4F766E0F1"
+    },
+    "824468d0-902f-4763-8b92-2bcb327ffad4": {
+        "scan_id": "824468d0-902f-4763-8b92-2bcb327ffad4",
+        "hash": "51d1a072f373ee2a20e638ea77ae01bbb02beccf63e944f5bc55f13393f8b919",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "824468d0-902f-4763-8b92-2bcb327ffad4",
+        "timestamp": "2026-03-08T07:38:25.311572Z",
+        "tx_id": "TX-9196AF2787C34C3581EDFF47A16367A1"
+    },
+    "4fdf6122-4728-4381-9745-4fda11887e24": {
+        "scan_id": "4fdf6122-4728-4381-9745-4fda11887e24",
+        "hash": "a4b303e79ddda04e0fae24a631d1a2ed099f650962be6856b2143fe8e0bd46cb",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "4fdf6122-4728-4381-9745-4fda11887e24",
+        "timestamp": "2026-03-08T07:38:25.337252Z",
+        "tx_id": "TX-B867F093C3C2487B9A055A2372D0E7CC"
+    },
+    "e2c809bc-51c8-4bb7-b79b-8013bc7d7a9c": {
+        "scan_id": "e2c809bc-51c8-4bb7-b79b-8013bc7d7a9c",
+        "hash": "8a6e54cc19fb3fc98bd4ba941458f23e2786519803e381e34fb6e35df115bdbd",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "e2c809bc-51c8-4bb7-b79b-8013bc7d7a9c",
+        "timestamp": "2026-03-08T07:38:25.379431Z",
+        "tx_id": "TX-CD71C535E6CA47249FF71CE5951CD18D"
+    },
+    "325986b0-be50-4c40-bb16-b7621f4c592a": {
+        "scan_id": "325986b0-be50-4c40-bb16-b7621f4c592a",
+        "hash": "f6efd3fc0ef00acf20cd257ba731fc1ed1a465c85942fb91207917a1381e3037",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "325986b0-be50-4c40-bb16-b7621f4c592a",
+        "timestamp": "2026-03-08T07:38:25.411512Z",
+        "tx_id": "TX-66DB40F039354768B2C62207F65E1C65"
+    },
+    "ebca5adb-fc1e-43b6-bf49-8ff938d68a42": {
+        "scan_id": "ebca5adb-fc1e-43b6-bf49-8ff938d68a42",
+        "hash": "f85c5d67fbde64187381fce13f042f9452a54592bfd135651d0312b7d41fbd42",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "ebca5adb-fc1e-43b6-bf49-8ff938d68a42",
+        "timestamp": "2026-03-08T07:38:25.440540Z",
+        "tx_id": "TX-5878FA10805E4B85B24D04D942FC7E81"
+    },
+    "417e3fcc-1457-48ba-8c93-f63ee302417c": {
+        "scan_id": "417e3fcc-1457-48ba-8c93-f63ee302417c",
+        "hash": "6a83b93ddbd1d58a7eceaf414076600bb94eb538f805e56d0dedcc19de16f40f",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "417e3fcc-1457-48ba-8c93-f63ee302417c",
+        "timestamp": "2026-03-08T07:38:25.470159Z",
+        "tx_id": "TX-5C1F5E1B0E694AF883BDF14BF43CD82F"
+    },
+    "076a624a-b9b2-43b4-b1b9-f1c177597cdf": {
+        "scan_id": "076a624a-b9b2-43b4-b1b9-f1c177597cdf",
+        "hash": "305e35f3a6688e5e8dbcd5247d3f23344d8e6c6e4bb5e16de9c9b9e81910f3d4",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "076a624a-b9b2-43b4-b1b9-f1c177597cdf",
+        "timestamp": "2026-03-08T07:38:25.497244Z",
+        "tx_id": "TX-62DEA3EC079742C4A1251DC898A3BD6B"
+    },
+    "426a9767-b21d-4221-a108-dd9ebaae9cbf": {
+        "scan_id": "426a9767-b21d-4221-a108-dd9ebaae9cbf",
+        "hash": "95a6c7e5f1b8d9987133bcd505310e63a9e520b08a49c1339faa51be428dea72",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "426a9767-b21d-4221-a108-dd9ebaae9cbf",
+        "timestamp": "2026-03-08T07:38:25.528264Z",
+        "tx_id": "TX-64261E06B62B413B97B5A3CC6C28FD6A"
+    },
+    "333ed267-e220-4fe1-8b4f-580cf86275e0": {
+        "scan_id": "333ed267-e220-4fe1-8b4f-580cf86275e0",
+        "hash": "902e3e2c9725389cee30c79b7bc5ee30844d20373db7c750be8d3be90e933b3c",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "333ed267-e220-4fe1-8b4f-580cf86275e0",
+        "timestamp": "2026-03-08T07:38:25.563851Z",
+        "tx_id": "TX-BFFEE97384284EFA912A3F39F8169E74"
+    },
+    "e200e65a-d22d-43f0-a286-7656eb69871f": {
+        "scan_id": "e200e65a-d22d-43f0-a286-7656eb69871f",
+        "hash": "f296f53960103928ee5c765ed4187431153935fa30f2f335bc5843fd8c99c3e7",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "e200e65a-d22d-43f0-a286-7656eb69871f",
+        "timestamp": "2026-03-08T07:38:25.594854Z",
+        "tx_id": "TX-ABFDCB0BAB5A4F45941810CE45290868"
+    },
+    "3b6df894-2517-4627-be5f-bff1d6f4fa41": {
+        "scan_id": "3b6df894-2517-4627-be5f-bff1d6f4fa41",
+        "hash": "86d70afc16be2b9ce6a341a976fe2ae928a5563323b8d74d0cefacc7489a9b5c",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "3b6df894-2517-4627-be5f-bff1d6f4fa41",
+        "timestamp": "2026-03-08T07:38:25.630411Z",
+        "tx_id": "TX-A27DEE6C74EC42D482773A03A15B7BB4"
+    },
+    "a4479708-1d66-4562-bf5f-3564c20f5f9e": {
+        "scan_id": "a4479708-1d66-4562-bf5f-3564c20f5f9e",
+        "hash": "668e79683e106ddeb58cf0ee22467eef835271818179e46d37eb8717d76a0b98",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "a4479708-1d66-4562-bf5f-3564c20f5f9e",
+        "timestamp": "2026-03-08T07:38:25.663683Z",
+        "tx_id": "TX-BA4F8A9673D54E28910355BADE3710D5"
+    },
+    "0fc7724b-cefa-46f6-acae-69d06777886b": {
+        "scan_id": "0fc7724b-cefa-46f6-acae-69d06777886b",
+        "hash": "d22930f7b8317449af75e8f7aa61f6c6c7bd0e102b6151bead09e67f5ba3ea86",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "0fc7724b-cefa-46f6-acae-69d06777886b",
+        "timestamp": "2026-03-08T07:38:25.696772Z",
+        "tx_id": "TX-6428EE5EBBD44C34ABBDF7EF217B52F8"
+    },
+    "a7699803-dab1-43b4-9eb3-35e5b72eaffb": {
+        "scan_id": "a7699803-dab1-43b4-9eb3-35e5b72eaffb",
+        "hash": "68f9e9b8ed627c7df56b9654904a3fa1b7b86a7bdd584c264493a1ebc2c11f5d",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "a7699803-dab1-43b4-9eb3-35e5b72eaffb",
+        "timestamp": "2026-03-08T07:38:25.736076Z",
+        "tx_id": "TX-0DAED190239B47AFACD45163C177D687"
+    },
+    "93a175b2-76f2-4069-b787-e1409522ed16": {
+        "scan_id": "93a175b2-76f2-4069-b787-e1409522ed16",
+        "hash": "26479fa007e37fecfd1a0e8106347e1698e68e7dc66f34c1001a927844c71b34",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "93a175b2-76f2-4069-b787-e1409522ed16",
+        "timestamp": "2026-03-08T07:38:25.771730Z",
+        "tx_id": "TX-4578EF14E54B4432A5C37F6B5A4EBCF9"
+    },
+    "b8d7f94c-fb65-46dc-be7f-70d959a50dd3": {
+        "scan_id": "b8d7f94c-fb65-46dc-be7f-70d959a50dd3",
+        "hash": "1fdb5a11cdf018bbfc6c1fb04fca9a2849c35e7817e083e471946ce9f863164a",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "b8d7f94c-fb65-46dc-be7f-70d959a50dd3",
+        "timestamp": "2026-03-08T07:38:25.805525Z",
+        "tx_id": "TX-0316D0F2325946E99E3D8E8EA80B516F"
+    },
+    "12b40b7d-f997-4c7a-8552-48440abebd28": {
+        "scan_id": "12b40b7d-f997-4c7a-8552-48440abebd28",
+        "hash": "3e71d96e93977600d2e5b3544667c64b010cbf741e5860aefe0ef222b617b267",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "12b40b7d-f997-4c7a-8552-48440abebd28",
+        "timestamp": "2026-03-08T07:38:25.843490Z",
+        "tx_id": "TX-E659DBF983DE4A0D8639872FDDC6A0B0"
+    },
+    "c0f65e99-2099-4138-8096-aab6dc8a7a42": {
+        "scan_id": "c0f65e99-2099-4138-8096-aab6dc8a7a42",
+        "hash": "d2c2dc6809db993c239ef65a895da0022c74b17860709304d26ec0f4f808a429",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "c0f65e99-2099-4138-8096-aab6dc8a7a42",
+        "timestamp": "2026-03-08T07:38:25.884331Z",
+        "tx_id": "TX-A28E16DCFF1A4D4B85E2508390579ADC"
+    },
+    "ec0aaded-7ee5-4353-84ea-e61680140caf": {
+        "scan_id": "ec0aaded-7ee5-4353-84ea-e61680140caf",
+        "hash": "09a60d994eaf104d48a520cfcb2c7a250dae02ca114f0d30fb3a9c10bfe54bd9",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "ec0aaded-7ee5-4353-84ea-e61680140caf",
+        "timestamp": "2026-03-08T07:38:25.913031Z",
+        "tx_id": "TX-2867644A9B8E44C19E2A76555531A4B6"
+    },
+    "db166277-50a1-4aa4-9df1-0db8d210b073": {
+        "scan_id": "db166277-50a1-4aa4-9df1-0db8d210b073",
+        "hash": "556ce57de418dc8689698a5f21a6e0ac736b92e6fd5eea8f5670a2ac600da5bb",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "db166277-50a1-4aa4-9df1-0db8d210b073",
+        "timestamp": "2026-03-08T07:38:25.940371Z",
+        "tx_id": "TX-EC8BF139C55F48A7969396F3D386C18E"
+    },
+    "58dc4b88-65fb-4512-af40-9bb30b948a9c": {
+        "scan_id": "58dc4b88-65fb-4512-af40-9bb30b948a9c",
+        "hash": "cdc628a8b41e793ec16bb91f196e4f4830687569a8451790f3c510606bda241c",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "58dc4b88-65fb-4512-af40-9bb30b948a9c",
+        "timestamp": "2026-03-08T07:38:25.963474Z",
+        "tx_id": "TX-CEE0B1C1A12E422A9423FAE09F058C4B"
+    },
+    "1a4e75de-04f5-4e31-b82a-2d5c05eeb2f1": {
+        "scan_id": "1a4e75de-04f5-4e31-b82a-2d5c05eeb2f1",
+        "hash": "c1b4d3a6afabfdd71c75f9ddc93269031ac326d9c60bf0a6683e6a45be3ea0fe",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "1a4e75de-04f5-4e31-b82a-2d5c05eeb2f1",
+        "timestamp": "2026-03-08T07:38:26.010063Z",
+        "tx_id": "TX-8CCA440C741048F8B5356B83DDD03912"
+    },
+    "b316b8dc-e00d-4201-881c-5806504fdbf2": {
+        "scan_id": "b316b8dc-e00d-4201-881c-5806504fdbf2",
+        "hash": "64e19d8558ab38606b8e0c16826b5ec43cc9480c4f8dcc12eafc856a3f6b76d4",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "b316b8dc-e00d-4201-881c-5806504fdbf2",
+        "timestamp": "2026-03-08T07:38:26.046882Z",
+        "tx_id": "TX-BC900CA2A5AD44F88C3E53B4642C414D"
+    },
+    "4d5197c4-3122-4908-be34-118dad80d9b7": {
+        "scan_id": "4d5197c4-3122-4908-be34-118dad80d9b7",
+        "hash": "cd12952309d9ceb93c58b745b5bfd0d2857f91e690f872a9ce14b30eeee3aa75",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "4d5197c4-3122-4908-be34-118dad80d9b7",
+        "timestamp": "2026-03-08T07:38:26.080368Z",
+        "tx_id": "TX-EA6E507B3749404CBF0C31117E1376BF"
+    },
+    "10bff692-415f-438e-9fb2-e4c151ead738": {
+        "scan_id": "10bff692-415f-438e-9fb2-e4c151ead738",
+        "hash": "7d96cc1144b751672d884a69363b02ebc47663bbb4db2c74e8a3ca545ef4c54d",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "10bff692-415f-438e-9fb2-e4c151ead738",
+        "timestamp": "2026-03-08T07:38:26.123598Z",
+        "tx_id": "TX-6BEDC839C8D14EE7BFAB6718AE7CB508"
+    },
+    "6753e10c-37b5-487e-9f0f-7a229e6ff1f4": {
+        "scan_id": "6753e10c-37b5-487e-9f0f-7a229e6ff1f4",
+        "hash": "13199e7b31adad945a50ee9016f8687f24e7c4f80576b10c8fbb6a5ed50f19b0",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "6753e10c-37b5-487e-9f0f-7a229e6ff1f4",
+        "timestamp": "2026-03-08T07:38:26.161558Z",
+        "tx_id": "TX-E6EFD8CB1DAB450C85545D6F3D01D643"
+    },
+    "2fb91a73-3d3a-44c9-ab3e-d68bf69da82c": {
+        "scan_id": "2fb91a73-3d3a-44c9-ab3e-d68bf69da82c",
+        "hash": "0b899c90f7e70a358b738cae86b82d5a800c5e1d3215fad5cc517705cb6a4bad",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "2fb91a73-3d3a-44c9-ab3e-d68bf69da82c",
+        "timestamp": "2026-03-08T07:38:26.197029Z",
+        "tx_id": "TX-61462298D2834ECB824EBD7E4A5DF73F"
+    },
+    "31b93c18-37bf-4763-8ef7-31329d891e61": {
+        "scan_id": "31b93c18-37bf-4763-8ef7-31329d891e61",
+        "hash": "0fbed6e83a5ac4638820e1af31f5303149952d6ccaec50b5b85d65ac3cf3c40b",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "31b93c18-37bf-4763-8ef7-31329d891e61",
+        "timestamp": "2026-03-08T07:38:26.233566Z",
+        "tx_id": "TX-F859EC31AE254AAA90BBBF3CAECB709F"
+    },
+    "bfb95284-97b7-4b8b-a506-3ff7253d9039": {
+        "scan_id": "bfb95284-97b7-4b8b-a506-3ff7253d9039",
+        "hash": "df218e46c516bbc20dc8c52158fab4ab1ac9d3ac1ead0db44d36679cf78a61e9",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "bfb95284-97b7-4b8b-a506-3ff7253d9039",
+        "timestamp": "2026-03-08T07:38:26.272516Z",
+        "tx_id": "TX-F2927DFFBD1A48969DA2E6E732E96B44"
+    },
+    "5f1d78ea-a7bb-40cd-9de8-fab8a83332af": {
+        "scan_id": "5f1d78ea-a7bb-40cd-9de8-fab8a83332af",
+        "hash": "2308106193ee551e9928aaf1a8c7a456470f97366ea394baaa5a0ba75eb6ccfc",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "5f1d78ea-a7bb-40cd-9de8-fab8a83332af",
+        "timestamp": "2026-03-08T07:38:26.306803Z",
+        "tx_id": "TX-5A78A0DFFADB4324ABAA0A4C4A6607F9"
+    },
+    "95ea12ee-dde8-4951-b609-af5338540772": {
+        "scan_id": "95ea12ee-dde8-4951-b609-af5338540772",
+        "hash": "61041516d6d2760b93856c124354c47438b5f5d549528297459729d2c9d97ca2",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "95ea12ee-dde8-4951-b609-af5338540772",
+        "timestamp": "2026-03-08T07:38:26.341133Z",
+        "tx_id": "TX-9F8782B770364C22869E2EF080F3AA6C"
+    },
+    "8fad3f14-d9f6-44c9-9da5-8699ae72aa9d": {
+        "scan_id": "8fad3f14-d9f6-44c9-9da5-8699ae72aa9d",
+        "hash": "5492637c1df373caa47c557ccc7cb533639f696d1a5ee2141c0c3dcf03715338",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "8fad3f14-d9f6-44c9-9da5-8699ae72aa9d",
+        "timestamp": "2026-03-08T07:38:26.370727Z",
+        "tx_id": "TX-21A38F4745954140915DFBB998EA3451"
+    },
+    "dfcd090d-468d-4062-82ff-828edd48dc4e": {
+        "scan_id": "dfcd090d-468d-4062-82ff-828edd48dc4e",
+        "hash": "d9dfa33f830e9308a0b05348274124130d49af30318f9753d32a305c51b310a1",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "dfcd090d-468d-4062-82ff-828edd48dc4e",
+        "timestamp": "2026-03-08T07:38:26.410630Z",
+        "tx_id": "TX-A14D068C5BD642409127604F886F6228"
+    },
+    "1661edfd-a7b2-4794-8a4b-952025f65d69": {
+        "scan_id": "1661edfd-a7b2-4794-8a4b-952025f65d69",
+        "hash": "014c51c14155991ec3601f933653763e872e8c41e745936b101ed2c90eba0944",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "1661edfd-a7b2-4794-8a4b-952025f65d69",
+        "timestamp": "2026-03-08T07:38:26.436323Z",
+        "tx_id": "TX-B5DCB3293F714699941CE351CA8A9760"
+    },
+    "73833026-29ca-4d2f-b217-d2c0b5d8192f": {
+        "scan_id": "73833026-29ca-4d2f-b217-d2c0b5d8192f",
+        "hash": "84645018689b12f596c60e521f1fc903cc4b1a01992d20bed20e4e45a0cb9465",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "73833026-29ca-4d2f-b217-d2c0b5d8192f",
+        "timestamp": "2026-03-08T07:38:26.461563Z",
+        "tx_id": "TX-18DA3E8823EE4AA0927FDF4D38F29FF1"
+    },
+    "3f97558a-b932-4220-84f1-ab436332b51c": {
+        "scan_id": "3f97558a-b932-4220-84f1-ab436332b51c",
+        "hash": "341959b044bcf8a9199a1d0e15a5f2afb6fd0fa8a639b6f04335af16cbb0b533",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "3f97558a-b932-4220-84f1-ab436332b51c",
+        "timestamp": "2026-03-08T07:38:26.496607Z",
+        "tx_id": "TX-9016440A6B0A488895B7CDC6045CF425"
+    },
+    "9bce08e6-a8d3-45d2-a5f7-994ad8d8051b": {
+        "scan_id": "9bce08e6-a8d3-45d2-a5f7-994ad8d8051b",
+        "hash": "de975f3f4a5483abd2b633378443a0b7d68aed00fb52e71c1d95061b01e8d5ac",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "9bce08e6-a8d3-45d2-a5f7-994ad8d8051b",
+        "timestamp": "2026-03-08T07:38:26.528112Z",
+        "tx_id": "TX-B2781C1B61464CAFAFFE2D25F819A5C3"
+    },
+    "e308df48-65d1-4915-a1a4-6985344bd208": {
+        "scan_id": "e308df48-65d1-4915-a1a4-6985344bd208",
+        "hash": "0d8148c860f6ee4c359502eb655ab22b1d8e0a6c6832bf0db4064a1b37cc8355",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "e308df48-65d1-4915-a1a4-6985344bd208",
+        "timestamp": "2026-03-08T07:38:26.560697Z",
+        "tx_id": "TX-6C07A4250BEE4618B074F466A6F4E1B1"
+    },
+    "e3ad3b7e-812a-493f-9a07-b77a62454b2d": {
+        "scan_id": "e3ad3b7e-812a-493f-9a07-b77a62454b2d",
+        "hash": "486c837806aec6909292ecfd1a50d0706e677cf194adb03a12aa2cbcccabc6dd",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "e3ad3b7e-812a-493f-9a07-b77a62454b2d",
+        "timestamp": "2026-03-08T07:38:26.580509Z",
+        "tx_id": "TX-98D08195E99F4F569E1414F84155C5F5"
+    },
+    "c078b3a5-3fe2-4206-ab77-506b84974c23": {
+        "scan_id": "c078b3a5-3fe2-4206-ab77-506b84974c23",
+        "hash": "94c02f6b80f8cad534bcdca579605217467bd658f9ed0bc795f5f54dd011f7b5",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "c078b3a5-3fe2-4206-ab77-506b84974c23",
+        "timestamp": "2026-03-08T07:38:26.613583Z",
+        "tx_id": "TX-72058D38FE23465AB8819A462199493D"
+    },
+    "88881fc3-d2c8-4d5c-856f-92cec89a63ac": {
+        "scan_id": "88881fc3-d2c8-4d5c-856f-92cec89a63ac",
+        "hash": "a13354d125bd284905cb0a401a95e6c695b53075d888f96f6e86f0d54d73a4dc",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "88881fc3-d2c8-4d5c-856f-92cec89a63ac",
+        "timestamp": "2026-03-08T07:38:26.646800Z",
+        "tx_id": "TX-1B49A9F914484A8D8DE1BAAB463DB476"
+    },
+    "a6182330-7f82-4fe6-a568-ddaefdd6f2a2": {
+        "scan_id": "a6182330-7f82-4fe6-a568-ddaefdd6f2a2",
+        "hash": "549fe6d5ede2cd493c6e3aad18eb29189bfb83805b0cd850ed2dbbaf1f2ea9b0",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "a6182330-7f82-4fe6-a568-ddaefdd6f2a2",
+        "timestamp": "2026-03-08T07:38:26.679941Z",
+        "tx_id": "TX-5C593A73523F49ED985EDB826AE43275"
+    },
+    "4a53f0fd-2230-454a-9088-7370da9347d9": {
+        "scan_id": "4a53f0fd-2230-454a-9088-7370da9347d9",
+        "hash": "65549927482440ef1a0599d4f0e4566c6b50ae2c67d30caa6e3e0c795562b713",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "4a53f0fd-2230-454a-9088-7370da9347d9",
+        "timestamp": "2026-03-08T07:38:26.706046Z",
+        "tx_id": "TX-2DCC9C0ABB78488B963E506D02DED7F0"
+    },
+    "3b2a301a-5ccb-472f-adb2-3815119ce53f": {
+        "scan_id": "3b2a301a-5ccb-472f-adb2-3815119ce53f",
+        "hash": "47f1860f514d7d36d1faea4164fb1199f1f795d53647a4d69cdcf2694c4da46f",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "3b2a301a-5ccb-472f-adb2-3815119ce53f",
+        "timestamp": "2026-03-08T07:38:26.737639Z",
+        "tx_id": "TX-16FB17E8D4044DD190D99DE811206765"
+    },
+    "10d2f065-8f74-40ca-820b-5e0774e01205": {
+        "scan_id": "10d2f065-8f74-40ca-820b-5e0774e01205",
+        "hash": "cb553989b8ca84b003f8db97622e3b9800b71abec036ed326c259775bd2c0016",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "10d2f065-8f74-40ca-820b-5e0774e01205",
+        "timestamp": "2026-03-08T07:38:26.762901Z",
+        "tx_id": "TX-F9D5B3CFB3DB4582AFC0FF544D1A3211"
+    },
+    "6d7de12a-af73-4b6c-8fde-d708f42becc7": {
+        "scan_id": "6d7de12a-af73-4b6c-8fde-d708f42becc7",
+        "hash": "23baba09b896b744ac367a0161d85768b3a0569758f210bcde5cf06634f6b951",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "6d7de12a-af73-4b6c-8fde-d708f42becc7",
+        "timestamp": "2026-03-08T07:38:26.796369Z",
+        "tx_id": "TX-2EF6D31178AC4E849CE9266D18AC7D4F"
+    },
+    "bd3de0b8-4389-4bc9-8542-8040a61a1578": {
+        "scan_id": "bd3de0b8-4389-4bc9-8542-8040a61a1578",
+        "hash": "cd15d488c0761d69a8360ea3ebeae4e025cb0079abfcaa37331b62a3411f510e",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "bd3de0b8-4389-4bc9-8542-8040a61a1578",
+        "timestamp": "2026-03-08T07:38:26.829858Z",
+        "tx_id": "TX-EB2959CF8252411FBAA186DCACFBF974"
+    },
+    "f5667495-7931-49a1-85e0-ef2942ccab09": {
+        "scan_id": "f5667495-7931-49a1-85e0-ef2942ccab09",
+        "hash": "4d2e0dbd8ea3df08022d313f8c708272aac98cc88384ff30261039771b9eee05",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "f5667495-7931-49a1-85e0-ef2942ccab09",
+        "timestamp": "2026-03-08T07:38:26.856606Z",
+        "tx_id": "TX-7BC8A038FC44479188EA3AEEFB6316B5"
+    },
+    "a4030a8b-e6fd-4c65-8aa8-5709823374bb": {
+        "scan_id": "a4030a8b-e6fd-4c65-8aa8-5709823374bb",
+        "hash": "f4536d92bad209ab26030a944f4acae0f04bb8d0b9b47585be2b353cac81e2da",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "a4030a8b-e6fd-4c65-8aa8-5709823374bb",
+        "timestamp": "2026-03-08T07:38:26.888079Z",
+        "tx_id": "TX-3D4C6588400B482FB08C2D544F0CD3A0"
+    },
+    "0c902e12-bd0b-4e07-a2fd-8bb6375ba734": {
+        "scan_id": "0c902e12-bd0b-4e07-a2fd-8bb6375ba734",
+        "hash": "8fffd51a0ca47249005ad1568314656e497ce3c9005d63f9099166f1ca35d4a7",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "0c902e12-bd0b-4e07-a2fd-8bb6375ba734",
+        "timestamp": "2026-03-08T07:38:26.913665Z",
+        "tx_id": "TX-CDC889C42F1C4AFCB28B6B991B67717E"
+    },
+    "e13681e3-aa48-427e-b0dc-717b28cc3659": {
+        "scan_id": "e13681e3-aa48-427e-b0dc-717b28cc3659",
+        "hash": "276e434c1eb4bd55c52a2e05faf0832e12a7f259f7c7c468fba9bbf76d223ad9",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "e13681e3-aa48-427e-b0dc-717b28cc3659",
+        "timestamp": "2026-03-08T07:38:26.948031Z",
+        "tx_id": "TX-14C4F64F7D8B46BFB6280599D6E3CC5A"
+    },
+    "952a4514-4782-4312-b9d2-bd4ae1ed11fa": {
+        "scan_id": "952a4514-4782-4312-b9d2-bd4ae1ed11fa",
+        "hash": "d452a6f88f5091a991641a265d62f512e650019f6445b6246cf1d65273feac3b",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "952a4514-4782-4312-b9d2-bd4ae1ed11fa",
+        "timestamp": "2026-03-08T07:38:26.983928Z",
+        "tx_id": "TX-4A4CC1A69A834B7DBFF7CCC8879B5838"
+    },
+    "ea8558b3-946e-408f-a762-85a31ad81f4b": {
+        "scan_id": "ea8558b3-946e-408f-a762-85a31ad81f4b",
+        "hash": "9c98d71e2cbab93af47de7b6d1cfc679ecb83028c4842cf5809e29f652225b19",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "ea8558b3-946e-408f-a762-85a31ad81f4b",
+        "timestamp": "2026-03-08T07:38:27.013458Z",
+        "tx_id": "TX-DA6F9FC096494F3282A5B3D03C9E99EB"
+    },
+    "bd2689e5-7c00-477c-b4e8-b2d475c845d8": {
+        "scan_id": "bd2689e5-7c00-477c-b4e8-b2d475c845d8",
+        "hash": "7999b028e488f508330b18f8f514adf418855e2023645dbe2555b282375125b1",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "bd2689e5-7c00-477c-b4e8-b2d475c845d8",
+        "timestamp": "2026-03-08T07:38:27.047223Z",
+        "tx_id": "TX-5353E3CEDF964A29A4F5C3B2258F20CC"
+    },
+    "97ee49a6-c99a-4c3c-b398-bc98a179aaeb": {
+        "scan_id": "97ee49a6-c99a-4c3c-b398-bc98a179aaeb",
+        "hash": "b693d4ea2fa04f55fba0a2d8b42600cd3909de0eb1878833adf5f0b23d6b263f",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "97ee49a6-c99a-4c3c-b398-bc98a179aaeb",
+        "timestamp": "2026-03-08T07:38:27.080560Z",
+        "tx_id": "TX-42448EA3CF9849C7A54383BC18879A54"
+    },
+    "a96d36a9-9b3d-489f-8973-b2aa44c9056d": {
+        "scan_id": "a96d36a9-9b3d-489f-8973-b2aa44c9056d",
+        "hash": "ae5cf77e5cc71202e9ee230005dd5497fe64f71315e7e7b58aa1d4bfd2eb4887",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "a96d36a9-9b3d-489f-8973-b2aa44c9056d",
+        "timestamp": "2026-03-08T07:38:27.111596Z",
+        "tx_id": "TX-75F02B349466474CB6D73F5E7C6E020F"
+    },
+    "8b7b83e7-6fb2-46fc-91a0-5ec11c0186f7": {
+        "scan_id": "8b7b83e7-6fb2-46fc-91a0-5ec11c0186f7",
+        "hash": "6e27629f6781239877ed787f508240a27f2f27314ac1c130975dbb574f9140b1",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "8b7b83e7-6fb2-46fc-91a0-5ec11c0186f7",
+        "timestamp": "2026-03-08T07:38:27.140172Z",
+        "tx_id": "TX-71127961ECD74CB7AA629C551B34D8CD"
+    },
+    "a4285e9a-8d94-4b2a-adf4-860e3a5ff00d": {
+        "scan_id": "a4285e9a-8d94-4b2a-adf4-860e3a5ff00d",
+        "hash": "48604cfd44d0df07acdf5a66b84de4370c1f57dedeb55bf68d28d987531c82bc",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "a4285e9a-8d94-4b2a-adf4-860e3a5ff00d",
+        "timestamp": "2026-03-08T07:38:27.163154Z",
+        "tx_id": "TX-C49F6EA861C643449E80D04557B26A1D"
+    },
+    "a708405c-2d10-4041-b18d-cc08e92b105a": {
+        "scan_id": "a708405c-2d10-4041-b18d-cc08e92b105a",
+        "hash": "8de67f8ce7799beec52420e7572b2c624c1646a2d2464776c3e92f907f878f07",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "a708405c-2d10-4041-b18d-cc08e92b105a",
+        "timestamp": "2026-03-08T07:38:27.196362Z",
+        "tx_id": "TX-A796B343D5354E849A203CF9FA17C84F"
+    },
+    "df2540ef-a49f-4d0c-841a-716b1612c524": {
+        "scan_id": "df2540ef-a49f-4d0c-841a-716b1612c524",
+        "hash": "eba3ba43e5d54463a74d1ecb8ca70ee768e6de14ee2b307581ff0af1cbad42b7",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "df2540ef-a49f-4d0c-841a-716b1612c524",
+        "timestamp": "2026-03-08T07:38:27.221604Z",
+        "tx_id": "TX-293DB02285824262B49805394E7EA5EE"
+    },
+    "129e2a26-d842-44c2-966c-5cd5efe28ce4": {
+        "scan_id": "129e2a26-d842-44c2-966c-5cd5efe28ce4",
+        "hash": "07f345b28a9af9d27b7bf5a5b706c79ef711883000c78c5f6710fad7a1a67f54",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "129e2a26-d842-44c2-966c-5cd5efe28ce4",
+        "timestamp": "2026-03-08T07:38:27.246033Z",
+        "tx_id": "TX-85C6B00AD8FC4942AB31AEC44CDBBE04"
+    },
+    "2095e9f7-45e7-4eec-858f-10c84f047e9c": {
+        "scan_id": "2095e9f7-45e7-4eec-858f-10c84f047e9c",
+        "hash": "106e0df7c0c39460aad38a8cab6640ae6ddfc070a38f82b9d38d7cb42f996aec",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "2095e9f7-45e7-4eec-858f-10c84f047e9c",
+        "timestamp": "2026-03-08T07:38:27.278011Z",
+        "tx_id": "TX-A274055CE8E444708A5901C1252B00E8"
+    },
+    "47b63510-c681-48d7-92e5-a0d9cf695e5f": {
+        "scan_id": "47b63510-c681-48d7-92e5-a0d9cf695e5f",
+        "hash": "cfc419626d495c4dc62087749adf0298a58769c41eddd4facecb9e5b50bf941e",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "47b63510-c681-48d7-92e5-a0d9cf695e5f",
+        "timestamp": "2026-03-08T07:38:27.301274Z",
+        "tx_id": "TX-D6BF3ACFE73A486B88070E51406CBDBE"
+    },
+    "ca6ee9ac-60b6-45de-8941-5882f7a752e5": {
+        "scan_id": "ca6ee9ac-60b6-45de-8941-5882f7a752e5",
+        "hash": "106894b4b1250d13ac6ae594067a23d37c6583a29ea41c7a87f87a5222023c9c",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "ca6ee9ac-60b6-45de-8941-5882f7a752e5",
+        "timestamp": "2026-03-08T07:38:27.333954Z",
+        "tx_id": "TX-FA6A724401CD4B438828E6BDD8E313C1"
+    },
+    "dae687ad-6cec-4de2-b5c0-03acb5253275": {
+        "scan_id": "dae687ad-6cec-4de2-b5c0-03acb5253275",
+        "hash": "3e672fef7c9cd9acff37d45faadf7e139af3de4ed6f68b241e71af04a44c5802",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "dae687ad-6cec-4de2-b5c0-03acb5253275",
+        "timestamp": "2026-03-08T07:38:27.371800Z",
+        "tx_id": "TX-223361D07E9A4B55A74522DC5D4F7B55"
+    },
+    "08dfb6ac-ea3e-4211-b907-cb43c05c6b5b": {
+        "scan_id": "08dfb6ac-ea3e-4211-b907-cb43c05c6b5b",
+        "hash": "0e2789cb38a03074932074b5be11df3ba12cb95ad4f4c1d6cc71f482c0b6a7cd",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "08dfb6ac-ea3e-4211-b907-cb43c05c6b5b",
+        "timestamp": "2026-03-08T07:38:27.397572Z",
+        "tx_id": "TX-28252E1671BA4A49962651CC6347560D"
+    },
+    "f3315df5-e549-4e54-9857-91dd0780d4c4": {
+        "scan_id": "f3315df5-e549-4e54-9857-91dd0780d4c4",
+        "hash": "e3e085b65d3ff8b4e11bcb37bf95976e20f7270a31a5c9c5fd722997224dab6b",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "f3315df5-e549-4e54-9857-91dd0780d4c4",
+        "timestamp": "2026-03-08T07:38:27.419092Z",
+        "tx_id": "TX-FAD306733A384DD1868FC9E7B9E071C3"
+    },
+    "e281d76f-bf5e-447f-a697-4836dd5e5542": {
+        "scan_id": "e281d76f-bf5e-447f-a697-4836dd5e5542",
+        "hash": "17721ff277e5c5148b6df1da9db6625cea34ae8fb3d41f40b5f2f77a622b92b0",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "e281d76f-bf5e-447f-a697-4836dd5e5542",
+        "timestamp": "2026-03-08T07:38:27.450892Z",
+        "tx_id": "TX-867C15E4B11F4D4980E74888C8A849A7"
+    },
+    "241945e6-b5b1-46a9-b2fa-455bf6080c18": {
+        "scan_id": "241945e6-b5b1-46a9-b2fa-455bf6080c18",
+        "hash": "a5780e5178e840226c9a606c33bfb6554c83a442b9a28624f18e31774389f691",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "241945e6-b5b1-46a9-b2fa-455bf6080c18",
+        "timestamp": "2026-03-08T07:38:27.466707Z",
+        "tx_id": "TX-E46E33BAC0D34959AD16A1F1428A6646"
+    },
+    "fd908fb3-20f2-4666-8635-51891b019a08": {
+        "scan_id": "fd908fb3-20f2-4666-8635-51891b019a08",
+        "hash": "26fd6a71b0e2b5a5904c6a2174e9d6903499832b998258bf90c0f2eeb0c59555",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "fd908fb3-20f2-4666-8635-51891b019a08",
+        "timestamp": "2026-03-08T07:38:27.496928Z",
+        "tx_id": "TX-5261D2868B9E403ABD7C49679C409274"
+    },
+    "af165f9d-2496-4891-838e-38b3b4c0825f": {
+        "scan_id": "af165f9d-2496-4891-838e-38b3b4c0825f",
+        "hash": "9aaaba0902c766414395bee857b79f56eede2f8ec7af11c42f65a4b9acb8d4b5",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "af165f9d-2496-4891-838e-38b3b4c0825f",
+        "timestamp": "2026-03-08T07:38:27.544893Z",
+        "tx_id": "TX-AEAD27C96FD9435C993D2663BADF0665"
+    },
+    "9757c566-eff3-44cf-b4f0-277c921e4a40": {
+        "scan_id": "9757c566-eff3-44cf-b4f0-277c921e4a40",
+        "hash": "cbda9a64217f74540e2512a341738da8753ffc92f155b436b761582aa41632e8",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "9757c566-eff3-44cf-b4f0-277c921e4a40",
+        "timestamp": "2026-03-08T07:38:27.587222Z",
+        "tx_id": "TX-2F7A3C476AF447F18A74DA18C0EBF4EB"
+    },
+    "77067b70-e488-4e42-bf56-1a49e6062811": {
+        "scan_id": "77067b70-e488-4e42-bf56-1a49e6062811",
+        "hash": "960457adbc1be71e840f88033d8703a54989e2c899d13568f8d0c510a7bbd4d8",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "77067b70-e488-4e42-bf56-1a49e6062811",
+        "timestamp": "2026-03-08T07:38:27.630165Z",
+        "tx_id": "TX-80C6CCD794964D8B8CC10E1304A07EFB"
+    },
+    "12febb2b-7967-4abc-b040-1d1e37e7b383": {
+        "scan_id": "12febb2b-7967-4abc-b040-1d1e37e7b383",
+        "hash": "588be023a8bb9d746ad35fcc1f110aa4257814e68f23cfbe74202a86b06639fc",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "12febb2b-7967-4abc-b040-1d1e37e7b383",
+        "timestamp": "2026-03-08T07:38:27.646899Z",
+        "tx_id": "TX-317D25CD84B546D0A01D7C124FADAA53"
+    },
+    "b861e4d1-5c2e-4e87-b061-ee17e2b86a7a": {
+        "scan_id": "b861e4d1-5c2e-4e87-b061-ee17e2b86a7a",
+        "hash": "53ab2169aac8d9f51eb871522395f92892697c86ac568363a146efa41cf066a6",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "b861e4d1-5c2e-4e87-b061-ee17e2b86a7a",
+        "timestamp": "2026-03-08T07:38:27.679919Z",
+        "tx_id": "TX-E73CD0A9089F47F49AEBAA4D729010E7"
+    },
+    "1a60fa08-6ad0-41b6-9c63-a3fd316703f0": {
+        "scan_id": "1a60fa08-6ad0-41b6-9c63-a3fd316703f0",
+        "hash": "9a12b51805c73673cb769e8dc81c90c81b27c7c911644ca7d8683951ebd58df3",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "1a60fa08-6ad0-41b6-9c63-a3fd316703f0",
+        "timestamp": "2026-03-08T07:38:27.706938Z",
+        "tx_id": "TX-FB25034F705A4CA58A1CAD20F1738452"
+    },
+    "0b333696-777d-4b9f-8fb4-97c2e91c78ea": {
+        "scan_id": "0b333696-777d-4b9f-8fb4-97c2e91c78ea",
+        "hash": "de19468af3d3c88e1f0005fb7f8d5a73148349367f79d215c47c3d6449d78fc7",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "0b333696-777d-4b9f-8fb4-97c2e91c78ea",
+        "timestamp": "2026-03-08T07:38:27.745744Z",
+        "tx_id": "TX-168F3FC300A34EF98CEE38FE66D60D80"
+    },
+    "a471545d-296c-4981-9d83-52d24c983286": {
+        "scan_id": "a471545d-296c-4981-9d83-52d24c983286",
+        "hash": "214c3f645b3cc96d3d299b3262389e3eb4ea3d721c919a6a39ac49f7a3cfd9b9",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "a471545d-296c-4981-9d83-52d24c983286",
+        "timestamp": "2026-03-08T07:38:27.777278Z",
+        "tx_id": "TX-6E9D926ACF4E4EA5B5398D1F374DE0A2"
+    },
+    "91d72b57-aea8-42b7-a4b9-f600f47408ca": {
+        "scan_id": "91d72b57-aea8-42b7-a4b9-f600f47408ca",
+        "hash": "e295f7a0d190fe700698fbc7859e51ff0ce8f9d3f3e3879b223d45fa77f6733f",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "91d72b57-aea8-42b7-a4b9-f600f47408ca",
+        "timestamp": "2026-03-08T07:38:27.797341Z",
+        "tx_id": "TX-5B14B6E443784704A99D674D8B90A6D1"
+    },
+    "44a4eeb6-2778-4d68-972f-09027017e3f6": {
+        "scan_id": "44a4eeb6-2778-4d68-972f-09027017e3f6",
+        "hash": "f2826e86163413286e6c40888b35c36a186d462088e5c553397faf6d7e2ce582",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "44a4eeb6-2778-4d68-972f-09027017e3f6",
+        "timestamp": "2026-03-08T07:38:27.830072Z",
+        "tx_id": "TX-3BC03A96172543F98EA6178880AD4D05"
+    },
+    "28e9f316-1594-4420-85c4-090754d2c32d": {
+        "scan_id": "28e9f316-1594-4420-85c4-090754d2c32d",
+        "hash": "cf0471578ff0200f89a0c6ae7aebf89b9f5630a8db686d5a996419c48bedd25d",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "28e9f316-1594-4420-85c4-090754d2c32d",
+        "timestamp": "2026-03-08T07:38:27.863921Z",
+        "tx_id": "TX-B7053FA2A598460781E8A86F2E97E61D"
+    },
+    "7f07d9fb-4f40-44dc-8164-fe4d30298108": {
+        "scan_id": "7f07d9fb-4f40-44dc-8164-fe4d30298108",
+        "hash": "9eb7db323016e2d4e724ade65d82322ba0ec0f87595167e92e39d0feff783cc6",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "7f07d9fb-4f40-44dc-8164-fe4d30298108",
+        "timestamp": "2026-03-08T07:38:27.888862Z",
+        "tx_id": "TX-64C565F0B55149EC817247F82E3357CA"
+    },
+    "105ee14d-f50a-481a-afeb-e09374a35e89": {
+        "scan_id": "105ee14d-f50a-481a-afeb-e09374a35e89",
+        "hash": "91519f523fae3e2906f09034209179c84a251cbf6578087ba96fe168f40c8437",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "105ee14d-f50a-481a-afeb-e09374a35e89",
+        "timestamp": "2026-03-08T07:38:27.913775Z",
+        "tx_id": "TX-79A6FE62AFA94E72A13842CEC1A00B53"
+    },
+    "2cc52bd9-5c47-421a-a87c-2afeb805a8b0": {
+        "scan_id": "2cc52bd9-5c47-421a-a87c-2afeb805a8b0",
+        "hash": "2f4fb845bb9330478b277a2a10e20bc775c84f530e2c2190f14d9bd772735a83",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "2cc52bd9-5c47-421a-a87c-2afeb805a8b0",
+        "timestamp": "2026-03-08T07:38:27.947324Z",
+        "tx_id": "TX-79DE7AEF47C14147B79A420F7C4D56F9"
+    },
+    "321c3891-27b6-4f34-b5a8-a0e0d0e351e1": {
+        "scan_id": "321c3891-27b6-4f34-b5a8-a0e0d0e351e1",
+        "hash": "db6623d2f330921347d30a01e86b66d26d1838bdde8845bb2e57f3a8358f5d6b",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "321c3891-27b6-4f34-b5a8-a0e0d0e351e1",
+        "timestamp": "2026-03-08T07:38:27.978795Z",
+        "tx_id": "TX-B017E5E143DE4FBB9F517E01CF052B75"
+    },
+    "28348442-dbed-44f7-b747-52635af3d8a9": {
+        "scan_id": "28348442-dbed-44f7-b747-52635af3d8a9",
+        "hash": "8d1025b8532e6a89ef255ccc571eac72e87c88ca394df6b7ec4ced52944dbe24",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "28348442-dbed-44f7-b747-52635af3d8a9",
+        "timestamp": "2026-03-08T07:38:27.997150Z",
+        "tx_id": "TX-5D7D136CA8D146FB958E17DE8E4FA3C3"
+    },
+    "5cf8df44-f5e1-43f4-bb01-a351828083eb": {
+        "scan_id": "5cf8df44-f5e1-43f4-bb01-a351828083eb",
+        "hash": "d3b2e90ef9cd2f95921b2fb808754e2801d3b7ec8e347f3663bdc490b58204b3",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "5cf8df44-f5e1-43f4-bb01-a351828083eb",
+        "timestamp": "2026-03-08T07:38:28.030539Z",
+        "tx_id": "TX-E502F6CC9D684144A4990BB4493633F9"
+    },
+    "488e88f4-9966-424c-b473-baf711b8c66e": {
+        "scan_id": "488e88f4-9966-424c-b473-baf711b8c66e",
+        "hash": "4f68dd624b7c375bf662626afde6008dc2579e79057932c786cb56918dbcb94e",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "488e88f4-9966-424c-b473-baf711b8c66e",
+        "timestamp": "2026-03-08T07:38:28.063934Z",
+        "tx_id": "TX-AF21E12584484CDB9122FFE8D247A2CA"
+    },
+    "8fde46f0-5bbe-45aa-b4f9-e62b9a2ad09b": {
+        "scan_id": "8fde46f0-5bbe-45aa-b4f9-e62b9a2ad09b",
+        "hash": "5a8757c0109c2959553cd31df5eae8cd156e9c1c3e2a6b973a8c88cf7cc3c439",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "8fde46f0-5bbe-45aa-b4f9-e62b9a2ad09b",
+        "timestamp": "2026-03-08T07:38:28.096988Z",
+        "tx_id": "TX-82DAF57CF2AA4C498F3D0F786FACAD4A"
+    },
+    "c7b3c740-9a66-4825-a22e-cba220ec1fc3": {
+        "scan_id": "c7b3c740-9a66-4825-a22e-cba220ec1fc3",
+        "hash": "211aaa11f295cadf5a9ed4bff873f292ec67ce8dd68e7c5d14bbae5c2055ea76",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "c7b3c740-9a66-4825-a22e-cba220ec1fc3",
+        "timestamp": "2026-03-08T07:38:28.132842Z",
+        "tx_id": "TX-1951C67B1C114D30AE34CC892B173514"
+    },
+    "2d18f9f5-ec4a-4581-8c7a-762eea41be71": {
+        "scan_id": "2d18f9f5-ec4a-4581-8c7a-762eea41be71",
+        "hash": "486564fd716f569c88443aaf572ef644313dfb927fc90af7304863b81e0733d6",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "2d18f9f5-ec4a-4581-8c7a-762eea41be71",
+        "timestamp": "2026-03-08T07:38:28.180700Z",
+        "tx_id": "TX-AC1B8BC53FB441CFA31C14B7E6578B8F"
+    },
+    "0d2a4d84-0ccf-4fb2-9f09-64af6fbd4d06": {
+        "scan_id": "0d2a4d84-0ccf-4fb2-9f09-64af6fbd4d06",
+        "hash": "1087c715b20bebce11f013fcd4793bc67e14568e07c9dd6a5c7cc5ceba6851b4",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "0d2a4d84-0ccf-4fb2-9f09-64af6fbd4d06",
+        "timestamp": "2026-03-08T07:38:28.214179Z",
+        "tx_id": "TX-EB7E9132EEDF4935A142635361702E5B"
+    },
+    "06162c3a-e887-442d-bcef-d5a3338d43c8": {
+        "scan_id": "06162c3a-e887-442d-bcef-d5a3338d43c8",
+        "hash": "b766b4d6590e5426b23146db3d4cc12dc9c390f3d3467783a72ea46d1edbce83",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "06162c3a-e887-442d-bcef-d5a3338d43c8",
+        "timestamp": "2026-03-08T07:38:28.262012Z",
+        "tx_id": "TX-B1980EC6569845CD85BAE21B5DDD4336"
+    },
+    "7cab38ad-000e-420e-bd1b-79db69930ace": {
+        "scan_id": "7cab38ad-000e-420e-bd1b-79db69930ace",
+        "hash": "4be766b2a5cc9b58154534647ecb73f31ceb7651fb88c582d76258649842aae6",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "7cab38ad-000e-420e-bd1b-79db69930ace",
+        "timestamp": "2026-03-08T07:38:28.297651Z",
+        "tx_id": "TX-A1600DEF84B64492B0C657DC19846FE5"
+    },
+    "633c3aeb-7c87-4f1b-a8be-43df13072a96": {
+        "scan_id": "633c3aeb-7c87-4f1b-a8be-43df13072a96",
+        "hash": "9bb76ec9bd3001314fe5bc62e9ac8ac9cc23c201179793d51dd8ea89c6448f2f",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "633c3aeb-7c87-4f1b-a8be-43df13072a96",
+        "timestamp": "2026-03-08T07:38:28.327135Z",
+        "tx_id": "TX-C72EC486193E4129813BCCFE535AEECD"
+    },
+    "6a7e6e9b-92f6-4832-ba8f-45a9171a680e": {
+        "scan_id": "6a7e6e9b-92f6-4832-ba8f-45a9171a680e",
+        "hash": "8de4466554e0925195b42fb74908adcbfa8b05463bc1c7fe7e65c29cd0b0b897",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "6a7e6e9b-92f6-4832-ba8f-45a9171a680e",
+        "timestamp": "2026-03-08T07:38:28.368842Z",
+        "tx_id": "TX-EB64C036D37D4E449904A99F0185FA34"
+    },
+    "0bc3135a-4d3f-47c0-98b6-7654472e8e41": {
+        "scan_id": "0bc3135a-4d3f-47c0-98b6-7654472e8e41",
+        "hash": "bb2ee48dd7ad7bdcd36519b38e02c276dbae1a8e853f2537363f46d9e39d2b12",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "0bc3135a-4d3f-47c0-98b6-7654472e8e41",
+        "timestamp": "2026-03-08T07:38:28.427679Z",
+        "tx_id": "TX-FA654D2F9B5E4DB784C62B82C2CA87D3"
+    },
+    "af0729f9-88b4-4551-a58a-e084b65e9680": {
+        "scan_id": "af0729f9-88b4-4551-a58a-e084b65e9680",
+        "hash": "d303c029e4f231395787822961ddbaa71483860990f5f1fe8eab4f2082fe1731",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "af0729f9-88b4-4551-a58a-e084b65e9680",
+        "timestamp": "2026-03-08T07:38:28.771007Z",
+        "tx_id": "TX-A6CDA0F371884893A8370998D477F417"
+    },
+    "7d79b8af-9b75-44dc-ba56-f412e65689b8": {
+        "scan_id": "7d79b8af-9b75-44dc-ba56-f412e65689b8",
+        "hash": "315e2ca748365efd05ca5bb6805e8ec55c8756cb01c0ab079f40375ea29bfa05",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "7d79b8af-9b75-44dc-ba56-f412e65689b8",
+        "timestamp": "2026-03-08T07:38:28.809110Z",
+        "tx_id": "TX-64038F95FD2046CE8B5D2AC4E2639F68"
+    },
+    "64a99c93-4f74-4594-a4df-eea4727f220c": {
+        "scan_id": "64a99c93-4f74-4594-a4df-eea4727f220c",
+        "hash": "af14ddcda7c53b4773fee437cb624963cfb8195255d6c76f1ea6792fb44a1760",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "64a99c93-4f74-4594-a4df-eea4727f220c",
+        "timestamp": "2026-03-08T07:38:28.988859Z",
+        "tx_id": "TX-220994A244A342E6A12E929F3A106E52"
+    },
+    "5dbe6c32-90be-472d-a5c8-0c596b22bc6f": {
+        "scan_id": "5dbe6c32-90be-472d-a5c8-0c596b22bc6f",
+        "hash": "123ee21fbfe3e02a3ea7d5e92f7e31b1c67b1c08b5e4cf7ca087a38f8722b220",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "5dbe6c32-90be-472d-a5c8-0c596b22bc6f",
+        "timestamp": "2026-03-08T07:38:29.023648Z",
+        "tx_id": "TX-C68FFE972E9D42B79AE5215866B0E6E4"
+    },
+    "854cbcb4-e4fa-4365-82c5-fd76f4832e78": {
+        "scan_id": "854cbcb4-e4fa-4365-82c5-fd76f4832e78",
+        "hash": "cb68cb79c201731b3eb52756bc904a2d62641a24d64045cddaa8a1caf933bfe2",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "854cbcb4-e4fa-4365-82c5-fd76f4832e78",
+        "timestamp": "2026-03-08T07:38:29.070441Z",
+        "tx_id": "TX-327C6C6949DC4B36BC55D08849C3C508"
+    },
+    "637fff48-0ced-4eb8-86b9-59a52c636593": {
+        "scan_id": "637fff48-0ced-4eb8-86b9-59a52c636593",
+        "hash": "ac9eb8bd5358c6332a64eb3d2bc5a3a306fb64a75cca353401e2433339befa3f",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "637fff48-0ced-4eb8-86b9-59a52c636593",
+        "timestamp": "2026-03-08T07:38:29.201951Z",
+        "tx_id": "TX-037720AEE63A4F7B95B1C68CA11C64D1"
+    },
+    "e9568604-76af-46ef-a272-0238be9020d7": {
+        "scan_id": "e9568604-76af-46ef-a272-0238be9020d7",
+        "hash": "6e772ab61a9c1269a71928a8de380856163c3349b2c04338538a533bf8d5fb1c",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "e9568604-76af-46ef-a272-0238be9020d7",
+        "timestamp": "2026-03-08T07:38:29.226020Z",
+        "tx_id": "TX-93A0C9502A3F4100B04B387AEC73C921"
+    },
+    "da73c602-2d82-4be2-ae83-1d14b40f72f9": {
+        "scan_id": "da73c602-2d82-4be2-ae83-1d14b40f72f9",
+        "hash": "6692ad80d53c4680835af2c0678e4d088811adc87d4fadbc3e828835292fbf2d",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "da73c602-2d82-4be2-ae83-1d14b40f72f9",
+        "timestamp": "2026-03-08T07:38:29.273796Z",
+        "tx_id": "TX-25571340DFCB4933808ADAD7E5E3AD18"
+    },
+    "150c83c9-4722-4094-8125-660f338fd4dc": {
+        "scan_id": "150c83c9-4722-4094-8125-660f338fd4dc",
+        "hash": "67d01c479d064657f727c9f057105fdffcc9966ea0d670e829dc3f596dca39e3",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "150c83c9-4722-4094-8125-660f338fd4dc",
+        "timestamp": "2026-03-08T07:38:29.308219Z",
+        "tx_id": "TX-C00ABDF9704C4A38BC98CB3101054F43"
+    },
+    "dedc0acd-dc5b-4ebe-b6cf-e9c7ad8f9cc5": {
+        "scan_id": "dedc0acd-dc5b-4ebe-b6cf-e9c7ad8f9cc5",
+        "hash": "fe13159188d9a38eff8fe499269d2ab3be803d6d705d4b5c09ef5983f48a492c",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "dedc0acd-dc5b-4ebe-b6cf-e9c7ad8f9cc5",
+        "timestamp": "2026-03-08T07:38:29.343144Z",
+        "tx_id": "TX-B8713C7D43CA463EAA6B95B4EB1DE4DF"
+    },
+    "54ace690-ada8-4a0a-9a66-e4f2d72a528d": {
+        "scan_id": "54ace690-ada8-4a0a-9a66-e4f2d72a528d",
+        "hash": "aa906486e6c84c8faa74491941640fde23d0090eff283273df7614382429d734",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "54ace690-ada8-4a0a-9a66-e4f2d72a528d",
+        "timestamp": "2026-03-08T07:38:29.377193Z",
+        "tx_id": "TX-9F06CDA7DB414864BF7D25356ED04A06"
+    },
+    "52c592f3-5d7f-4ee1-99d7-23966240ed1b": {
+        "scan_id": "52c592f3-5d7f-4ee1-99d7-23966240ed1b",
+        "hash": "b966a0a188f08d7fea0f31818e9ebb73c6a0c6d4752070b5db65a74721cd8929",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "52c592f3-5d7f-4ee1-99d7-23966240ed1b",
+        "timestamp": "2026-03-08T07:38:30.178120Z",
+        "tx_id": "TX-9AA077F455E34E9B828ECE52649CF77D"
+    },
+    "19b5b945-255a-47b6-b048-eca7b5ca3143": {
+        "scan_id": "19b5b945-255a-47b6-b048-eca7b5ca3143",
+        "hash": "5f5bfc07f21bcfd5ea19239fd035cac48a672b89ca6ee15de52bb982fff0b30d",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "19b5b945-255a-47b6-b048-eca7b5ca3143",
+        "timestamp": "2026-03-08T07:38:30.206564Z",
+        "tx_id": "TX-F0665B46A3F34284A6E6E6BA3BB4827F"
+    },
+    "02be30b7-d7d0-4c01-8dc4-1247431feaed": {
+        "scan_id": "02be30b7-d7d0-4c01-8dc4-1247431feaed",
+        "hash": "84c7d8d885199712cc2210944d41364d5901d6b29aacb90f6c67006882d5811b",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "02be30b7-d7d0-4c01-8dc4-1247431feaed",
+        "timestamp": "2026-03-08T07:38:30.243240Z",
+        "tx_id": "TX-82F9182CD6614AA49B94B39B8ACE251F"
+    },
+    "729b7b17-d8e2-4af5-af35-799dd77c28bb": {
+        "scan_id": "729b7b17-d8e2-4af5-af35-799dd77c28bb",
+        "hash": "4f4426c2d793fe26bf2a7d0512db6d7149d793f6339fb7393924c105c68e12de",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "729b7b17-d8e2-4af5-af35-799dd77c28bb",
+        "timestamp": "2026-03-08T07:38:30.281966Z",
+        "tx_id": "TX-C71793D3B1234AE39EEC5F2553101680"
+    },
+    "93dc9495-a75a-4540-88e2-f9a85c00fe44": {
+        "scan_id": "93dc9495-a75a-4540-88e2-f9a85c00fe44",
+        "hash": "d2d20d3ad0068e39e507ac0cd88159c3837828ff613e750c48f9599a8c6c95a4",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "93dc9495-a75a-4540-88e2-f9a85c00fe44",
+        "timestamp": "2026-03-08T07:38:30.317219Z",
+        "tx_id": "TX-B70E3B25921B4C63B4798249E02623F0"
+    },
+    "fa770ef7-3d8f-457c-b636-aeef384c4832": {
+        "scan_id": "fa770ef7-3d8f-457c-b636-aeef384c4832",
+        "hash": "31a3843dbf4641d0fa0c3a388a8c04ca41e7395c6ba1331ec63141af0f2e132c",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "fa770ef7-3d8f-457c-b636-aeef384c4832",
+        "timestamp": "2026-03-08T07:38:30.348850Z",
+        "tx_id": "TX-E7FE2537FA984A3A984155A68C7A1C92"
+    },
+    "bc7009de-3885-4a91-89c2-de6581dc107a": {
+        "scan_id": "bc7009de-3885-4a91-89c2-de6581dc107a",
+        "hash": "ceac57bf472bcf0b804e5b034d457a422890f76c6851719aea80fac5a2da2b85",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "bc7009de-3885-4a91-89c2-de6581dc107a",
+        "timestamp": "2026-03-08T07:38:30.388496Z",
+        "tx_id": "TX-15B9FC1E94A448EEBD5DC69481130393"
+    },
+    "415ef6c7-cb2b-4ad0-9b6e-487c0544726c": {
+        "scan_id": "415ef6c7-cb2b-4ad0-9b6e-487c0544726c",
+        "hash": "65994fd27b36f6d6467131a245e15a03298bd77a80970be5053368f00a72f461",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "415ef6c7-cb2b-4ad0-9b6e-487c0544726c",
+        "timestamp": "2026-03-08T07:38:30.420339Z",
+        "tx_id": "TX-DC27ED76864547D48379331DC6F9F53A"
+    },
+    "bf4b767f-151f-4ba7-b071-df072dd00fb4": {
+        "scan_id": "bf4b767f-151f-4ba7-b071-df072dd00fb4",
+        "hash": "6483803f1762f0edf1aa57b4bd4235adb4ce990dd91e755e663d024b8eeac47a",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "bf4b767f-151f-4ba7-b071-df072dd00fb4",
+        "timestamp": "2026-03-08T07:38:30.467421Z",
+        "tx_id": "TX-14091E4E479C40EC86C74311695F6199"
+    },
+    "fe84fd65-6f12-4ac0-9e1e-27c32313923f": {
+        "scan_id": "fe84fd65-6f12-4ac0-9e1e-27c32313923f",
+        "hash": "d0148389f0a3c4af3dbc95b83a0737660e143b7ce04a37a8d065e581853d6246",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "fe84fd65-6f12-4ac0-9e1e-27c32313923f",
+        "timestamp": "2026-03-08T07:38:30.519790Z",
+        "tx_id": "TX-BD49EF350EFD4EEE889ABC7EB9A09132"
+    },
+    "7f3f5209-8ebf-48fa-bc62-26ec92d30b68": {
+        "scan_id": "7f3f5209-8ebf-48fa-bc62-26ec92d30b68",
+        "hash": "cba8c16c9cfecb8cfc28b4938cc8c12ec67af288c27e1b6720a9dc02c04402b9",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "7f3f5209-8ebf-48fa-bc62-26ec92d30b68",
+        "timestamp": "2026-03-08T07:38:30.547179Z",
+        "tx_id": "TX-B8D515603E6343568BC4B869CB2341D8"
+    },
+    "0ab11fa5-c057-4ab1-97b0-133d942130ca": {
+        "scan_id": "0ab11fa5-c057-4ab1-97b0-133d942130ca",
+        "hash": "f644e82ce903f36b11afa7bc67f066658b3ba0c244c093e3809ff12098b37c9f",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "0ab11fa5-c057-4ab1-97b0-133d942130ca",
+        "timestamp": "2026-03-08T07:38:30.583195Z",
+        "tx_id": "TX-FC405A2914CC4D89A6F8CE4014E11FBC"
+    },
+    "e33b04f9-8243-4558-994e-39cba3b1e8c9": {
+        "scan_id": "e33b04f9-8243-4558-994e-39cba3b1e8c9",
+        "hash": "0e4e7b2caf1301ddbc9dad26edf965a2cd0f65dd14112e3f1aedb4c732589202",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "e33b04f9-8243-4558-994e-39cba3b1e8c9",
+        "timestamp": "2026-03-08T07:38:30.617573Z",
+        "tx_id": "TX-1412E8B931EB4698B77C7441E908D4DD"
+    },
+    "c64c02b3-f37d-4e8b-b571-e2ffa2a73bc6": {
+        "scan_id": "c64c02b3-f37d-4e8b-b571-e2ffa2a73bc6",
+        "hash": "d2b649f288a75eabaad8f8f6642c301ed8caf3ebc451c51f74939148b713aaa8",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "c64c02b3-f37d-4e8b-b571-e2ffa2a73bc6",
+        "timestamp": "2026-03-08T07:38:30.662571Z",
+        "tx_id": "TX-2A18D00D719445989B1FE432736E30F4"
+    },
+    "88d25598-5421-440a-98b0-5b3c4657164c": {
+        "scan_id": "88d25598-5421-440a-98b0-5b3c4657164c",
+        "hash": "77f15f06ed5309d0c876f27e1133c5a48e3863ff52f49ff5e671f27e8714e7e9",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "88d25598-5421-440a-98b0-5b3c4657164c",
+        "timestamp": "2026-03-08T07:38:30.728255Z",
+        "tx_id": "TX-EBB7D1B3EBA74F508DA705E8E86B4170"
+    },
+    "eed12b43-78d2-4bc1-9796-1d3027bdf5b4": {
+        "scan_id": "eed12b43-78d2-4bc1-9796-1d3027bdf5b4",
+        "hash": "2444c2405df9bbde98074064a9c428a62fe452962b74f53782cec5ced152ec9f",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "eed12b43-78d2-4bc1-9796-1d3027bdf5b4",
+        "timestamp": "2026-03-08T07:38:30.797848Z",
+        "tx_id": "TX-A9C73F733C4E4C87A388A86F6700F4A6"
+    },
+    "ef3687e9-1773-4797-8e8c-17cb84c0f50c": {
+        "scan_id": "ef3687e9-1773-4797-8e8c-17cb84c0f50c",
+        "hash": "0a501fe26a6df84fb36fabe42e2c4d7b5b3bce20218626c3eaf08e634abb029a",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "ef3687e9-1773-4797-8e8c-17cb84c0f50c",
+        "timestamp": "2026-03-08T07:38:30.864560Z",
+        "tx_id": "TX-A8AB4B6AF08A4946B830A26FC0414B7B"
+    },
+    "efd8615c-7a76-4cb2-a8d1-b5f8c3b56d13": {
+        "scan_id": "efd8615c-7a76-4cb2-a8d1-b5f8c3b56d13",
+        "hash": "5e79de028db9e7a76a37dd3b209ff645a2463e8cd4ff719403e271ab1cb16ad8",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "efd8615c-7a76-4cb2-a8d1-b5f8c3b56d13",
+        "timestamp": "2026-03-08T07:38:30.934997Z",
+        "tx_id": "TX-D54A52AD3417481BB2AE0C9052457C56"
+    },
+    "1a367f32-a517-4176-a933-d9600c2da2be": {
+        "scan_id": "1a367f32-a517-4176-a933-d9600c2da2be",
+        "hash": "b746e26cf8883180bbf32a17785b97a7380e3e3bef156f07ae88d583ac7401c9",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "1a367f32-a517-4176-a933-d9600c2da2be",
+        "timestamp": "2026-03-08T07:38:31.006817Z",
+        "tx_id": "TX-7BDAA95BCFAE47C590B65E8F9AA29A16"
+    },
+    "dc1c49c6-2d97-495f-b05c-05756f436748": {
+        "scan_id": "dc1c49c6-2d97-495f-b05c-05756f436748",
+        "hash": "87d394b9bc520f317ff17818e38d4a1f0536c39d15dd7fc538f4dea421debf9e",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "dc1c49c6-2d97-495f-b05c-05756f436748",
+        "timestamp": "2026-03-08T07:38:31.074053Z",
+        "tx_id": "TX-0F1EDAF3305541A0B59EDBDFA52007DD"
+    },
+    "7020170e-f17e-4427-be4b-92c0816b4d58": {
+        "scan_id": "7020170e-f17e-4427-be4b-92c0816b4d58",
+        "hash": "c458654795208222d321e95842148831315d84f047199a576fed9406f78e583b",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "7020170e-f17e-4427-be4b-92c0816b4d58",
+        "timestamp": "2026-03-08T07:38:31.130539Z",
+        "tx_id": "TX-FDFD19ECEC5D48D4B30B645BD3A5DAF7"
+    },
+    "c92fa12b-650a-4fd2-bd23-0b70bba4329b": {
+        "scan_id": "c92fa12b-650a-4fd2-bd23-0b70bba4329b",
+        "hash": "ce43b1fc8dedbe1602cdb743bdfeec98e0ace798907d9385a6a80910ec6b977f",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "c92fa12b-650a-4fd2-bd23-0b70bba4329b",
+        "timestamp": "2026-03-08T07:38:31.213221Z",
+        "tx_id": "TX-F7C790207EDD4C9BA816A61A29E466D3"
+    },
+    "6e9347cf-c8bd-4d97-8556-8d4412c8a61a": {
+        "scan_id": "6e9347cf-c8bd-4d97-8556-8d4412c8a61a",
+        "hash": "d940492257afd2daef425ffc297435d4175c6c10615495ec9e7ed11b380e9b16",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "6e9347cf-c8bd-4d97-8556-8d4412c8a61a",
+        "timestamp": "2026-03-08T07:38:31.274445Z",
+        "tx_id": "TX-7F60D7B5FC8742B1904196188908BD4E"
+    },
+    "2b4c420c-9a7c-446f-94d4-ec31ab91cd53": {
+        "scan_id": "2b4c420c-9a7c-446f-94d4-ec31ab91cd53",
+        "hash": "5cf4ae303c9650cfc8ffb6ee36041ab75c4c046ee125c9cfbabffa12ca53caed",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "2b4c420c-9a7c-446f-94d4-ec31ab91cd53",
+        "timestamp": "2026-03-08T07:38:31.354142Z",
+        "tx_id": "TX-74BE75A29BDE43C9941617DCEBE4C1AD"
+    },
+    "324154ab-cb7b-48af-880e-4bb6b17bde93": {
+        "scan_id": "324154ab-cb7b-48af-880e-4bb6b17bde93",
+        "hash": "4586b2464a56af7f18f4c182db461a45a520a1f37d5754a2a7deeb2af7a9c1ab",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "324154ab-cb7b-48af-880e-4bb6b17bde93",
+        "timestamp": "2026-03-08T07:38:31.827608Z",
+        "tx_id": "TX-35FB6B28AE724F2E930A785B01DD1C85"
+    },
+    "43a9b257-65bd-4a64-a644-5f97af890aa2": {
+        "scan_id": "43a9b257-65bd-4a64-a644-5f97af890aa2",
+        "hash": "c360675b405dca4753dc28a5ffab3577c73076f33a97ea48b23675e9e16f0182",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "ref_id": "43a9b257-65bd-4a64-a644-5f97af890aa2",
+        "timestamp": "2026-03-08T07:38:37.774149Z",
+        "tx_id": "TX-57254A703E934C5FA39F2608D548E394"
+    },
+    "8932e701-c8db-4876-a1b7-f99c0ff44f78": {
+        "scan_id": "8932e701-c8db-4876-a1b7-f99c0ff44f78",
+        "hash": "85d10da35351fadc6316ff8af6e1d366fd08f6bb6ef7800eaefda0e75effff58",
+        "scan_type": "DeviceProfile",
+        "target": "192.168.10.6",
+        "ref_id": "8932e701-c8db-4876-a1b7-f99c0ff44f78",
+        "timestamp": "2026-03-08T07:38:37.806041Z",
+        "tx_id": "TX-B7387881722345C2BDD11622D883EE1A"
+    },
+    "36da61fb-63d9-4bc8-8b73-58014872df93": {
+        "scan_id": "36da61fb-63d9-4bc8-8b73-58014872df93",
+        "hash": "9bcd76e076f58fe4d83781e29d7c7284a7df11b62424c889455463e6a66ff2f5",
+        "scan_type": "DeviceProfile",
+        "target": "192.168.10.1",
+        "ref_id": "36da61fb-63d9-4bc8-8b73-58014872df93",
+        "timestamp": "2026-03-08T07:40:30.887848Z",
+        "tx_id": "TX-274838FE4A454F61B76DB8C03EC92036"
+    },
+    "c8b92de9-dd0f-447f-8734-a8930495b921": {
+        "scan_id": "c8b92de9-dd0f-447f-8734-a8930495b921",
+        "hash": "be5bcee6ff74ed6cffbbb4951be5bfb36b3d2f1b447a7858519911e667aca2ab",
+        "scan_type": "DeviceProfile",
+        "target": "192.168.10.4",
+        "ref_id": "c8b92de9-dd0f-447f-8734-a8930495b921",
+        "timestamp": "2026-03-08T07:40:30.915795Z",
+        "tx_id": "TX-F7DAF47188AC4085A61D809DB8B0C439"
+    },
+    "de66262d-426f-4f98-b149-10272d90ba07": {
+        "scan_id": "de66262d-426f-4f98-b149-10272d90ba07",
+        "hash": "3a13e2dd27114471fefa276188cdd73742826271beb7ee5c597e7a34d1f694b1",
+        "scan_type": "DeviceProfile",
+        "target": "192.168.10.10",
+        "ref_id": "de66262d-426f-4f98-b149-10272d90ba07",
+        "timestamp": "2026-03-08T07:40:30.964352Z",
+        "tx_id": "TX-B0DD601DADB741018ACE2A3DEC0B64CD"
+    },
+    "9b9e4a1c-1e0e-4a83-9cd9-3ecb592aaf5f": {
+        "scan_id": "9b9e4a1c-1e0e-4a83-9cd9-3ecb592aaf5f",
+        "hash": "493d987685f85ce4941f890ee2108c224a70ba974c8791767b5824f479922771",
+        "scan_type": "DeviceProfile",
+        "target": "192.168.10.6",
+        "ref_id": "9b9e4a1c-1e0e-4a83-9cd9-3ecb592aaf5f",
+        "timestamp": "2026-03-08T07:40:31.014154Z",
+        "tx_id": "TX-58E5880450714E67A117EBA82B915843"
+    },
+    "65bb7b02-acc2-4a75-a1d8-d27b07a59827": {
+        "scan_id": "65bb7b02-acc2-4a75-a1d8-d27b07a59827",
+        "hash": "5af48b439e24adacbfd511863ec57849809a02a748c1b2314e488f74b8f17967",
+        "scan_type": "DeviceProfile",
+        "target": "192.168.10.1",
+        "ref_id": "65bb7b02-acc2-4a75-a1d8-d27b07a59827",
+        "timestamp": "2026-03-08T07:40:31.062443Z",
+        "tx_id": "TX-B6262B5573E24A2C89812AA726505631"
+    },
+    "92c0ec8f-a7bf-4109-9ea2-d28ce76ad85a": {
+        "scan_id": "92c0ec8f-a7bf-4109-9ea2-d28ce76ad85a",
+        "hash": "b4e376a14214e5cf909ed5fe65c5ce112735b575cd4a949bff05f3b77301ca56",
+        "scan_type": "DeviceProfile",
+        "target": "192.168.10.4",
+        "ref_id": "92c0ec8f-a7bf-4109-9ea2-d28ce76ad85a",
+        "timestamp": "2026-03-08T07:40:31.108443Z",
+        "tx_id": "TX-411C636741C2443DA407007194DCFE3E"
+    },
+    "81c51439-0b64-461f-bd1f-a01a3c3dbb64": {
+        "scan_id": "81c51439-0b64-461f-bd1f-a01a3c3dbb64",
+        "hash": "e4f58cbfdf12ebacd154d8a60eab35c3dbe41542aaaf153df86bdf38e35e3e76",
+        "scan_type": "DeviceProfile",
+        "target": "192.168.10.10",
+        "ref_id": "81c51439-0b64-461f-bd1f-a01a3c3dbb64",
+        "timestamp": "2026-03-08T07:40:31.158272Z",
+        "tx_id": "TX-443783F88A324D32B3BB6A547E2C2AAE"
+    },
+    "1048c32a-4a6c-480b-acf3-b0bb3789de4c": {
+        "scan_id": "1048c32a-4a6c-480b-acf3-b0bb3789de4c",
+        "hash": "20f804bdc39790fd08f7e1b1cf67aca5f12f32a84cd8668c05301cabfc26c425",
+        "scan_type": "DeviceProfile",
+        "target": "192.168.10.6",
+        "ref_id": "1048c32a-4a6c-480b-acf3-b0bb3789de4c",
+        "timestamp": "2026-03-08T07:40:31.208769Z",
+        "tx_id": "TX-DDB50DF4C0CD4515B45EB777517CFA51"
+    },
+    "758a57ce-20d7-47fe-8edd-31739d8636c5": {
+        "scan_id": "758a57ce-20d7-47fe-8edd-31739d8636c5",
+        "hash": "4f59e88f25354220b2c548ec66e9fbcaedbb178b8a70ca150725c4ddb2962058",
+        "scan_type": "DeviceProfile",
+        "target": "192.168.10.1",
+        "ref_id": "758a57ce-20d7-47fe-8edd-31739d8636c5",
+        "timestamp": "2026-03-08T07:40:31.255463Z",
+        "tx_id": "TX-099F173429D14FAFA48EE4C305C944C5"
+    },
+    "bd3f82bd-8411-432c-8e1d-b56c09d54f70": {
+        "scan_id": "bd3f82bd-8411-432c-8e1d-b56c09d54f70",
+        "hash": "b11ade005ca9edfce91eaeea69f695ab40f7be6fb9247b5dbc271c97b4d81f6e",
+        "scan_type": "DeviceProfile",
+        "target": "192.168.10.4",
+        "ref_id": "bd3f82bd-8411-432c-8e1d-b56c09d54f70",
+        "timestamp": "2026-03-08T07:40:31.298713Z",
+        "tx_id": "TX-83EA6E79EBF84FFFA6A19E48990B3CD6"
+    },
+    "14303e1c-c1b1-4b25-8a8b-83b661aedda9": {
+        "scan_id": "14303e1c-c1b1-4b25-8a8b-83b661aedda9",
+        "hash": "7b1c5689f02801b46b1eb187f52040fdd85186e8b29641ea64bbcac848f4dd6d",
+        "scan_type": "DeviceProfile",
+        "target": "192.168.10.10",
+        "ref_id": "14303e1c-c1b1-4b25-8a8b-83b661aedda9",
+        "timestamp": "2026-03-08T07:40:31.369272Z",
+        "tx_id": "TX-73CFBEBAE0C142A5A9DE942E6EB1BBB1"
+    },
+    "7afadea5-4920-455f-b9c4-d7828f592ef5": {
+        "scan_id": "7afadea5-4920-455f-b9c4-d7828f592ef5",
+        "hash": "5d5a492a9058ed4f0976a32826b13a95dc3b643e478cfa8c296f7d26447f08f5",
+        "scan_type": "DeviceProfile",
+        "target": "192.168.10.6",
+        "ref_id": "7afadea5-4920-455f-b9c4-d7828f592ef5",
+        "timestamp": "2026-03-08T07:40:31.451308Z",
+        "tx_id": "TX-CB318C034213492CB408AAA052B556EC"
+    },
+    "530a5ad0-cbc3-4b58-a1c2-019f72b29468": {
+        "scan_id": "530a5ad0-cbc3-4b58-a1c2-019f72b29468",
+        "hash": "627936688b317d3f00d1cd8b619764d3dbe4691efb4208caae8221e26d3caa61",
+        "scan_type": "DeviceProfile",
+        "target": "192.168.10.6",
+        "ref_id": "530a5ad0-cbc3-4b58-a1c2-019f72b29468",
+        "timestamp": "2026-03-08T07:41:18.431216Z",
+        "tx_id": "TX-BABE347F8A46449DBAD747592ADB4B16"
+    },
+    "64ac163b-243f-4323-93ae-2619ce3125b2": {
+        "scan_id": "64ac163b-243f-4323-93ae-2619ce3125b2",
+        "hash": "538c154182f219b79988da5281ef6c98f375eb470b79c6153c39c16a22872e39",
+        "scan_type": "DeviceProfile",
+        "target": "192.168.10.6",
+        "ref_id": "64ac163b-243f-4323-93ae-2619ce3125b2",
+        "timestamp": "2026-03-08T07:41:18.482730Z",
+        "tx_id": "TX-FA0695DCFB5942F381ED5E06ECCE0A30"
+    },
+    "09a0f859-e51f-4fb2-8e95-f6beceb71244": {
+        "scan_id": "09a0f859-e51f-4fb2-8e95-f6beceb71244",
+        "hash": "5f64d6820698928f0e6468b6de6abfde84de3f49a0d2c66c91f5df5dbc5d5db8",
+        "scan_type": "DeviceProfile",
+        "target": "192.168.10.1",
+        "ref_id": "09a0f859-e51f-4fb2-8e95-f6beceb71244",
+        "timestamp": "2026-03-08T07:44:41.896955Z",
+        "tx_id": "TX-D08309D2E66C437DA28929CF7E4C6DAD"
+    },
+    "2c60b86f-953c-4402-ba72-6cc3ccabd05f": {
+        "scan_id": "2c60b86f-953c-4402-ba72-6cc3ccabd05f",
+        "hash": "802ddefa68be69e22ca9a10688e214043b53f2c523a4c65c7b28a267eb822dc8",
+        "scan_type": "DeviceProfile",
+        "target": "192.168.10.4",
+        "ref_id": "2c60b86f-953c-4402-ba72-6cc3ccabd05f",
+        "timestamp": "2026-03-08T07:44:41.915776Z",
+        "tx_id": "TX-5FE83D7AEE894B4591D243E69C9CA400"
+    },
+    "f733566a-1321-4796-bef9-dce71b4afafe": {
+        "scan_id": "f733566a-1321-4796-bef9-dce71b4afafe",
+        "hash": "bf0ce3772da7e57764d1bcb2064338cfcf2bd8d7a4af92b19422232dcc68031c",
+        "scan_type": "DeviceProfile",
+        "target": "192.168.10.10",
+        "ref_id": "f733566a-1321-4796-bef9-dce71b4afafe",
+        "timestamp": "2026-03-08T07:44:41.974623Z",
+        "tx_id": "TX-0C4AF0FFC8F34545BDB1E7F3B8D859B1"
+    },
+    "c415dc6f-98dd-46b1-a891-5ff80104585c": {
+        "scan_id": "c415dc6f-98dd-46b1-a891-5ff80104585c",
+        "hash": "bf05c189331c2afe30518f6a1249d885d736634fce892b336085216532aaa0b4",
+        "scan_type": "DeviceProfile",
+        "target": "192.168.10.6",
+        "ref_id": "c415dc6f-98dd-46b1-a891-5ff80104585c",
+        "timestamp": "2026-03-08T07:44:42.032467Z",
+        "tx_id": "TX-6DE3295406E74E25AAA4B361CBABB4A7"
+    },
+    "6a162b2f-ae09-4e0f-9a31-06e540dc3bcb": {
+        "scan_id": "6a162b2f-ae09-4e0f-9a31-06e540dc3bcb",
+        "hash": "87ea8b58c09321ed9622dd72fba10beef7125df64c6c779db2a528ed8b183299",
+        "scan_type": "DeviceProfile",
+        "target": "192.168.10.6",
+        "ref_id": "6a162b2f-ae09-4e0f-9a31-06e540dc3bcb",
+        "timestamp": "2026-03-08T07:46:52.287714Z",
+        "tx_id": "TX-FEEB5B45BF7C43D68078B3E0A582DBC0"
+    },
+    "e958ff6a-eb9d-45be-83f6-e84acfae3f7e": {
+        "scan_id": "e958ff6a-eb9d-45be-83f6-e84acfae3f7e",
+        "hash": "110494eb7474074aa061b421063e1224023f91b1aeb1ed815989f68496309cf9",
+        "scan_type": "DeviceProfile",
+        "target": "192.168.10.6",
+        "ref_id": "e958ff6a-eb9d-45be-83f6-e84acfae3f7e",
+        "timestamp": "2026-03-08T07:46:52.320107Z",
+        "tx_id": "TX-2FCC4391C3F84249ACCEBCF324BB0D16"
+    },
+    "86288769-a3a7-45a7-a81b-e42e72ca7a34": {
+        "scan_id": "86288769-a3a7-45a7-a81b-e42e72ca7a34",
+        "hash": "aafab45d0be2e1c6319ad26fe4991208f4342265ea758d1703b671f5aa2c41a2",
+        "scan_type": "DeviceProfile",
+        "target": "192.168.10.6",
+        "ref_id": "86288769-a3a7-45a7-a81b-e42e72ca7a34",
+        "timestamp": "2026-03-08T07:46:52.388151Z",
+        "tx_id": "TX-384787542D45405282B45E732F4EFC00"
+    },
+    "bcccd0e9-a003-4525-885a-4e5085cad852": {
+        "scan_id": "bcccd0e9-a003-4525-885a-4e5085cad852",
+        "hash": "bf38e40decad50db0ceadacda8458ed11725199e3a103990f2bd03d2222052a4",
+        "scan_type": "DeviceProfile",
+        "target": "192.168.10.6",
+        "ref_id": "bcccd0e9-a003-4525-885a-4e5085cad852",
+        "timestamp": "2026-03-08T07:48:00.977809Z",
+        "tx_id": "TX-F0AD80BCB9CB491E997D1AAC1E84A520"
+    },
+    "a26d4cd1-c48a-4c0b-b30d-3549ad29514d": {
+        "scan_id": "a26d4cd1-c48a-4c0b-b30d-3549ad29514d",
+        "hash": "f4ffbf5988a10b2677e815903622cdc6e4a9ca0e79127953b38b6a4707fb5277",
+        "scan_type": "DeviceProfile",
+        "target": "192.168.10.6",
+        "ref_id": "a26d4cd1-c48a-4c0b-b30d-3549ad29514d",
+        "timestamp": "2026-03-08T07:48:01.016302Z",
+        "tx_id": "TX-F9EB186063C8418F810BDCB596CC31F5"
+    },
+    "79891e61-1a65-414d-a609-c6bd722385e3": {
+        "scan_id": "79891e61-1a65-414d-a609-c6bd722385e3",
+        "hash": "fa760b612185118d9cede576878e51ef757840627a6442aac9adb24ea7905b4a",
+        "scan_type": "DeviceProfile",
+        "target": "192.168.10.6",
+        "ref_id": "79891e61-1a65-414d-a609-c6bd722385e3",
+        "timestamp": "2026-03-08T07:48:01.077444Z",
+        "tx_id": "TX-16391CD0793A4F2DABC18A9B41B409AE"
+    },
+    "VIOLATION_73a0fccf-eaad-466e-a6f4-2c38e9bbc154": {
+        "violation_id": "73a0fccf-eaad-466e-a6f4-2c38e9bbc154",
+        "scan_id": "unknown",
+        "target": "192.168.10.6",
+        "rule": "Blocked port open: 445",
+        "severity": "High",
+        "timestamp": "2026-03-08T07:48:01.544570Z",
+        "tx_id": "TX-DE2A755895FA4579B37F0CC246E5D391"
+    },
+    "VIOLATION_2f15a6c4-1dec-41fe-997c-7c7024f412cc": {
+        "violation_id": "2f15a6c4-1dec-41fe-997c-7c7024f412cc",
+        "scan_id": "unknown",
+        "target": "192.168.10.6",
+        "rule": "Blocked port open: 445",
+        "severity": "High",
+        "timestamp": "2026-03-08T07:48:01.608342Z",
+        "tx_id": "TX-613600FC0BC04E1E92EDA45DFD3ADAA8"
+    },
+    "VIOLATION_4a52c571-b405-4a07-9369-fe8f24d70289": {
+        "violation_id": "4a52c571-b405-4a07-9369-fe8f24d70289",
+        "scan_id": "unknown",
+        "target": "192.168.10.6",
+        "rule": "Blocked port open: 445",
+        "severity": "High",
+        "timestamp": "2026-03-08T07:48:01.658494Z",
+        "tx_id": "TX-4ADFBDB11AAF4C65AA79C6952C0B4F9C"
+    }
+}
