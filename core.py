@@ -13,22 +13,48 @@ Fixes applied:
   6. SmartContract.check_policy() now returns structured dict (not plain string)
   7. generate_reports() includes hash registry for audit verification
   8. All classes implement their interfaces from interfaces.py
+  9. [FIX] network_scan() deduplicates hosts by IP address using seen_ips set,
+     preventing the same IP from being treated as multiple devices when nmap
+     emits repeated host blocks (e.g. across ping/port/script scan phases).
+     - seen_ips guards the current parse pass (in-memory dedup)
+     - db.get_devices() re-fetched each iteration (prevents stale dict miss)
+     - Dedup key is IP (stable), not hostname (can vary or be empty)
+     - Return value is the deduplicated unique_hosts list, so all downstream
+       steps (device_profiling, traffic_monitoring, policy_enforcement) receive
+       exactly one entry per IP — fixing cascading duplicate blockchain TXs,
+       duplicate policy violations, and incorrect host counts.
+ 10. [FIX] device_profiling() signature restored to per-host (host: Dict)
+     so it stays compatible with bensam_integration.py and run() callers.
+     CVE enrichment and risk scoring are applied to the single host dict,
+     then _submit_to_chain() is called — blockchain submission preserved.
+     self.update_log() replaced with print() (no GUI dependency in core).
+     Profiled host appended to self._profiled_hosts for report generation.
+ 11. [FIX] generate_reports() now calls ReportGenerator.generate_html() and
+     generate_json() after the JSON blockchain report, producing three output
+     files per scan:
+       bensam_audit_<ts>.json   — blockchain audit trail
+       bensam_report_<ts>.json  — structured host data  (ReportGenerator)
+       bensam_report_<ts>.html  — human-readable report (ReportGenerator)
 
 Architecture mapping:
   network_scan()        → Layer 1 output consumed here
-  device_profiling()    → Layer 2: normalize + hash + store off-chain
+  device_profiling()    → Layer 2: enrich CVEs + score risk + hash + store + log on-chain
   _submit_to_chain()    → Layer 2→3 handoff: hash + metadata to blockchain
   policy_enforcement()  → Layer 2: compliance check
-  generate_reports()    → Layer 4 preparation: includes all hashes
+  generate_reports()    → Layer 4: audit JSON + HTML/JSON via ReportGenerator
 """
 
 import hashlib
 import json
 import re
 import uuid
+import ipaddress
 from datetime import datetime
 from typing import Dict, List, Optional
 
+from BENSAM_Framework.vuln_intel import VulnerabilityIntel
+from BENSAM_Framework.risk_scoring import RiskScoring
+from BENSAM_Framework.report_generator import ReportGenerator
 from BENSAM_Framework.audit import Database, BlockchainAudit, SmartContract
 
 
@@ -47,108 +73,166 @@ def compute_hash(payload: Dict) -> str:
 
 
 # ─────────────────────────────────────────────────────────────────────────────
-# ScanResult.txt Parser
+# Network utility helpers
+# ─────────────────────────────────────────────────────────────────────────────
+
+def is_internal_ip(ip: str) -> bool:
+    """
+    Returns True if IP falls within any RFC-1918 private range:
+        10.0.0.0/8
+        172.16.0.0/12   (covers 172.16.x.x – 172.31.x.x, includes 172.24.x.x)
+        192.168.0.0/16
+    Works at home, office, lab — no config needed.
+    """
+    try:
+        return ipaddress.ip_address(ip).is_private
+    except ValueError:
+        return False
+
+
+# ─────────────────────────────────────────────────────────────────────────────
+# Scan.xml Parser
 # ─────────────────────────────────────────────────────────────────────────────
 
 class ScanResultParser:
     """
-    Parses ScanResult.txt into structured host records.
+    Parses Scan.xml into structured host records.
+
+    Scan.xml stores nmap output as individual <Result> XML elements, one
+    line of nmap output per element.  This parser:
+      1. Reads the XML with ElementTree
+      2. Extracts the text content of every <Result> element
+         (skips bulk/multiline elements that are duplicate full-stdout dumps)
+      3. Reconstructs per-host records by walking the line sequence
 
     Extracts per host:
-        ip, hostname, mac, vendor, status,
+        ip, hostname, mac, vendor, status, latency,
         open_ports (list of {port, proto, state, service, version}),
-        os_detection, cves (list), raw_block
-
-    FIX 5 from review: no data is discarded.
+        os, cves (list), raw_lines (list of original text lines)
     """
 
-    # Regex patterns
-    _RE_HOST       = re.compile(r"Nmap scan report for (.+)")
-    _RE_STATUS     = re.compile(r"Host is (up|down)")
-    _RE_MAC        = re.compile(r"MAC Address: ([0-9A-Fa-f:]{17}) \((.+?)\)")
-    _RE_PORT       = re.compile(
-        r"(\d+)/(tcp|udp)\s+(open|closed|filtered)\s+(\S+)(?:\s+(.+))?"
-    )
-    _RE_OS         = re.compile(r"OS details?:\s*(.+)")
-    _RE_OS_GUESS   = re.compile(r"Aggressive OS guesses?:\s*(.+)")
-    _RE_CVE        = re.compile(r"\bCVE-\d{4}-\d{4,7}\b", re.IGNORECASE)
-    _RE_MS         = re.compile(r"\bMS\d{2}-\d{3}\b",     re.IGNORECASE)
-    _RE_HOSTNAME   = re.compile(r"Nmap scan report for (.+?) \((\d+\.\d+\.\d+\.\d+)\)")
+    import xml.etree.ElementTree as _ET
 
-    def parse(self, file_path: str) -> List[Dict]:
+    _RE_REPORT  = re.compile(r"^Nmap scan report for (.+?)(\s+\[host down\])?$")
+    _RE_MAC     = re.compile(r"^MAC Address:\s*([0-9A-Fa-f:]{17})\s*\((.+?)\)")
+    _RE_STATUS  = re.compile(r"^Host is (up|down)")
+    _RE_PORT    = re.compile(
+        r"^(\d+)/(tcp|udp)\s+(open|closed|filtered)\s+(\S+)(?:\s+(.+))?"
+    )
+    _RE_OS      = re.compile(r"^(?:OS details?|Aggressive OS guesses?):\s*(.+)")
+    _RE_SVC_OS  = re.compile(r"Service Info:.*OS:\s*([^;,]+)")
+    _RE_LATENCY = re.compile(r"\(([\d.]+s) latency\)")
+    _RE_CVE     = re.compile(r"\bCVE-\d{4}-\d{4,7}\b", re.IGNORECASE)
+    _RE_MS      = re.compile(r"\bMS\d{2}-\d{3}\b",     re.IGNORECASE)
+    _RE_HOSTNAME = re.compile(r"^Nmap scan report for (.+?) \((\d+\.\d+\.\d+\.\d+)\)$")
+
+    def parse(self, file_path: str) -> list:
         """
-        Parse ScanResult.txt and return a list of host dicts.
-        Returns [] if file not found or empty.
+        Parse Scan.xml and return a list of host dicts.
+        Returns [] if file not found, empty, or not valid XML.
         """
+        import xml.etree.ElementTree as ET
+
         try:
-            with open(file_path, "r", encoding="utf-8", errors="ignore") as f:
-                content = f.read()
+            tree = ET.parse(file_path)
+            xml_root = tree.getroot()
         except FileNotFoundError:
             print(f"[BENSAM][Parser] File not found: {file_path}")
+            return []
+        except ET.ParseError as e:
+            print(f"[BENSAM][Parser] XML parse error in {file_path}: {e}")
             return []
         except Exception as e:
             print(f"[BENSAM][Parser] Error reading {file_path}: {e}")
             return []
 
-        return self._split_and_parse(content)
+        # Extract per-line text from <Result> elements.
+        # Skip bulk multiline elements (the final full-stdout callback dump
+        # that NMapScanHandler emits — it contains \n and duplicates the lines).
+        lines = []
+        for elem in xml_root.findall("Result"):
+            text = (elem.text or "").strip()
+            if text and "\n" not in text:
+                lines.append(text)
 
-    def _split_and_parse(self, content: str) -> List[Dict]:
-        """Split content into per-host blocks then parse each."""
-        # Split on "Nmap scan report for" keeping the delimiter
-        raw_blocks = re.split(r"(?=Nmap scan report for )", content)
-        hosts = []
-        for block in raw_blocks:
-            block = block.strip()
-            if not block.startswith("Nmap scan report for"):
-                continue
-            host = self._parse_block(block)
-            if host:
-                hosts.append(host)
-        return hosts
-
-    def _parse_block(self, block: str) -> Optional[Dict]:
-        """Parse a single host block into a structured dict."""
-        lines = block.splitlines()
         if not lines:
-            return None
+            print(f"[BENSAM][Parser] No usable lines found in {file_path}")
+            return []
 
-        # --- IP and hostname ---
-        header = lines[0]
-        m_with_hostname = self._RE_HOSTNAME.search(header)
-        if m_with_hostname:
-            hostname = m_with_hostname.group(1).strip()
-            ip       = m_with_hostname.group(2).strip()
-        else:
-            # No hostname — just IP or bare host
-            parts = header.split()
-            ip       = parts[-1].strip()
-            hostname = ""
+        return self._parse_lines(lines)
 
-        if not ip:
-            return None
+    def _parse_lines(self, lines: list) -> list:
+        """Walk extracted nmap output lines and build per-host dicts."""
+        from collections import OrderedDict
 
-        # --- Status ---
-        status = "unknown"
-        for line in lines[1:6]:
-            m = self._RE_STATUS.search(line)
-            if m:
-                status = m.group(1)
-                break
+        hosts      = OrderedDict()
+        current_ip = None
+        cve_pat    = re.compile(r"\bCVE-\d{4}-\d{4,7}\b", re.IGNORECASE)
+        ms_pat     = re.compile(r"\bMS\d{2}-\d{3}\b",     re.IGNORECASE)
 
-        # --- MAC and vendor ---
-        mac    = "Unknown"
-        vendor = "Unknown"
         for line in lines:
-            m = self._RE_MAC.search(line)
-            if m:
-                mac    = m.group(1)
-                vendor = m.group(2)
-                break
+            line = line.strip()
 
-        # --- Open ports and services ---
-        open_ports = []
-        for line in lines:
-            m = self._RE_PORT.match(line.strip())
+            # ── New host block ────────────────────────────────────────────
+            m = self._RE_REPORT.match(line)
+            if m:
+                addr    = m.group(1).strip()
+                is_down = bool(m.group(2))
+
+                # Separate optional hostname from IP
+                hm = self._RE_HOSTNAME.match(line)
+                if hm:
+                    hostname = hm.group(1).strip()
+                    ip       = hm.group(2).strip()
+                else:
+                    ip_match = re.search(r"(\d{1,3}(?:\.\d{1,3}){3})", addr)
+                    ip       = ip_match.group(1) if ip_match else addr
+                    hostname = addr.replace(ip, "").strip(" ()")
+
+                current_ip = ip
+                if ip not in hosts:
+                    hosts[ip] = {
+                        "ip":           ip,
+                        "hostname":     hostname,
+                        "mac":          "Unknown",
+                        "vendor":       "Unknown",
+                        "status":       "down" if is_down else "",
+                        "latency":      "",
+                        "os":           "Unknown",
+                        "open_ports":   [],
+                        "port_numbers": [],
+                        "services":     set(),
+                        "cves":         set(),
+                        "raw_lines":    []
+                    }
+                hosts[ip]["raw_lines"].append(line)
+                continue
+
+            if current_ip is None:
+                continue
+
+            host = hosts[current_ip]
+            host["raw_lines"].append(line)
+
+            # ── Host status + latency ─────────────────────────────────────
+            m = self._RE_STATUS.match(line)
+            if m:
+                if not host["status"]:
+                    host["status"] = m.group(1)
+                lat = self._RE_LATENCY.search(line)
+                if lat:
+                    host["latency"] = lat.group(1)
+                continue
+
+            # ── MAC address + vendor ──────────────────────────────────────
+            m = self._RE_MAC.match(line)
+            if m:
+                host["mac"]    = m.group(1)
+                host["vendor"] = m.group(2)
+                continue
+
+            # ── Open port ────────────────────────────────────────────────
+            m = self._RE_PORT.match(line)
             if m:
                 port_entry = {
                     "port":    int(m.group(1)),
@@ -157,54 +241,38 @@ class ScanResultParser:
                     "service": m.group(4),
                     "version": (m.group(5) or "").strip()
                 }
-                open_ports.append(port_entry)
+                host["open_ports"].append(port_entry)
+                host["port_numbers"].append(port_entry["port"])
+                host["services"].add(port_entry["service"])
+                continue
 
-        # --- OS Detection ---
-        os_detection = "Unknown"
-        for line in lines:
-            m = self._RE_OS.search(line)
-            if m:
-                os_detection = m.group(1).strip()
-                break
-            m = self._RE_OS_GUESS.search(line)
-            if m:
-                # Take first guess up to first semicolon
-                os_detection = m.group(1).split(";")[0].strip()
-                break
+            # ── OS detection ──────────────────────────────────────────────
+            m = self._RE_OS.match(line)
+            if m and host["os"] == "Unknown":
+                host["os"] = m.group(1).split(";")[0].strip()
+                continue
 
-        # Also check "Service Info: OS:" line
-        if os_detection == "Unknown":
-            for line in lines:
-                if "Service Info:" in line and "OS:" in line:
-                    m = re.search(r"OS:\s*([^;,]+)", line)
-                    if m:
-                        os_detection = m.group(1).strip()
-                        break
+            m = self._RE_SVC_OS.search(line)
+            if m and host["os"] == "Unknown":
+                host["os"] = m.group(1).strip()
+                continue
 
-        # --- CVE extraction ---
-        cves = list({
-            cve.upper()
-            for line in lines
-            # Only lines NOT flagged as false/not-vulnerable
-            if not re.search(r":\s*false\b", line, re.IGNORECASE)
-            if not re.search(r":\s*(ERROR|Could not negotiate|not vulnerable)", line, re.IGNORECASE)
-            if not line.strip().startswith("|")
-            for cve in self._RE_CVE.findall(line) + self._RE_MS.findall(line)
-        })
+            # ── CVE extraction (skip false/not-vulnerable lines) ──────────
+            if (not re.search(r":\s*false\b",                                    line, re.IGNORECASE)
+                    and not re.search(r":\s*(ERROR|Could not negotiate|not vulnerable)", line, re.IGNORECASE)
+                    and not line.startswith("|")):
+                for cve in cve_pat.findall(line) + ms_pat.findall(line):
+                    host["cves"].add(cve.upper())
 
-        return {
-            "ip":           ip,
-            "hostname":     hostname,
-            "mac":          mac,
-            "vendor":       vendor,
-            "status":       status,
-            "os":           os_detection,
-            "open_ports":   open_ports,
-            "port_numbers": [p["port"] for p in open_ports],
-            "services":     list({p["service"] for p in open_ports}),
-            "cves":         cves,
-            "raw_block":    block
-        }
+        # Convert sets to sorted lists for JSON serialisation
+        result = []
+        for ip, h in hosts.items():
+            h["services"]  = sorted(h["services"])
+            h["cves"]      = sorted(h["cves"])
+            h["raw_block"] = "\n".join(h.pop("raw_lines", []))
+            result.append(h)
+
+        return result
 
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -215,25 +283,32 @@ class BENSAMFramework:
     """
     Orchestrates the full BENSAM pipeline:
 
-        Layer 1 output (ScanResult.txt)
+        Layer 1 output (Scan.xml)
             ↓
-        network_scan()       — parse + store devices
+        network_scan()       — parse + deduplicate by IP + store devices
             ↓
-        device_profiling()   — enrich + hash + store off-chain + log on-chain
+        device_profiling()   — enrich CVEs + score risk + hash + store off-chain + log on-chain
             ↓
         policy_enforcement() — check rules + log violations on-chain
             ↓
-        generate_reports()   — full JSON report with hash registry
+        generate_reports()   — audit JSON + structured JSON + HTML via ReportGenerator
     """
 
-    def __init__(self, scan_result_file: str = "ScanResult.txt"):
+    def __init__(self, scan_result_file: str = "Scan.xml"):
         self.scan_result_file = scan_result_file
         self.db               = Database()
         self.blockchain       = BlockchainAudit()
         self.contract         = SmartContract()
         self.parser           = ScanResultParser()
 
-        # Runtime scan context — populated during run()
+        # ReportGenerator used in generate_reports()
+        self.report_generator = ReportGenerator(output_folder="output")
+
+        # Accumulates enriched host dicts across device_profiling() calls
+        # so generate_reports() can pass the full list to ReportGenerator
+        self._profiled_hosts: List[Dict] = []
+
+        # Runtime scan context
         self._current_scan_id:   Optional[str] = None
         self._current_scan_type: str           = "Network Scan"
         self._current_target:    str           = "unknown"
@@ -242,27 +317,17 @@ class BENSAMFramework:
     # Internal: hash + store off-chain + submit to chain
     # ─────────────────────────────────────────────────────────────────────
 
-    def _submit_to_chain(self,
-                          payload: Dict,
-                          scan_type: str,
-                          target: str) -> Dict:
+    def _submit_to_chain(self, payload: Dict, scan_type: str, target: str) -> Dict:
         """
-        Core Layer 2 → Layer 3 handoff:
+        Layer 2 → Layer 3 handoff:
           1. Compute SHA-256 of full payload
           2. Store full payload off-chain
           3. Submit only {hash, metadata} to blockchain
 
-        Returns:
-            {
-                "scan_id":      str,
-                "hash":         str,
-                "ref_id":       str,
-                "tx_id":        str
-            }
+        Returns: { "scan_id", "hash", "ref_id", "tx_id" }
         """
         scan_id = str(uuid.uuid4())
 
-        # Add scan metadata to payload before hashing
         payload["_meta"] = {
             "scan_id":   scan_id,
             "scan_type": scan_type,
@@ -270,14 +335,9 @@ class BENSAMFramework:
             "timestamp": datetime.utcnow().isoformat() + "Z"
         }
 
-        # Step 1: Hash
         payload_hash = compute_hash(payload)
-
-        # Step 2: Store full payload off-chain
-        ref_id = self.db.store_payload(scan_id, payload)
-
-        # Step 3: Submit hash + metadata to blockchain
-        tx_id = self.blockchain.log_scan_record(
+        ref_id       = self.db.store_payload(scan_id, payload)
+        tx_id        = self.blockchain.log_scan_record(
             scan_id=scan_id,
             payload_hash=payload_hash,
             scan_type=scan_type,
@@ -285,12 +345,7 @@ class BENSAMFramework:
             ref_id=ref_id
         )
 
-        return {
-            "scan_id":  scan_id,
-            "hash":     payload_hash,
-            "ref_id":   ref_id,
-            "tx_id":    tx_id
-        }
+        return {"scan_id": scan_id, "hash": payload_hash, "ref_id": ref_id, "tx_id": tx_id}
 
     # ─────────────────────────────────────────────────────────────────────
     # Step 1: Network Scan
@@ -298,101 +353,150 @@ class BENSAMFramework:
 
     def network_scan(self) -> List[Dict]:
         """
-        Parse ScanResult.txt into structured host records.
-        Store each device in the persistent off-chain database.
+        Parse Scan.xml into structured host records.
+        Store each unique device in the persistent off-chain database.
+        Deduplication by IP prevents duplicate blockchain TXs and violations.
         """
-        print("[BENSAM] Parsing ScanResult.txt ...")
-        hosts = self.parser.parse(self.scan_result_file)
+        print(f"[BENSAM] Parsing scan results: {self.scan_result_file}")
 
+        hosts = self.parser.parse(self.scan_result_file)
         if not hosts:
-            print("[BENSAM] No hosts found in ScanResult.txt.")
+            print("[BENSAM] No hosts found in Scan.xml.")
             return []
 
-        devices = self.db.get_devices()
+        seen_ips     = set()
+        unique_hosts = []
+
         for host in hosts:
+            ip = host.get("ip")
+            if not ip or ip in seen_ips:
+                continue
+
+            seen_ips.add(ip)
+            unique_hosts.append(host)
+
             device = {
-                "name":     host.get("hostname") or f"Host_{host['ip'].replace('.', '_')}",
-                "ip":       host["ip"],
+                "name":     host.get("hostname") or f"Host_{ip.replace('.', '_')}",
+                "ip":       ip,
                 "type":     "Unknown",
-                "os":       host.get("os", "Unknown"),
-                "mac":      host.get("mac", "Unknown"),
-                "vendor":   host.get("vendor", "Unknown"),
+                "os":       host.get("os",      "Unknown"),
+                "mac":      host.get("mac",     "Unknown"),
+                "vendor":   host.get("vendor",  "Unknown"),
                 "ports":    host.get("port_numbers", []),
-                "services": host.get("services", []),
-                "cves":     host.get("cves", [])
+                "services": host.get("services",     []),
+                "cves":     host.get("cves",         [])
             }
+
+            devices = self.db.get_devices()
             if device["name"] not in devices:
-                print(f"[BENSAM] New device: {device['ip']} ({device['name']})")
+                print(f"[BENSAM] New device discovered → {device['ip']} ({device['name']})")
                 self.db.add_device(device)
             else:
                 self.db.update_timestamp(device["name"])
 
-        print(f"[BENSAM] Network scan complete. Hosts found: {len(hosts)}")
-        return hosts
+        print(f"[BENSAM] Network scan complete. Unique hosts found: {len(unique_hosts)}")
+        return unique_hosts
 
     # ─────────────────────────────────────────────────────────────────────
-    # Step 2: Device Profiling — hash + store off-chain + log on-chain
+    # Step 2: Device Profiling
+    # Called once per host — enriches, scores, hashes, submits to chain
     # ─────────────────────────────────────────────────────────────────────
 
     def device_profiling(self, host: Dict) -> Dict:
         """
-        FIX 6: Full payload hashed before blockchain submission.
+        Per-host pipeline step:
 
-        Profile structure (everything from the scan):
-            ip, hostname, mac, vendor, os, status,
-            open_ports, services, cves, scan_timestamp
+          1. Build base profile from scan data
+          2. Enrich CVEs via VulnerabilityIntel
+          3. Calculate risk score via RiskScoring
+          4. Persist profile off-chain
+          5. Hash full profile + submit to blockchain
+          6. Append enriched host to self._profiled_hosts for ReportGenerator
+
+        Args:
+            host: Single host dict from network_scan()
+
+        Returns:
+            Chain result dict: { "scan_id", "hash", "ref_id", "tx_id" }
         """
+        ip = host.get("ip", "unknown")
+
+        # ── 1. Base profile ──────────────────────────────────────────────
         profile = {
-            "ip":         host.get("ip"),
-            "hostname":   host.get("hostname", ""),
-            "mac":        host.get("mac", "Unknown"),
-            "vendor":     host.get("vendor", "Unknown"),
-            "os":         host.get("os", "Unknown"),
-            "status":     host.get("status", "unknown"),
+            "ip":         ip,
+            "hostname":   host.get("hostname",   ""),
+            "mac":        host.get("mac",        "Unknown"),
+            "vendor":     host.get("vendor",     "Unknown"),
+            "os":         host.get("os",         "Unknown"),
+            "status":     host.get("status",     "unknown"),
             "open_ports": host.get("open_ports", []),
-            "services":   host.get("services", []),
-            "cves":       host.get("cves", []),
+            "services":   host.get("services",   []),
+            "cves":       host.get("cves",       []),
             "timestamp":  datetime.utcnow().isoformat() + "Z"
         }
 
-        # Persist profile off-chain
+        # ── 2. CVE enrichment ────────────────────────────────────────────
+        try:
+            intel = VulnerabilityIntel()
+            if profile["cves"]:
+                enriched_cves = intel.enrich_cves(profile["cves"])
+                profile["vulnerability_intel"] = enriched_cves
+                print(f"[BENSAM] CVE enrichment → {ip}: {len(enriched_cves)} CVE(s) enriched")
+            else:
+                profile["vulnerability_intel"] = []
+        except Exception as e:
+            print(f"[BENSAM] CVE enrichment failed for {ip}: {e}")
+            profile["vulnerability_intel"] = []
+
+        # ── 3. Risk scoring ──────────────────────────────────────────────
+        try:
+            scorer                = RiskScoring()
+            score                 = scorer.calculate(profile)
+            level                 = scorer.classify(score)
+            profile["risk_score"] = score
+            profile["risk_level"] = level
+            print(f"[BENSAM] Risk score → {ip}: {score} ({level})")
+        except Exception as e:
+            print(f"[BENSAM] Risk scoring failed for {ip}: {e}")
+            profile["risk_score"] = 0
+            profile["risk_level"] = "UNKNOWN"
+
+        # ── 4. Persist profile off-chain ─────────────────────────────────
         self.db.store_profile({
-            "name": host.get("hostname") or f"Host_{host['ip'].replace('.', '_')}",
+            "name": host.get("hostname") or f"Host_{ip.replace('.', '_')}",
             **profile
         })
 
-        # Hash full profile and submit to chain
+        # ── 5. Hash + submit to blockchain ───────────────────────────────
         chain_result = self._submit_to_chain(
             payload=dict(profile),   # copy so _meta doesn't pollute profile
             scan_type="DeviceProfile",
-            target=host.get("ip", "unknown")
+            target=ip
         )
 
         print(f"[BENSAM] DeviceProfile logged → "
-              f"IP={profile['ip']} "
+              f"IP={ip} "
               f"hash={chain_result['hash'][:16]}... "
               f"tx={chain_result['tx_id']}")
+
+        # ── 6. Accumulate for ReportGenerator ────────────────────────────
+        self._profiled_hosts.append(dict(profile))
 
         return chain_result
 
     # ─────────────────────────────────────────────────────────────────────
-    # Step 3: Traffic Monitoring — uses real scan data
+    # Step 3: Traffic Monitoring
     # ─────────────────────────────────────────────────────────────────────
 
     def traffic_monitoring(self, hosts: List[Dict]) -> None:
-        """
-        FIX 7: Uses real scan data instead of hardcoded mock data.
-
-        Derives traffic events from open ports discovered in the scan.
-        Each open port on each host = a logged traffic event.
-        """
+        """Derives and logs one traffic event per open port per host."""
         print("[BENSAM] Logging traffic events from scan data...")
         event_count = 0
 
         for host in hosts:
             ip = host.get("ip", "unknown")
             for port_entry in host.get("open_ports", []):
-                packet = {
+                self.db.log_traffic({
                     "src":     ip,
                     "dst":     "scanner",
                     "port":    port_entry.get("port"),
@@ -400,8 +504,7 @@ class BENSAMFramework:
                     "service": port_entry.get("service"),
                     "state":   port_entry.get("state"),
                     "version": port_entry.get("version", "")
-                }
-                self.db.log_traffic(packet)
+                })
                 event_count += 1
 
         print(f"[BENSAM] Traffic monitoring complete. Events logged: {event_count}")
@@ -412,9 +515,7 @@ class BENSAMFramework:
 
     def policy_enforcement(self, hosts: List[Dict]) -> List[Dict]:
         """
-        FIX 2 (partial): Policy rules loaded from policy_rules.json.
-        In Phase 3 these move into Hyperledger Fabric chaincode.
-
+        Evaluates each host against policy_rules.json once.
         Returns list of violation records.
         """
         print("[BENSAM] Running policy enforcement...")
@@ -422,22 +523,17 @@ class BENSAMFramework:
 
         for host in hosts:
             device_name = host.get("hostname") or f"Host_{host['ip'].replace('.', '_')}"
-            device = self.db.get_devices().get(device_name, {})
-            device["ip"]    = host.get("ip", device.get("ip", ""))
+            device      = self.db.get_devices().get(device_name, {})
+            device["ip"]    = host.get("ip",           device.get("ip", ""))
             device["ports"] = host.get("port_numbers", [])
-            device["os"]    = host.get("os", device.get("os", "Unknown"))
+            device["os"]    = host.get("os",           device.get("os", "Unknown"))
 
-            # check_policy now returns structured dict (FIX from review Bug 6)
             result = self.contract.check_policy(device)
 
             if result["status"] == "Violation":
                 for rule in result["violations"]:
                     violation_id = str(uuid.uuid4())
-
-                    # Log to off-chain DB
                     self.db.log_violation(device, rule, result["severity"])
-
-                    # Log to blockchain
                     self.blockchain.log_policy_violation(
                         violation_id=violation_id,
                         scan_id=self._current_scan_id or "unknown",
@@ -445,7 +541,6 @@ class BENSAMFramework:
                         rule=rule,
                         severity=result["severity"]
                     )
-
                     all_violations.append({
                         "ip":       host.get("ip"),
                         "rule":     rule,
@@ -461,25 +556,29 @@ class BENSAMFramework:
 
     # ─────────────────────────────────────────────────────────────────────
     # Step 5: Report Generation
+    # Produces three output files per scan session:
+    #   bensam_audit_<ts>.json   — blockchain audit trail
+    #   bensam_report_<ts>.json  — structured host data  (ReportGenerator)
+    #   bensam_report_<ts>.html  — human-readable report (ReportGenerator)
     # ─────────────────────────────────────────────────────────────────────
 
     def generate_reports(self, output_folder: str = "output") -> str:
         """
-        Generate a comprehensive JSON report including:
-        - All discovered devices with full profiles
-        - All traffic events
-        - All policy violations
-        - Blockchain hash registry (scan_id → hash → ref_id)
-          This is what Layer 4 (audit) will use to verify integrity.
+        Generate all BENSAM output files after a completed scan.
+
+        Returns the path to the blockchain audit JSON (used by the GUI
+        and bensam_integration.finalize_bensam()).
         """
-        os_module = __import__("os")
+        import os as os_module
         os_module.makedirs(output_folder, exist_ok=True)
+
+        # Sync ReportGenerator to the requested output folder
+        self.report_generator.output_folder = output_folder
 
         devices    = self.db.get_devices()
         logs       = self.db.get_logs()
         violations = self.db.get_violations()
 
-        # Build hash registry from blockchain ledger
         hash_registry = [
             {
                 "scan_id":   r.get("scan_id"),
@@ -493,33 +592,55 @@ class BENSAMFramework:
             for r in self.blockchain.get_all_scan_records()
         ]
 
-        report = {
+        # ── File 1: Blockchain audit JSON ────────────────────────────────
+        audit_report = {
             "metadata": {
-                "report_name":       "BENSAM Network Scan & Compliance Report",
-                "generated_at":      datetime.utcnow().isoformat() + "Z",
-                "framework_version": "1.0-phase1",
-                "total_devices":     len(devices),
-                "total_violations":  len(violations),
-                "total_log_events":  len(logs),
+                "report_name":        "BENSAM Network Scan & Compliance Report",
+                "generated_at":       datetime.utcnow().isoformat() + "Z",
+                "framework_version":  "1.0-phase1",
+                "total_devices":      len(devices),
+                "total_violations":   len(violations),
+                "total_log_events":   len(logs),
                 "blockchain_records": len(hash_registry)
             },
             "devices":       devices,
             "traffic_logs":  logs,
             "violations":    violations,
-            "hash_registry": hash_registry   # ← enables Layer 4 audit verification
+            "hash_registry": hash_registry
         }
 
-        filename = f"bensam_report_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
-        output_path = os_module.path.join(output_folder, filename)
+        timestamp  = datetime.now().strftime("%Y%m%d_%H%M%S")
+        audit_path = os_module.path.join(output_folder, f"bensam_audit_{timestamp}.json")
 
         try:
-            with open(output_path, "w", encoding="utf-8") as f:
-                json.dump(report, f, indent=4, default=str)
-            print(f"[BENSAM] Report saved → {output_path}")
+            with open(audit_path, "w", encoding="utf-8") as f:
+                json.dump(audit_report, f, indent=4, default=str)
+            print(f"[BENSAM] Audit report saved  → {audit_path}")
         except Exception as e:
-            print(f"[BENSAM] Failed to write report: {e}")
+            print(f"[BENSAM] Failed to write audit report: {e}")
 
-        return output_path
+        # ── Files 2 & 3: ReportGenerator (structured JSON + HTML) ────────
+        # self._profiled_hosts carries enriched CVE intel and risk scores
+        # accumulated by device_profiling(). Falls back to flat device list
+        # if called standalone (e.g. from __main__ without a full run()).
+        profiled = self._profiled_hosts if self._profiled_hosts else list(devices.values())
+
+        if profiled:
+            try:
+                rg_json = self.report_generator.generate_json(profiled)
+                print(f"[BENSAM] Data report saved   → {rg_json}")
+            except Exception as e:
+                print(f"[BENSAM] ReportGenerator JSON failed: {e}")
+
+            try:
+                rg_html = self.report_generator.generate_html(profiled)
+                print(f"[BENSAM] HTML report saved   → {rg_html}")
+            except Exception as e:
+                print(f"[BENSAM] ReportGenerator HTML failed: {e}")
+        else:
+            print("[BENSAM] No profiled hosts available — skipping ReportGenerator output.")
+
+        return audit_path
 
     # ─────────────────────────────────────────────────────────────────────
     # Full Pipeline Runner
@@ -532,42 +653,42 @@ class BENSAMFramework:
         Execute the full BENSAM pipeline end-to-end.
 
         Args:
-            scan_type:     Type of scan that produced ScanResult.txt
+            scan_type:     Type of scan that produced Scan.xml
             target:        IP or network that was scanned
-            output_folder: Where to write the final report
+            output_folder: Where to write the final reports
 
         Returns:
-            Path to the generated report file
+            Path to the generated audit report file
         """
         self._current_scan_type = scan_type
         self._current_target    = target
+        self._profiled_hosts    = []   # reset for fresh pipeline run
 
         print(f"\n{'='*60}")
         print(f"[BENSAM] Starting pipeline: {scan_type} → {target}")
         print(f"{'='*60}")
 
-        # Step 1: Parse scan results
+        # Step 1
         hosts = self.network_scan()
         if not hosts:
             print("[BENSAM] No hosts to process. Generating empty report.")
             return self.generate_reports(output_folder)
 
-        # Step 2: Profile each device (hash + store off-chain + log on-chain)
+        # Step 2 — per-host enrichment + scoring + blockchain submission
         scan_records = []
         for host in hosts:
             result = self.device_profiling(host)
             scan_records.append(result)
-            # Keep first scan_id as the "session" scan_id for policy violations
             if not self._current_scan_id:
                 self._current_scan_id = result["scan_id"]
 
-        # Step 3: Traffic events from real scan data
+        # Step 3
         self.traffic_monitoring(hosts)
 
-        # Step 4: Policy enforcement
+        # Step 4
         self.policy_enforcement(hosts)
 
-        # Step 5: Final report
+        # Step 5 — three output files
         report_path = self.generate_reports(output_folder)
 
         print(f"\n[BENSAM] Pipeline complete.")

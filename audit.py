@@ -23,7 +23,7 @@ import os
 import uuid
 from datetime import datetime
 from typing import Dict, List, Optional
-
+from BENSAM_Framework.utils import is_internal_ip
 from BENSAM_Framework.interfaces import IBlockchainLogger, IDatabase
 
 
@@ -383,9 +383,10 @@ class SmartContract:
                     severity = "Medium"
 
         # Rule 3: Network range (Routers must be internal)
+        # Uses RFC-1918 check instead of a hardcoded prefix —
+        # works on any private network (home 192.168.x.x, office 172.24.x.x, etc.)
         if device_type == "Router":
-            prefix = self.rules.get("internal_network_prefix", "192.168.")
-            if not ip.startswith(prefix):
+            if not is_internal_ip(ip):
                 violations.append(f"Router outside internal range: {ip}")
                 if severity != "High":
                     severity = "Medium"
