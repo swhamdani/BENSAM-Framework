@@ -1,0 +1,18 @@
+{
+    "ip": "192.168.10.1",
+    "hostname": "",
+    "mac": "88:76:B9:11:B7:B1",
+    "vendor": "D-Link",
+    "os": "Unknown",
+    "status": "up",
+    "open_ports": [],
+    "services": [],
+    "cves": [],
+    "timestamp": "2026-03-08T07:37:36.762256Z",
+    "_meta": {
+        "scan_id": "c9611638-81a1-4eac-9d22-e6e8575bb10d",
+        "scan_type": "DeviceProfile",
+        "target": "192.168.10.1",
+        "timestamp": "2026-03-08T07:37:36.778964Z"
+    }
+}

@@ -1,0 +1,18 @@
+{
+    "ip": "192.168.10.6",
+    "hostname": "",
+    "mac": "Unknown",
+    "vendor": "Unknown",
+    "os": "Unknown",
+    "status": "up",
+    "open_ports": [],
+    "services": [],
+    "cves": [],
+    "timestamp": "2026-03-08T07:44:42.016351Z",
+    "_meta": {
+        "scan_id": "c415dc6f-98dd-46b1-a891-5ff80104585c",
+        "scan_type": "DeviceProfile",
+        "target": "192.168.10.6",
+        "timestamp": "2026-03-08T07:44:42.032467Z"
+    }
+}

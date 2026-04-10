@@ -1,0 +1,67 @@
+{
+    "ip": "192.168.10.6",
+    "hostname": "",
+    "mac": "Unknown",
+    "vendor": "Unknown",
+    "os": "Windows",
+    "status": "up",
+    "open_ports": [
+        {
+            "port": 135,
+            "proto": "tcp",
+            "state": "open",
+            "service": "msrpc",
+            "version": "Microsoft Windows RPC"
+        },
+        {
+            "port": 139,
+            "proto": "tcp",
+            "state": "open",
+            "service": "netbios-ssn",
+            "version": "Microsoft Windows netbios-ssn"
+        },
+        {
+            "port": 445,
+            "proto": "tcp",
+            "state": "open",
+            "service": "microsoft-ds?",
+            "version": ""
+        },
+        {
+            "port": 3389,
+            "proto": "tcp",
+            "state": "open",
+            "service": "ms-wbt-server",
+            "version": ""
+        },
+        {
+            "port": 9000,
+            "proto": "tcp",
+            "state": "open",
+            "service": "tcpwrapped",
+            "version": ""
+        },
+        {
+            "port": 9010,
+            "proto": "tcp",
+            "state": "open",
+            "service": "tcpwrapped",
+            "version": ""
+        }
+    ],
+    "services": [
+        "tcpwrapped",
+        "netbios-ssn",
+        "ms-wbt-server",
+        "msrpc",
+        "microsoft-ds?"
+    ],
+    "cves": [],
+    "timestamp": "2026-03-08T07:48:01.044388Z",
+    "_meta": {
+        "scan_id": "79891e61-1a65-414d-a609-c6bd722385e3",
+        "scan_type": "DeviceProfile",
+        "target": "192.168.10.6",
+        "timestamp": "2026-03-08T07:48:01.075034Z"
+    }
+}

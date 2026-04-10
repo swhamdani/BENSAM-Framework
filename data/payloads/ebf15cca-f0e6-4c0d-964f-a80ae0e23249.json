@@ -1,0 +1,18 @@
+{
+    "ip": "down]",
+    "hostname": "",
+    "mac": "Unknown",
+    "vendor": "Unknown",
+    "os": "Unknown",
+    "status": "unknown",
+    "open_ports": [],
+    "services": [],
+    "cves": [],
+    "timestamp": "2026-03-08T07:38:16.939535Z",
+    "_meta": {
+        "scan_id": "ebf15cca-f0e6-4c0d-964f-a80ae0e23249",
+        "scan_type": "DeviceProfile",
+        "target": "down]",
+        "timestamp": "2026-03-08T07:38:16.973638Z"
+    }
+}

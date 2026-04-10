@@ -1,0 +1,28 @@
+{
+    "ip": "192.168.10.6",
+    "hostname": "",
+    "mac": "Unknown",
+    "vendor": "Unknown",
+    "os": "Unknown",
+    "status": "up",
+    "open_ports": [
+        {
+            "port": 1000,
+            "proto": "tcp",
+            "state": "closed",
+            "service": "cadlock",
+            "version": ""
+        }
+    ],
+    "services": [
+        "cadlock"
+    ],
+    "cves": [],
+    "timestamp": "2026-03-08T07:41:18.449159Z",
+    "_meta": {
+        "scan_id": "64ac163b-243f-4323-93ae-2619ce3125b2",
+        "scan_type": "DeviceProfile",
+        "target": "192.168.10.6",
+        "timestamp": "2026-03-08T07:41:18.474585Z"
+    }
+}
