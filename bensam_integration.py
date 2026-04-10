@@ -3,19 +3,6 @@ bensam_integration.py
 ─────────────────────────────────────────────────────────────────────────────
 Bridge between NetworkScannerGUI and BENSAM Framework.
 
-Called from NetworkScannerGUI.py → on_scan_finished():
-    from BENSAM_Framework.bensam_integration import parse_scan_result, finalize_bensam
-    parse_scan_result(SCANRESULT_FILE)
-    report_path = finalize_bensam(OUTPUT_FOLDER)
-
-Fixes applied:
-  1. No longer just logs host IPs — full payload passed to BENSAMFramework
-  2. No module-level global event list — session state managed by framework
-  3. Unused SmartContract() removed from module level
-  4. Dynamic module loading replaced with direct imports
-  5. parse_scan_result() now passes scan_type and target from GUI context
-  6. finalize_bensam() returns report path for GUI to display
-  7. Added verify_scan_integrity() for Layer 4 audit use
 """
 
 import os
