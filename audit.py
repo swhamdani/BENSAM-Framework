@@ -3,18 +3,6 @@ audit.py
 ─────────────────────────────────────────────────────────────────────────────
 Concrete implementations for Phase 1 of BENSAM Framework.
 
-Fixes applied:
-  1. Database is now persistent (JSON files) — data survives restarts
-  2. BlockchainAudit now hashes payloads (SHA-256) before logging
-  3. Both classes properly implement their interfaces from interfaces.py
-  4. SmartContract policy rules are externalized to policy_rules.json
-  5. Removed duplicate self.violations initialization
-  6. Added store_payload / get_payload for off-chain data store
-  7. Simulated ledger written to local JSON file (ready for Fabric in Phase 3)
-
-Phase 3 upgrade path:
-  Replace SimulatedBlockchainAudit with FabricBlockchainAudit (fabric_connector.py)
-  No changes needed in core.py or bensam_integration.py.
 """
 
 import hashlib
