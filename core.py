@@ -2,46 +2,6 @@
 core.py
 ─────────────────────────────────────────────────────────────────────────────
 BENSAM Framework — Core Pipeline (Phase 1)
-
-Fixes applied:
-  1. Parser now extracts FULL payload: IPs, MACs, ports, services,
-     OS detection, CVEs, hostnames — nothing discarded
-  2. SHA-256 hashing added at every pipeline stage
-  3. Full payload stored off-chain (data/payloads/) via db.store_payload()
-  4. Only hash + metadata submitted to blockchain layer
-  5. traffic_monitoring() uses real scan data, not mock data
-  6. SmartContract.check_policy() now returns structured dict (not plain string)
-  7. generate_reports() includes hash registry for audit verification
-  8. All classes implement their interfaces from interfaces.py
-  9. [FIX] network_scan() deduplicates hosts by IP address using seen_ips set,
-     preventing the same IP from being treated as multiple devices when nmap
-     emits repeated host blocks (e.g. across ping/port/script scan phases).
-     - seen_ips guards the current parse pass (in-memory dedup)
-     - db.get_devices() re-fetched each iteration (prevents stale dict miss)
-     - Dedup key is IP (stable), not hostname (can vary or be empty)
-     - Return value is the deduplicated unique_hosts list, so all downstream
-       steps (device_profiling, traffic_monitoring, policy_enforcement) receive
-       exactly one entry per IP — fixing cascading duplicate blockchain TXs,
-       duplicate policy violations, and incorrect host counts.
- 10. [FIX] device_profiling() signature restored to per-host (host: Dict)
-     so it stays compatible with bensam_integration.py and run() callers.
-     CVE enrichment and risk scoring are applied to the single host dict,
-     then _submit_to_chain() is called — blockchain submission preserved.
-     self.update_log() replaced with print() (no GUI dependency in core).
-     Profiled host appended to self._profiled_hosts for report generation.
- 11. [FIX] generate_reports() now calls ReportGenerator.generate_html() and
-     generate_json() after the JSON blockchain report, producing three output
-     files per scan:
-       bensam_audit_<ts>.json   — blockchain audit trail
-       bensam_report_<ts>.json  — structured host data  (ReportGenerator)
-       bensam_report_<ts>.html  — human-readable report (ReportGenerator)
-
-Architecture mapping:
-  network_scan()        → Layer 1 output consumed here
-  device_profiling()    → Layer 2: enrich CVEs + score risk + hash + store + log on-chain
-  _submit_to_chain()    → Layer 2→3 handoff: hash + metadata to blockchain
-  policy_enforcement()  → Layer 2: compliance check
-  generate_reports()    → Layer 4: audit JSON + HTML/JSON via ReportGenerator
 """
 
 import hashlib
