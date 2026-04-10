@@ -1,15 +1,127 @@
 {
+    "_comment": "BENSAM Framework — Policy Rules. See port_policy section for full classification.",
+
     "blocked_ports": [
-        23,
         21,
-        445
+        23,
+        139,
+        445,
+        3389,
+        5357
     ],
+
+    "blocked_ports_metadata": {
+        "21":   { "service": "FTP",              "reason": "Plaintext credential transmission", "severity": "High" },
+        "23":   { "service": "Telnet",            "reason": "Plaintext credential transmission", "severity": "High" },
+        "139":  { "service": "NetBIOS/SMB legacy","reason": "Legacy SMBv1 attack surface (EternalBlue)", "severity": "High" },
+        "445":  { "service": "SMB/CIFS",          "reason": "Must be firewalled — SMBv1 must be disabled", "severity": "High" },
+        "3389": { "service": "RDP",               "reason": "High-value attack target — restrict to admin IPs only or disable", "severity": "Critical" },
+        "5357": { "service": "WS-Discovery/UPnP", "reason": "Device info leakage on LAN — disable FDPHost service", "severity": "Medium" }
+    },
+
+    "warning_ports": [
+        135,
+        137,
+        7680,
+        5040,
+        9000,
+        9010
+    ],
+
+    "warning_ports_metadata": {
+        "135":  { "service": "MS RPC endpoint mapper", "reason": "Block at perimeter — internal use only", "severity": "Medium" },
+        "137":  { "service": "NetBIOS-NS",             "reason": "Should remain filtered — leaks hostname/workgroup info", "severity": "Low" },
+        "5040": { "service": "Windows MTP/Device Assoc", "reason": "Identify owning process — disable if unused", "severity": "Medium" },
+        "7680": { "service": "Windows Delivery Optimization", "reason": "Peer update sharing — disable if not policy-approved", "severity": "Medium" },
+        "9000": { "service": "Unknown (tcpwrapped)",   "reason": "Unregistered service — investigate PID before approving", "severity": "Medium" },
+        "9010": { "service": "Unknown (tcpwrapped)",   "reason": "Unregistered service — investigate PID before approving", "severity": "Medium" }
+    },
+
+    "rpc_dynamic_port_range": {
+        "start": 49152,
+        "end": 65535,
+        "action": "block_external",
+        "reason": "Windows RPC dynamic ports — internal only, must not be reachable from outside the subnet",
+        "severity": "Medium"
+    },
+
+    "hardening_required_ports": {
+        "445": [
+            "SMBv1 must be disabled: Set-SmbServerConfiguration -EnableSMB1Protocol $false",
+            "SMB signing must be enabled: Set-SmbServerConfiguration -RequireSecuritySignature $true",
+            "Block at perimeter — allow only from trusted internal subnets"
+        ],
+        "3389": [
+            "Firewall to specific admin source IPs only",
+            "Network Level Authentication (NLA) must be enabled",
+            "MFA required via RD Gateway or Windows Hello for Business",
+            "All sessions must be logged"
+        ],
+        "135": [
+            "Block inbound from Internet/external at perimeter firewall",
+            "Allow only within internal subnet"
+        ]
+    },
+
     "allowed_os": [
         "Windows 11",
         "Windows 10",
         "Ubuntu 22.04",
+        "Ubuntu 24.04",
         "Unknown"
     ],
-    "internal_network_prefix": "192.168.",
-    "iot_open_port_limit": 2
+
+    "internal_network_prefixes": [
+        "192.168.",
+        "10.",
+        "172.16.",
+        "172.24."
+    ],
+
+    "iot_open_port_limit": 2,
+
+    "unregistered_service_ports": [
+        9000,
+        9010,
+        5040
+    ],
+
+    "policy_violation_severities": {
+        "Critical": ["3389"],
+        "High":     ["139", "445", "21", "23"],
+        "Medium":   ["5357", "135", "7680"],
+        "Low":      ["137"]
+    },
+
+    "blockchain_log_actions": {
+        "blocked_port_open":       "POLICY_VIOLATION",
+        "warning_port_open":       "POLICY_WARNING",
+        "unregistered_service":    "UNREGISTERED_SERVICE",
+        "rpc_port_external":       "POLICY_WARNING",
+        "compliant":               "COMPLIANT",
+        "requires_investigation":  "PENDING_REVIEW"
+    },
+
+    "smb_requirements": {
+        "smb_v1_must_be_disabled": true,
+        "smb_signing_required": true,
+        "audit_smb1_access": true
+    },
+
+    "rdp_requirements": {
+        "nla_required": true,
+        "mfa_required": true,
+        "restrict_to_ips": [],
+        "session_logging": true,
+        "disable_if_unused": true
+    },
+
+    "nvd_enrichment": {
+        "api_key": "",
+        "recency_days": 730,
+        "recent_only_days": 365,
+        "min_cvss_score": 0.0,
+        "max_cves_per_service": 5,
+        "request_delay_seconds": 6
+    }
 }
